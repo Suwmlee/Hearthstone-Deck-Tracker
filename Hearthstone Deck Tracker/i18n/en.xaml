@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    
+    <!-- main window-->
+
+    <s:String x:Key="Hearthstone Deck Tracker">炉石传说 记牌器</s:String>
+    <s:String x:Key="options">options</s:String>
+    <s:String x:Key="help">help</s:String>
+    <s:String x:Key="donate">donate</s:String>
+    <!-- main top -->
+    <s:String x:Key="_MAIN">_MAIN</s:String>
+    <s:String x:Key="USE _NO DECK">USE _NO DECK</s:String>
+    <s:String x:Key="_SORT / FILTER">_SORT / FILTER</s:String>
+    <s:String x:Key="_QUICK FILTER">donate</s:String>
+    <s:String x:Key="E_XIT">donate</s:String>
+    <s:String x:Key="_NEW">donate</s:String>
+    <s:String x:Key="_DRUID">donate</s:String>
+    <s:String x:Key="_HUNTER">donate</s:String>
+    <s:String x:Key="_MAGE">donate</s:String>
+    <s:String x:Key="_PRIEST">donate</s:String>
+    <s:String x:Key="_ROGUE">donate</s:String>
+    <s:String x:Key="_SHAMAN">donate</s:String>
+    <s:String x:Key="_PALADIN">donate</s:String>
+    <s:String x:Key="_WARLOCK">donate</s:String>
+    <s:String x:Key="_WARRIOR">donate</s:String>
+    
+    <s:String x:Key="_DECK">donate</s:String>
+    <s:String x:Key="EDIT _DECK">donate</s:String>
+    <s:String x:Key="EDIT NA_ME">donate</s:String>
+    <s:String x:Key="EDIT _NOTES">donate</s:String>
+    <s:String x:Key="EDIT _TAGS">donate</s:String>
+    <s:String x:Key="_QUICK SET TAG">donate</s:String>
+    
+    
+    
+    <s:String x:Key="Move to new window">Move to new window</s:String>
+    <s:String x:Key="Stats">Stats</s:String>
+    <s:String x:Key="START LAUNCHER / HEARTHSTONE">START LAUNCHER / HEARTHSTONE</s:String>
+    <s:String x:Key="SELECTED VERSION:">SELECTED VERSION:</s:String>
+    <s:String x:Key="CARDS:">CARDS:</s:String>
+    <s:String x:Key="FILTER">FILTER</s:String>
+    <s:String x:Key="DECK HISTORY:">DECK HISTORY:</s:String>
+    
+    
+    <s:String x:Key="Settings">Settings</s:String>
+    <!-- option appearane -->
+    <s:String x:Key="Theme:">Theme:</s:String>
+    <s:String x:Key="Accent:">Accent:</s:String>
+    <s:String x:Key="Icon set:">Icon set:</s:String>
+    <s:String x:Key="Class colors:">Class colors:</s:String>
+    <s:String x:Key="Deck layout:">Deck layout:</s:String>
+    <s:String x:Key="Red/green text color in stats summary">Red/green text color in stats summary</s:String>
+    <s:String x:Key="Use upper case deck names">Use upper case deck names</s:String>
+    <s:String x:Key="Use metro animations">Use metro animations</s:String>
+
+    <s:String x:Key="Primary:">Primary:</s:String>
+    <s:String x:Key="Alternatives:">Alternatives:</s:String>
+    <s:String x:Key="Use default font for non-latin languages">Use default font for non-latin languages</s:String>
+    <s:String x:Key="Restart HDT to apply language changes">Restart HDT to apply language changes</s:String>
+    <s:String x:Key="restart hdt">restart hdt</s:String>
+    
+</ResourceDictionary>

@@ -20,6 +20,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="Resources/ReplayViewIcons.xaml"/>
                 <ResourceDictionary Source="Resources/Icons.xaml"/>
+                <ResourceDictionary Source="i18n\zh-cn.xaml" />
                 <ResourceDictionary>
                     <utility:ConfigWrapper x:Key="ConfigWrapper"/>
                 </ResourceDictionary>

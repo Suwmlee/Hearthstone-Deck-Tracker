@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="300">
     <Grid>
-        <GroupBox Header="Settings">
+        <GroupBox Header="{DynamicResource Settings}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Theme:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Theme:}" HorizontalAlignment="Left"
                                                VerticalAlignment="Top" />
                         <ComboBox x:Name="ComboboxTheme" HorizontalAlignment="Right"
                                                   VerticalAlignment="Top" Width="150"
@@ -25,7 +25,7 @@
 
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Accent:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Accent:}" HorizontalAlignment="Left"
                                                VerticalAlignment="Top" />
                         <ComboBox x:Name="ComboboxAccent" HorizontalAlignment="Right"
                                                   VerticalAlignment="Top" Width="150"
@@ -38,57 +38,57 @@
                         </ComboBox>
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Icon set:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Icon set:}" HorizontalAlignment="Left"
                                                VerticalAlignment="Top" />
                         <ComboBox x:Name="ComboBoxIconSet" HorizontalAlignment="Right"
                                                   VerticalAlignment="Top" Width="150"
                                                   SelectionChanged="ComboboxIconSet_SelectionChanged" />
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Class colors:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Class colors:}" HorizontalAlignment="Left"
                                                VerticalAlignment="Top" />
                         <ComboBox x:Name="ComboBoxClassColors" HorizontalAlignment="Right"
                                                   VerticalAlignment="Top" Width="150"
                                                   SelectionChanged="ComboBoxClassColors_SelectionChanged" />
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Deck layout:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Deck layout:}" HorizontalAlignment="Left"
                                                VerticalAlignment="Top" />
                         <ComboBox x:Name="ComboBoxDeckLayout" HorizontalAlignment="Right"
                                                   VerticalAlignment="Top" Width="150"
                                                   SelectionChanged="ComboboxDeckLayout_SelectionChanged" />
                     </DockPanel>
-                    <CheckBox x:Name="CheckBoxArenaStatsTextColoring" Content="Red/green text color in stats summary"
+                    <CheckBox x:Name="CheckBoxArenaStatsTextColoring" Content="{DynamicResource Red/green text color in stats summary}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckBoxArenaStatsTextColoring_Checked"
                                               Unchecked="CheckBoxArenaStatsTextColoring_Unchecked"/>
-                    <CheckBox x:Name="CheckboxDeckPickerCaps" Content="Use upper case deck names"
+                    <CheckBox x:Name="CheckboxDeckPickerCaps" Content="{DynamicResource Use upper case deck names}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxDeckPickerCaps_Checked"
                                               Unchecked="CheckboxDeckPickerCaps_Unchecked" ToolTip="Uncheck to use normal case in Deck Picker."/>
-                    <CheckBox x:Name="CheckboxUseAnimations" Content="Use metro animations"
+                    <CheckBox x:Name="CheckboxUseAnimations" Content="{DynamicResource Use metro animations}"
                     	HorizontalAlignment="Left" Margin="10,5,0,0"
                     	VerticalAlignment="Top"
                     	Unchecked="CheckboxUseAnimations_Unchecked" ToolTip="Uncheck to disable most animations for popup dialogs and flyouts" Checked="CheckboxUseAnimations_Checked"/>
                     <GroupBox Header="Card Language" Margin="10,10,10,0">
                         <StackPanel>
                             <DockPanel Margin="0,5,0,0">
-                                <Label Content="Primary:" HorizontalAlignment="Left"
+                                <Label Content="{DynamicResource Primary:}" HorizontalAlignment="Left"
                         			VerticalAlignment="Top" />
                                 <ComboBox x:Name="ComboboxLanguages" HorizontalAlignment="Right"
                         			VerticalAlignment="Top" Width="170"
                         			SelectionChanged="ComboboxLanguages_SelectionChanged" />
                             </DockPanel>
                             <DockPanel Margin="0,5,0,0">
-                                <Label x:Name="___No_Name_" Content="Alternatives:" HorizontalAlignment="Left"
+                                <Label x:Name="___No_Name_" Content="{DynamicResource Alternatives:}" HorizontalAlignment="Left"
                             		VerticalAlignment="Top" ToolTip="Alternative languages are used in card search and tooltips" />
                                 <ListBox x:Name="ListBoxAlternativeLanguages" Height="120" Width="170" HorizontalAlignment="Right" />
                             </DockPanel>
-                            <CheckBox Name="CheckBoxDefaultFont" Content="Use default font for non-latin languages" Margin="5,5,0,0" Checked="CheckBoxDefaultFont_OnChecked" Unchecked="CheckBoxDefaultFont_OnUnchecked"/>
-                            <Label x:Name="label" Content="Restart HDT to apply language changes"/>
+                            <CheckBox Name="CheckBoxDefaultFont" Content="{DynamicResource Use default font for non-latin languages}" Margin="5,5,0,0" Checked="CheckBoxDefaultFont_OnChecked" Unchecked="CheckBoxDefaultFont_OnUnchecked"/>
+                            <Label x:Name="label" Content="{DynamicResource Restart HDT to apply language changes}"/>
                         </StackPanel>
                     </GroupBox>
-                    <Button Name="ButtonRestart" Margin="10,15,10,0" Content="restart hdt" Click="ButtonRestart_OnClick"/>
+                    <Button Name="ButtonRestart" Margin="10,15,10,0" Content="{DynamicResource restart hdt}" Click="ButtonRestart_OnClick"/>
                 </StackPanel>
             </ScrollViewer>
         </GroupBox>

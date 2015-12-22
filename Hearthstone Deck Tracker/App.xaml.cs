@@ -70,8 +70,12 @@ namespace Hearthstone_Deck_Tracker
 
 		private void App_OnStartup(object sender, StartupEventArgs e)
 		{
+            App.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("i18n/zh-cn.xaml",UriKind.RelativeOrAbsolute) });
 			ShutdownMode = ShutdownMode.OnExplicitShutdown;
 			Core.Initialize();
+
+
+
 		}
 	}
 }

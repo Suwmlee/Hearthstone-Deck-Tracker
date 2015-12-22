@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <!-- main window-->
+
+    <s:String x:Key="Hearthstone Deck Tracker">炉石传说 记牌器</s:String>
+    <s:String x:Key="options">选项</s:String>
+    <s:String x:Key="help">帮助</s:String>
+    <s:String x:Key="donate">捐赠</s:String>
+    <!-- top -->
+    <!-- main -->
+    <s:String x:Key="_MAIN">主要</s:String>
+    <s:String x:Key="USE _NO DECK">不使用套牌</s:String>
+    <s:String x:Key="AUTO DECK SELECTION">自动选择套牌</s:String>
+    <s:String x:Key="_SORT / FILTER">顺序 / 搜索</s:String>
+    <s:String x:Key="_QUICK FILTER">快速搜索</s:String>
+    <s:String x:Key="CLASS CARDS FIRST">推荐套牌</s:String>
+    <s:String x:Key="E_XIT">退出</s:String>
+    
+    <!-- new deck -->
+    <s:String x:Key="_NEW">新建</s:String>
+    <s:String x:Key="_DRUID">德鲁伊</s:String>
+    <s:String x:Key="_HUNTER">猎人</s:String>
+    <s:String x:Key="_MAGE">法师</s:String>
+    <s:String x:Key="_PRIEST">牧师</s:String>
+    <s:String x:Key="_ROGUE">盗贼</s:String>
+    <s:String x:Key="_SHAMAN">萨满</s:String>
+    <s:String x:Key="_PALADIN">圣骑士</s:String>
+    <s:String x:Key="_WARLOCK">术士</s:String>
+    <s:String x:Key="_WARRIOR">战士</s:String>
+    
+    <!-- deck -->
+    <s:String x:Key="_DECK">套牌</s:String>
+    <s:String x:Key="EDIT _DECK">编辑套牌</s:String>
+    <s:String x:Key="EDIT NA_ME">编辑名称</s:String>
+    <s:String x:Key="EDIT _NOTES">编辑备注</s:String>
+    <s:String x:Key="EDIT _TAGS">编辑标签</s:String>
+    <s:String x:Key="_QUICK SET TAG">快速设置标签</s:String>
+    <s:String x:Key="Move to new window">在新窗口打开</s:String>
+    <s:String x:Key="Stats">统计</s:String>
+    <s:String x:Key="START LAUNCHER / HEARTHSTONE">运行 炉石</s:String>
+    <s:String x:Key="SELECTED VERSION:">选择版本:</s:String>
+    <s:String x:Key="CARDS:">卡牌:</s:String>
+    <s:String x:Key="FILTER">过滤</s:String>
+    <s:String x:Key="DECK HISTORY:">历史套牌:</s:String>
+    
+    <!-- import deck -->
+    <s:String x:Key="_IMPORT">导入</s:String>
+    
+    <!-- export deck -->
+    <s:String x:Key="E_XPORT">导出</s:String>
+    
+    <!-- stats -->
+    <s:String x:Key="_STATS">统计</s:String>
+    
+    <!-- new deck -->
+    <s:String x:Key="_HEARTHSTATS">_HEARTHSTATS</s:String>
+    
+    <!-- plugins -->
+    <s:String x:Key="_PLUGINS">插件</s:String>
+    
+    
+    
+    <!-- option appearane -->
+    <s:String x:Key="Theme:">Theme:</s:String>
+    <s:String x:Key="Accent:">Accent:</s:String>
+    <s:String x:Key="Icon set:">Icon set:</s:String>
+    <s:String x:Key="Class colors:">Class colors:</s:String>
+    <s:String x:Key="Deck layout:">Deck layout:</s:String>
+    <s:String x:Key="Red/green text color in stats summary">Red/green text color in stats summary</s:String>
+    <s:String x:Key="Use upper case deck names">Use upper case deck names</s:String>
+    <s:String x:Key="Use metro animations">Use metro animations</s:String>
+
+    <s:String x:Key="Primary:">Primary:</s:String>
+    <s:String x:Key="Alternatives:">Alternatives:</s:String>
+    <s:String x:Key="Use default font for non-latin languages">Use default font for non-latin languages</s:String>
+    <s:String x:Key="Restart HDT to apply language changes">Restart HDT to apply language changes</s:String>
+    <s:String x:Key="restart hdt">restart hdt</s:String>
+
+</ResourceDictionary>
