@@ -9,7 +9,7 @@
              xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"
              d:DesignHeight="600" d:DesignWidth="300">
-    <GroupBox Header="Hotkeys">
+    <GroupBox Header="{DynamicResource Hotkeys}">
         <GroupBox.Resources>
             <hotKeys:HotKeyManager x:Key="HotKeyManager" />
             <hotKeys:PredefinedHotKeyActions x:Key="PredefinedHotKeyActions" />
@@ -33,13 +33,13 @@
                       CanUserDeleteRows="False" CanUserResizeColumns="False" CanUserResizeRows="False"
                       CanUserSortColumns="False" IsReadOnly="True">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Mod" Binding="{Binding Key.Mod}" />
-                    <DataGridTextColumn Header="Key" Binding="{Binding Key.Key}" />
-                    <DataGridTextColumn Header="Action" Binding="{Binding Value}" />
+                    <DataGridTextColumn Header="{DynamicResource Mod}" Binding="{Binding Key.Mod}" />
+                    <DataGridTextColumn Header="{DynamicResource Key}" Binding="{Binding Key.Key}" />
+                    <DataGridTextColumn Header="{DynamicResource Action}" Binding="{Binding Value}" />
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Margin="0,5" Content="delete seleceted" Click="ButtonDelete_OnClick" />
-            <GroupBox Header="New">
+            <Button Margin="0,5" Content="{DynamicResource delete seleceted}" Click="ButtonDelete_OnClick" />
+            <GroupBox Header="{DynamicResource New}">
                 <StackPanel>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -51,14 +51,14 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Label Content="Mod:" DockPanel.Dock="Left" Grid.Column="0" Grid.Row="0" />
+                        <Label Content="{DynamicResource Mod:}" DockPanel.Dock="Left" Grid.Column="0" Grid.Row="0" />
                         <ComboBox Name="ComboBoxMod" ItemsSource="{Binding Source={StaticResource Mods}}"
                                   SelectedIndex="0" Margin="5,2" Grid.Column="1" Grid.Row="0"
                                   SelectionChanged="ComboBoxMod_OnSelectionChanged" />
-                        <Label Content="Key:" DockPanel.Dock="Left" Grid.Column="0" Grid.Row="1" />
+                        <Label Content="{DynamicResource Key:}" DockPanel.Dock="Left" Grid.Column="0" Grid.Row="1" />
                         <TextBox Name="TextBoxKey" controls:TextBoxHelper.Watermark="Press key" Margin="5,2"
                                  Grid.Column="1" Grid.Row="1" PreviewKeyDown="TextBoxKey_OnPreviewKeyDown" />
-                        <Label Content="Action:" Grid.Column="0" Grid.Row="2" />
+                        <Label Content="{DynamicResource Action:}" Grid.Column="0" Grid.Row="2" />
                         <ComboBox Name="ComboBoxActions" Margin="5,2"
                                   ItemsSource="{Binding Path=PredefinedActionNames, Source={StaticResource PredefinedHotKeyActions}}"
                                   SelectedIndex="1" Grid.Column="1" Grid.Row="2">
@@ -75,7 +75,7 @@
                                TextWrapping="Wrap" FontStyle="Italic" />
                     <TextBlock TextWrapping="Wrap" Foreground="Red"
                                Text="{Binding Path=ErrorText, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Button Content="Add new" Margin="0,5,0,0" Click="ButtonAddNew_OnClick"
+                    <Button Content="{DynamicResource Add new}" Margin="0,5,0,0" Click="ButtonAddNew_OnClick"
                             IsEnabled="{Binding Path=SelectedHotKeyIsValue, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                 </StackPanel>
             </GroupBox>

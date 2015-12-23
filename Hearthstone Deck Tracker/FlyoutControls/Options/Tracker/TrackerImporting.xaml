@@ -10,10 +10,10 @@
         <enums:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
     </UserControl.Resources>
     <Grid>
-        <GroupBox Header="Importing">
+        <GroupBox Header="{DynamicResource Importing}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <GroupBox Header="Arena">
+                    <GroupBox Header="{DynamicResource Arena}">
                         <StackPanel>
                             <DockPanel Margin="10,5,10,0" >
                                 <TextBlock DockPanel.Dock="Left" Text="Importing Behaviour:" VerticalAlignment="Center"/>
@@ -25,26 +25,26 @@
                                     </ComboBox.ItemTemplate>
                                 </ComboBox>
                             </DockPanel>
-                            <CheckBox Name="CheckboxUseOldArenaImporting" Content="Use old arena importing method" Margin="10,5,0,0" Checked="CheckboxUseOldArenaImporting_OnChecked" Unchecked="CheckboxUseOldArenaImporting_OnUnchecked"/>
-                            <Button Name="BtnArenaHowTo" Margin="10,5,10,0" HorizontalAlignment="Stretch" Content="SHOW ARENA IMPORTING HOW-TO" Click="ButtonArenaHowTo_OnClick" IsEnabled="False"/>
-                            <GroupBox Header="Arena deck name template">
+                            <CheckBox Name="CheckboxUseOldArenaImporting" Content="{DynamicResource Use old arena importing method}" Margin="10,5,0,0" Checked="CheckboxUseOldArenaImporting_OnChecked" Unchecked="CheckboxUseOldArenaImporting_OnUnchecked"/>
+                            <Button Name="BtnArenaHowTo" Margin="10,5,10,0" HorizontalAlignment="Stretch" Content="{DynamicResource SHOW ARENA IMPORTING HOW-TO}" Click="ButtonArenaHowTo_OnClick" IsEnabled="False"/>
+                            <GroupBox Header="{DynamicResource Arena deck name template}">
                                 <DockPanel>
                                     <DockPanel DockPanel.Dock="Bottom" Margin="0,5,0,0">
                                         <TextBlock Text="Preview:" />
                                         <TextBlock Name="TextBlockNamePreview" Margin="5,0,0,0"/>
                                     </DockPanel>
-                                    <Button Name="BtnEditTemplate" Content="EDIT" DockPanel.Dock="Right" Margin="5,0,0,0" Click="BtnEditTemplate_Click"/>
+                                    <Button Name="BtnEditTemplate" Content="{DynamicResource EDIT}" DockPanel.Dock="Right" Margin="5,0,0,0" Click="BtnEditTemplate_Click"/>
                                     <TextBox Name="TextBoxArenaTemplate" IsEnabled="False" TextChanged="TextBoxArenaTemplate_OnTextChanged"/>
                                 </DockPanel>
                             </GroupBox>
                         </StackPanel>
                     </GroupBox>
-                    <CheckBox x:Name="CheckboxTagOnImport" Content="Tag decks on import"
+                    <CheckBox x:Name="CheckboxTagOnImport" Content="{DynamicResource Tag decks on import}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxTagOnImport_Checked"
                                               Unchecked="CheckboxTagOnImport_Unchecked" />
-                    <CheckBox Name="CheckboxAutoSaveOnImport" Content="Auto save deck on import" Margin="10,5,0,0" Checked="CheckboxAutoSaveOnImport_OnChecked" Unchecked="CheckboxAutoSaveOnImport_OnUnchecked"/>
-                    <CheckBox Name="CheckboxImportNetDeck" Content="Auto import via NetDeck" Margin="10,5,0,0" Checked="CheckboxImportNetDeck_OnChecked" Unchecked="CheckboxImportNetDeck_OnUnchecked"/>
+                    <CheckBox Name="CheckboxAutoSaveOnImport" Content="{DynamicResource Auto save deck on import}" Margin="10,5,0,0" Checked="CheckboxAutoSaveOnImport_OnChecked" Unchecked="CheckboxAutoSaveOnImport_OnUnchecked"/>
+                    <CheckBox Name="CheckboxImportNetDeck" Content="{DynamicResource Auto import via NetDeck}" Margin="10,5,0,0" Checked="CheckboxImportNetDeck_OnChecked" Unchecked="CheckboxImportNetDeck_OnUnchecked"/>
                     
                     <TextBlock Margin="10,2,0,0">
                                         <Hyperlink NavigateUri="https://chrome.google.com/webstore/detail/netdeck/lpdbiakcpmcppnpchohihcbdnojlgeel"
@@ -52,9 +52,9 @@
                                             Download NetDeck (Chrome ext.)
                                         </Hyperlink>
                     </TextBlock>
-                    <Button Margin="10,5,10,0" HorizontalAlignment="Stretch" Content="SHOW CONSTRUCTED IMPORTING HOW-TO" Click="ButtonConstructedHowTo_OnClick"/>
-                    <Button Margin="10,5,10,0" HorizontalAlignment="Stretch" Content="SET UP CONSTRUCTED IMPORTING" Click="ButtonSetUpConstructed_OnClick"/>
-                    <Button Margin="10,10,10,0" HorizontalAlignment="Stretch" Content="ACTIVATE HDT PROTOCOL" Click="ButtonActivateHdtProtocol_OnClick"/>
+                    <Button Margin="10,5,10,0" HorizontalAlignment="Stretch" Content="{DynamicResource SHOW CONSTRUCTED IMPORTING HOW-TO}" Click="ButtonConstructedHowTo_OnClick"/>
+                    <Button Margin="10,5,10,0" HorizontalAlignment="Stretch" Content="{DynamicResource SET UP CONSTRUCTED IMPORTING}" Click="ButtonSetUpConstructed_OnClick"/>
+                    <Button Margin="10,10,10,0" HorizontalAlignment="Stretch" Content="{DynamicResource ACTIVATE HDT PROTOCOL}" Click="ButtonActivateHdtProtocol_OnClick"/>
                 </StackPanel>
             </ScrollViewer>
         </GroupBox>

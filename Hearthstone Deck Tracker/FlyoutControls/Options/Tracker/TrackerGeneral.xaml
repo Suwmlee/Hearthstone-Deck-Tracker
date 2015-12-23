@@ -6,35 +6,35 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="300">
     <Grid>
-        <GroupBox Header="General">
+        <GroupBox Header="{DynamicResource General}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <CheckBox x:Name="CheckBoxAutoUse" Margin="10,5,0,0"  
                               Content="Automatically &quot;USE&quot; decks. (disables button on decks)" 
                               Checked="CheckBoxAutoUse_OnChecked" Unchecked="CheckBoxAutoUse_OnUnchecked"/>
                     <CheckBox x:Name="CheckboxAutoSelectDeck"
-                                          Content="Autoselect deck if only one possible" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Autoselect deck if only one possible}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxAutoSelectDeck_Checked"
                                           Unchecked="CheckboxAutoSelectDeck_Unchecked" />
                     <CheckBox x:Name="CheckboxSpectatorUseNoDeck"
-                                          Content="Use no deck on Spectator mode" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Use no deck on Spectator mode}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxSpectatorUseNoDeck_Checked"
                                           Unchecked="CheckboxSpectatorUseNoDeck_Unchecked" />
-                    <CheckBox x:Name="CheckboxFlashHs" Content="Flash Hearthstone on turn start"
+                    <CheckBox x:Name="CheckboxFlashHs" Content="{DynamicResource Flash Hearthstone on turn start}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxFlashHs_Checked"
                                           Unchecked="CheckboxFlashHs_Unchecked" />
                     <CheckBox x:Name="CheckboxBringHsToForegorund"
-                                          Content="Popup Hearthstone on turn start" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Popup Hearthstone on turn start}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxBringHsToForegorund_Checked"
                                           Unchecked="CheckboxBringHsToForegorund_Unchecked" />
                     <DockPanel Margin="10,5,10,0">
 
                         <CheckBox x:Name="CheckboxTimerAlert"
-                                              Content="Alert at X seconds" HorizontalAlignment="Left" Margin="0,5,0,0" ToolTip="Sound an alert and flash when you have X seconds remaining"
+                                              Content="{DynamicResource Alert at X seconds}" HorizontalAlignment="Left" Margin="0,5,0,0" ToolTip="Sound an alert and flash when you have X seconds remaining"
                                               VerticalAlignment="Top" Checked="CheckboxTimerAlert_Checked" Unchecked="CheckboxTimerAlert_Unchecked" />
                         <TextBox x:Name="TextboxTimerAlert" 
                                              HorizontalAlignment="Right" Height="23" HorizontalContentAlignment="Center"
@@ -42,45 +42,45 @@
                                              Width="60" TextChanged="TextboxTimerAlert_TextChanged" PreviewTextInput="TextboxTimerAlert_PreviewTextInput"/>
                     </DockPanel>
                     <CheckBox x:Name="CheckboxTurnTime"
-                                          Content="Set turn time to 75s (default 90s) *"
+                                          Content="{DynamicResource Set turn time to 75s (default 90s) *}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxTurnTime_Checked"
                                           Unchecked="CheckboxTurnTime_Unchecked" />
                     <CheckBox x:Name="CheckboxNoteDialog"
-                                          Content="Show note dialog after game"
+                                          Content="{DynamicResource Show note dialog after game}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxNoteDialog_Checked"
                                           Unchecked="CheckboxNoteDialog_Unchecked" />
                     <CheckBox x:Name="CheckboxNoteDialogDelayed"
-                                          Content="Wait until back in menu"
+                                          Content="{DynamicResource Wait until back in menu}"
                                           HorizontalAlignment="Left" Margin="30,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxNoteDialogDelay_Checked"
                                           Unchecked="CheckboxNoteDialogDelay_Unchecked" />
                     <CheckBox x:Name="CheckboxArenaRewardDialog"
-                                          Content="Show arena reward dialog when run is over"
+                                          Content="{DynamicResource Show arena reward dialog when run is over}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxArenaRewardDialog_Checked"
                                           Unchecked="CheckboxArenaRewardDialog_Unchecked" />
                     <Separator Margin="0,5,0,0"/>
-                    <CheckBox x:Name="CheckboxTrackerCardToolTips" Content="Card tooltips"
+                    <CheckBox x:Name="CheckboxTrackerCardToolTips" Content="{DynamicResource Card tooltips}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxTrackerCardToolTips_Checked"
                                           Unchecked="CheckboxTrackerCardToolTips_Unchecked" />
-                    <CheckBox x:Name="CheckboxCardFrameRarity" Content="Rarity-colored card frames"
+                    <CheckBox x:Name="CheckboxCardFrameRarity" Content="{DynamicResource Rarity-colored card frames}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxCardFrameRarity_OnChecked"
                                           Unchecked="CheckboxCardFrameRarity_OnUnchecked" />
-                    <CheckBox x:Name="CheckboxCardGemRarity" Content="Rarity-colored card gems"
+                    <CheckBox x:Name="CheckboxCardGemRarity" Content="{DynamicResource Rarity-colored card gems}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxCardGemRarity_OnChecked"
                                           Unchecked="CheckboxCardGemRarity_OnUnchecked" />
                     <CheckBox x:Name="CheckboxHideManaCurveMyDecks"
-                                              Content="Show Manacurve" HorizontalAlignment="Left"
+                                              Content="{DynamicResource Show Manacurve}" HorizontalAlignment="Left"
                                               Margin="10,5,0,0" VerticalAlignment="Top"
                                               Checked="CheckboxManaCurveMyDecks_Checked"
                                               Unchecked="CheckboxManaCurveMyDecks_Unchecked" />
                     <CheckBox x:Name="CheckboxFullTextSearch"
-                                          Content="Full text search in New Deck" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Full text search in New Deck}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxFullTextSearch_Checked"
                                           Unchecked="CheckboxFullTextSearch_Unchecked" />

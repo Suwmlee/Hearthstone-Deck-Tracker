@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="300">
     <Grid>
-        <GroupBox Header="Exporting to Hearthstone">
+        <GroupBox Header="{DynamicResource Exporting to Hearthstone}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Speed:" />
+                        <Label Content="{DynamicResource Speed:}" />
                         <ComboBox Name="ComboboxExportSpeed" SelectedIndex="1"
                                                   HorizontalAlignment="Right" Width="150"
                                                   SelectionChanged="ComboboxExportSpeed_SelectionChanged">
@@ -23,49 +23,49 @@
                         </ComboBox>
                     </DockPanel>
                     <StackPanel Orientation="Horizontal" Margin="10,5,0,0" >
-                        <Label Content="Wait" />
+                        <Label Content="{DynamicResource Wait}" />
                         <TextBox x:Name="TextboxExportDelay" 
                                              HorizontalAlignment="Right" Height="23" HorizontalContentAlignment="Center"
                                              TextWrapping="Wrap" Text="0" VerticalAlignment="Top"
                                              Width="27" TextChanged="TextboxExportDelay_TextChanged" PreviewTextInput="TextboxExportDelay_PreviewTextInput"/>
-                        <Label Content="seconds before starting" />
+                        <Label Content="{DynamicResource seconds before starting}" />
                     </StackPanel>
-                    <CheckBox x:Name="CheckboxPrioGolden" Content="Prioritize golden cards"
+                    <CheckBox x:Name="CheckboxPrioGolden" Content="{DynamicResource Prioritize golden cards}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxPrioGolden_Checked"
                                               Unchecked="CheckboxPrioGolden_Unchecked" />
-                    <CheckBox x:Name="CheckboxExportName" Content="Set deck name"
+                    <CheckBox x:Name="CheckboxExportName" Content="{DynamicResource Set deck name}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxExportName_Checked"
                                               Unchecked="CheckboxExportName_Unchecked" />
-                    <CheckBox x:Name="CheckboxExportAddVersion" Content="Include version number in name"
+                    <CheckBox x:Name="CheckboxExportAddVersion" Content="{DynamicResource Include version number in name}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxExportAddVersion_Checked"
                                               Unchecked="CheckboxExportAddVersion_Unchecked" />
-                    <CheckBox x:Name="CheckboxAutoClear" Content="Auto clear cards"
+                    <CheckBox x:Name="CheckboxAutoClear" Content="{DynamicResource Auto clear cards}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxAutoClear_Checked"
                                               Unchecked="CheckboxAutoClear_Unchecked" />
-                    <CheckBox x:Name="CheckboxAutoClearFilters" Content="Auto clear filters"
+                    <CheckBox x:Name="CheckboxAutoClearFilters" Content="{DynamicResource Auto clear filters}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxAutoClearFilters_Checked"
                                               Unchecked="CheckboxAutoClearFilters_Unchecked" />
                     <CheckBox x:Name="CheckboxExportPasteClipboard"
-                                              Content="Paste names from clipboard"
+                                              Content="{DynamicResource Paste names from clipboard}"
                                               ToolTip="Try this if you have problems exporting certain card/deck names - May not work with all keyboard layouts"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top"
                                               Checked="CheckboxExportPasteClipboard_Checked"
                                               Unchecked="CheckboxExportPasteClipboard_Unchecked" />
-                    <CheckBox x:Name="CheckboxGoldenFeugen" Content="Golden Feugen"
+                    <CheckBox x:Name="CheckboxGoldenFeugen" Content="{DynamicResource Golden Feugen}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxGoldenFeugen_Checked"
                                               Unchecked="CheckboxGoldenFeugen_Unchecked" />
-                    <CheckBox x:Name="CheckboxGoldenStalagg" Content="Golden Stalagg"
+                    <CheckBox x:Name="CheckboxGoldenStalagg" Content="{DynamicResource Golden Stalagg}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxGoldenStalagg_Checked"
                                               Unchecked="CheckboxGoldenStalagg_Unchecked" />
-                    <CheckBox x:Name="CheckboxShowDialog" Content="Show dialog before exporting"
+                    <CheckBox x:Name="CheckboxShowDialog" Content="{DynamicResource Show dialog before exporting}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxShowDialog_OnChecked"
                                               Unchecked="CheckboxShowDialog_OnUnchecked" />

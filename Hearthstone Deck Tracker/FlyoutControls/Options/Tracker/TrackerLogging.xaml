@@ -13,14 +13,14 @@
         </Grid.RowDefinitions>
         <GroupBox Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button Name="BtnSaveLog" Content="Save to file" Click="BtnSaveLog_OnClick"/>
-                <Button Name="BtnClear" Content="Clear" Click="BtnClear_OnClick" Margin="5,0,0,0"/>
-                <Label Content="Log level:" Margin="5,0,0,0" />
+                <Button Name="BtnSaveLog" Content="{DynamicResource Save to file}" Click="BtnSaveLog_OnClick"/>
+                <Button Name="BtnClear" Content="{DynamicResource Clear}" Click="BtnClear_OnClick" Margin="5,0,0,0"/>
+                <Label Content="{DynamicResource Log level:}" Margin="5,0,0,0" />
                 <ComboBox Name="ComboBoxLogLevel" SelectionChanged="ComboBoxLogLevel_OnSelectionChanged" SelectedIndex="0">
                     <system:String>0</system:String>
                     <system:String>1</system:String>
                 </ComboBox>
-                <Button Name="BtnDebugWindow" Content="DebugWindow" Click="BtnDebugWindow_OnClick" Margin="5,0,0,0"/>
+                <Button Name="BtnDebugWindow" Content="{DynamicResource DebugWindow}" Click="BtnDebugWindow_OnClick" Margin="5,0,0,0"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Grid.Row="1">

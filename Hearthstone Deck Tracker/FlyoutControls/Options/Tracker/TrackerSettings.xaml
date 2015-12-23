@@ -7,84 +7,84 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="300">
     <Grid>
-        <GroupBox Header="Settings">
+        <GroupBox Header="{DynamicResource Settings}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <GroupBox Header="Google Analytics">
+                    <GroupBox Header="{DynamicResource Google Analytics}">
                         <StackPanel>
-                            <CheckBox Name="CheckBoxAnalytics" Content="Submit anonymous data" Checked="CheckBoxAnalytics_OnChecked" Unchecked="CheckBoxAnalytics_OnUnchecked"/>
+                            <CheckBox Name="CheckBoxAnalytics" Content="{DynamicResource Submit anonymous data}" Checked="CheckBoxAnalytics_OnChecked" Unchecked="CheckBoxAnalytics_OnUnchecked"/>
                             <TextBlock
                                 Text="This only tracks two things: App starts, where the version number and login mode is submitted, as well as information about crashes."
                                 TextWrapping="Wrap" />
                         </StackPanel>
                     </GroupBox>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Key on game start:" HorizontalAlignment="Right"
+                        <Label Content="{DynamicResource Key on game start:}" HorizontalAlignment="Right"
                                                VerticalAlignment="Top" />
                         <ComboBox x:Name="ComboboxKeyPressGameStart" HorizontalAlignment="Right"
                                                   VerticalAlignment="Top" Width="150"
                                                   SelectionChanged="ComboboxKeyPressGameStart_SelectionChanged" />
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Key on game end:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Key on game end:}" HorizontalAlignment="Left"
                                                VerticalAlignment="Top" />
                         <ComboBox x:Name="ComboboxKeyPressGameEnd" HorizontalAlignment="Right"
                                                   VerticalAlignment="Top" Width="150"
                                                   SelectionChanged="ComboboxKeyPressGameEnd_SelectionChanged" />
                     </DockPanel>
-                    <CheckBox x:Name="CheckboxConfigSaveAppData" Content="Save config in AppData"
+                    <CheckBox x:Name="CheckboxConfigSaveAppData" Content="{DynamicResource Save config in AppData}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxConfigSaveAppData_Checked"
                                               Unchecked="CheckboxConfigSaveAppData_Unchecked" />
-                    <CheckBox x:Name="CheckboxDataSaveAppData" Content="Save data in AppData"
+                    <CheckBox x:Name="CheckboxDataSaveAppData" Content="{DynamicResource Save data in AppData}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxDataSaveAppData_Checked"
                                               Unchecked="CheckboxDataSaveAppData_Unchecked" />
-                    <CheckBox x:Name="CheckboxMinimizeTray" Content="Minimize to tray"
+                    <CheckBox x:Name="CheckboxMinimizeTray" Content="{DynamicResource Minimize to tray}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxMinimizeTray_Checked"
                                               Unchecked="CheckboxMinimizeTray_Unchecked" />
-                    <CheckBox x:Name="CheckboxStartMinimized" Content="Start minimized"
+                    <CheckBox x:Name="CheckboxStartMinimized" Content="{DynamicResource Start minimized}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxStartMinimized_Checked"
                                               Unchecked="CheckboxStartMinimized_Unchecked" />
-                    <CheckBox x:Name="CheckboxStartWithWindows" Content="Start with windows"
+                    <CheckBox x:Name="CheckboxStartWithWindows" Content="{DynamicResource Start with windows}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxStartWithWindows_Checked"
                                               Unchecked="CheckboxStartWithWindows_Unchecked" />
-                    <CheckBox x:Name="CheckBoxShowLoginDialog" Content="Show login dialog"
+                    <CheckBox x:Name="CheckBoxShowLoginDialog" Content="{DynamicResource Show login dialog}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxShowLoginDialog_Checked"
                                               Unchecked="CheckboxShowLoginDialog_Unchecked" />
-                    <CheckBox x:Name="CheckBoxShowSplashScreen" Content="Show the loading splash screen"
+                    <CheckBox x:Name="CheckBoxShowSplashScreen" Content="{DynamicResource Show the loading splash screen}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxShowSplashScreen_Checked"
                                               Unchecked="CheckboxShowSplashScreen_Unchecked" />
                     <CheckBox x:Name="CheckboxCloseWithHearthstone"
-                                              Content="Close with Hearthstone" HorizontalAlignment="Left"
+                                              Content="{DynamicResource Close with Hearthstone}" HorizontalAlignment="Left"
                                               Margin="10,5,0,0" VerticalAlignment="Top"
                                               Checked="CheckboxCloseWithHearthstone_Checked"
                                               Unchecked="CheckboxCloseWithHearthstone_Unchecked" />
-                    <CheckBox x:Name="CheckboxCheckForUpdates" Content="Check for updates"
+                    <CheckBox x:Name="CheckboxCheckForUpdates" Content="{DynamicResource Check for updates}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxCheckForUpdates_Checked"
                                               Unchecked="CheckboxCheckForUpdates_Unchecked" />
-                    <CheckBox x:Name="CheckboxCheckForBetaUpdates" Content="Check for BETA updates"
+                    <CheckBox x:Name="CheckboxCheckForBetaUpdates" Content="{DynamicResource Check for BETA updates}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxCheckForBetaUpdates_Checked"
                                               Unchecked="CheckboxCheckForBetaUpdates_Unchecked" />
-                    <CheckBox x:Name="CheckboxAdvancedWindowSearch" Content="Advanced window search"
+                    <CheckBox x:Name="CheckboxAdvancedWindowSearch" Content="{DynamicResource Advanced window search}"
                                     	HorizontalAlignment="Left" Margin="10,5,0,0"
                                     	VerticalAlignment="Top" Checked="CheckboxAdvancedWindowSearch_Checked"
                                     	Unchecked="CheckboxAdvancedWindowSearch_Unchecked" ToolTip="This can be turned off if the overlay shows up in non-Hearthstone windows." />
-                    <CheckBox x:Name="CheckboxLogTab" Content="Show Log"
+                    <CheckBox x:Name="CheckboxLogTab" Content="{DynamicResource Show Log}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top" Checked="CheckboxLogTab_Checked"
                                               Unchecked="CheckboxLogTab_Unchecked" />
-                    <Button Name="ButtonGamePath" Margin="10,5,10,0" Content ="set hearthstone path" Click="ButtonGamePath_OnClick"/>
-                    <Button Name="ButtonOpenAppData" Margin="10,5,10,0" Content ="open appdata folder" Click="ButtonOpenAppData_OnClick"/>
-                    <Button Name="SelectSaveDataPath" Margin="10,5,10,0" Content="set data path" Click="SelectSaveDataPath_Click"/>
-                    <Button Name="ButtonRestart" Margin="10,15,10,0" Content="restart hdt" Click="ButtonRestart_OnClick"/>
+                    <Button Name="ButtonGamePath" Margin="10,5,10,0" Content ="{DynamicResource set hearthstone path}" Click="ButtonGamePath_OnClick"/>
+                    <Button Name="ButtonOpenAppData" Margin="10,5,10,0" Content ="{DynamicResource open appdata folder}" Click="ButtonOpenAppData_OnClick"/>
+                    <Button Name="SelectSaveDataPath" Margin="10,5,10,0" Content="{DynamicResource set data path}" Click="SelectSaveDataPath_Click"/>
+                    <Button Name="ButtonRestart" Margin="10,15,10,0" Content="{DynamicResource restart hdt}" Click="ButtonRestart_OnClick"/>
                 </StackPanel>
             </ScrollViewer>
         </GroupBox>

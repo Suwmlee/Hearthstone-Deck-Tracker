@@ -8,12 +8,12 @@
              d:DesignHeight="600" d:DesignWidth="300">
 
     <Grid>
-        <GroupBox Header="Plugins">
+        <GroupBox Header="{DynamicResource Plugins}">
             <DockPanel>
                 <DockPanel DockPanel.Dock="Top" Height="150">
                     <StackPanel DockPanel.Dock="Right" Margin="5,0,0,0">
-                        <Button Click="ButtonAvailablePlugins_OnClick" Content="Available Plugins"/>
-                        <Button Click="ButtonOpenPluginsFolder_OnClick" Content="Plugins Folder" Margin="0,5,0,0"/>
+                        <Button Click="ButtonAvailablePlugins_OnClick" Content="{DynamicResource Available Plugins}"/>
+                        <Button Click="ButtonOpenPluginsFolder_OnClick" Content="{DynamicResource Plugins Folder}" Margin="0,5,0,0"/>
                     </StackPanel>
                     <Border BorderThickness="1" BorderBrush="{DynamicResource AccentColorBrush}">
                         <ListBox Name="ListBoxPlugins" SelectionChanged="ListBoxPlugins_OnSelectionChanged" SelectionMode="Single">
