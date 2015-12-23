@@ -39,7 +39,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			string selectedSet;
 			try
 			{
-				selectedNeutral = MenuFilterType.Items.Cast<RadioButton>().First(x => x.IsChecked.HasValue && x.IsChecked.Value).Content.ToString();
+				selectedNeutral = MenuFilterType.Items.Cast<RadioButton>().First(x => x.IsChecked.HasValue && x.IsChecked.Value).Tag.ToString();
 			}
 			catch(Exception)
 			{
@@ -48,7 +48,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			try
 			{
 				selectedManaCost =
-					MenuFilterMana.Items.Cast<RadioButton>().First(x => x.IsChecked.HasValue && x.IsChecked.Value).Content.ToString();
+					MenuFilterMana.Items.Cast<RadioButton>().First(x => x.IsChecked.HasValue && x.IsChecked.Value).Tag.ToString();
 			}
 			catch(Exception)
 			{
@@ -56,7 +56,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			}
 			try
 			{
-				selectedSet = MenuFilterSet.Items.Cast<RadioButton>().First(x => x.IsChecked.HasValue && x.IsChecked.Value).Content.ToString();
+				selectedSet = MenuFilterSet.Items.Cast<RadioButton>().First(x => x.IsChecked.HasValue && x.IsChecked.Value).Tag.ToString();
 			}
 			catch(Exception)
 			{

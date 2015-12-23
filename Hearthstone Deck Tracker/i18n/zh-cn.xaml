@@ -17,7 +17,7 @@
     <s:String x:Key="_QUICK FILTER">快速搜索</s:String>
     <s:String x:Key="CLASS CARDS FIRST">推荐套牌</s:String>
     <s:String x:Key="E_XIT">退出</s:String>
-    
+
     <!-- new deck -->
     <s:String x:Key="_NEW">新建</s:String>
     <s:String x:Key="_DRUID">德鲁伊</s:String>
@@ -29,7 +29,7 @@
     <s:String x:Key="_PALADIN">圣骑士</s:String>
     <s:String x:Key="_WARLOCK">术士</s:String>
     <s:String x:Key="_WARRIOR">战士</s:String>
-    
+
     <!-- deck -->
     <s:String x:Key="_DECK">套牌</s:String>
     <s:String x:Key="EDIT _DECK">编辑套牌</s:String>
@@ -37,45 +37,131 @@
     <s:String x:Key="EDIT _NOTES">编辑备注</s:String>
     <s:String x:Key="EDIT _TAGS">编辑标签</s:String>
     <s:String x:Key="_QUICK SET TAG">快速设置标签</s:String>
+    <s:String x:Key="MOVE TO ARENA">快速设置标签</s:String>
+    <s:String x:Key="MOVE TO CONSTRUCTED">手动构造</s:String>
+    <s:String x:Key="SHOW _MISSING CARDS">展示错过的卡牌</s:String>
+    <s:String x:Key="_UPDATE (WEB)">更新(网页)</s:String>
+    <s:String x:Key="OPEN _WEBSITE">打开网站</s:String>
+    <s:String x:Key="OPEN _HEARTHSTATS">打开 HEARTHSTATS</s:String>
+    <s:String x:Key="_ARCHIVE">归档</s:String>
+    <s:String x:Key="UN_ARCHIVE">删档</s:String>
+    <s:String x:Key="DELETE">删除</s:String>
+    <s:String x:Key="CLONE">克隆</s:String>
+    <s:String x:Key="ENTIRE DECK">完整套牌</s:String>
+    <s:String x:Key="SELECTED VERSION">选择的版本</s:String>
+
+    <!-- import deck -->
+    <s:String x:Key="_IMPORT">导入</s:String>
+    <s:String x:Key="FROM _WEB">从网页</s:String>
+    <s:String x:Key="FROM GAME: _ARENA">从游戏中:竞技场</s:String>
+    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏中:人工(测试)</s:String>
+    <s:String x:Key="FROM _FILE">从文件</s:String>
+    <s:String x:Key="FROM _ID STRING">使用ID</s:String>
+    <s:String x:Key="FROM CLIPBOARD: _CARD NAMES">从剪贴板:卡牌名称</s:String>
+    <s:String x:Key="FROM LAST _GAME">从最后的游戏中</s:String>
+
+    <!-- export deck -->
+    <s:String x:Key="E_XPORT">导出</s:String>
+    <s:String x:Key="TO _HEARTHSTONE">到炉石传说</s:String>
+    <s:String x:Key="TO HEARTHSTONE FROM _WEB">到网页炉石</s:String>
+    <s:String x:Key="SAVE AS _XML">保存为xml格式</s:String>
+    <s:String x:Key="COPY IDS TO _CLIPBOARD">复制IDS到剪贴板</s:String>
+    <s:String x:Key="COPY _NAMES TO CLIPBOARD">复制名称到剪贴板</s:String>
+    <s:String x:Key="_SCREENSHOT">截图</s:String>
+
+    <!-- stats -->
+    <s:String x:Key="_STATS">统计</s:String>
+    <s:String x:Key="[OLD] GAMES _STATISTICS">[OLD] GAMES  &amp; _STATISTICS</s:String>
+    <s:String x:Key="ARENA RUNS _STATISTICS">竞技场统计</s:String>
+    <s:String x:Key="_LATEST REPLAY">最新的录像</s:String>
+    <s:String x:Key="_SELECT REPLAY">选择录像</s:String>
+    <s:String x:Key="LOAD REPLAY FROM _FILE">从文件中导入录像</s:String>
+
+    <!-- new deck -->
+    <s:String x:Key="_HEARTHSTATS">_HEARTHSTATS</s:String>
+
+    <!-- plugins -->
+    <s:String x:Key="_PLUGINS">插件</s:String>
+    <s:String x:Key="EMPTY...">清空</s:String>
+
     <s:String x:Key="Move to new window">在新窗口打开</s:String>
     <s:String x:Key="Stats">统计</s:String>
+    <!-- mid -->
     <s:String x:Key="START LAUNCHER / HEARTHSTONE">运行 炉石</s:String>
     <s:String x:Key="SELECTED VERSION:">选择版本:</s:String>
     <s:String x:Key="CARDS:">卡牌:</s:String>
+    <s:String x:Key="SAVE">保存</s:String>
+    <s:String x:Key="CANCEL">取消</s:String>
     <s:String x:Key="FILTER">过滤</s:String>
-    <s:String x:Key="DECK HISTORY:">历史套牌:</s:String>
-    
-    <!-- import deck -->
-    <s:String x:Key="_IMPORT">导入</s:String>
-    
-    <!-- export deck -->
-    <s:String x:Key="E_XPORT">导出</s:String>
-    
-    <!-- stats -->
-    <s:String x:Key="_STATS">统计</s:String>
-    
-    <!-- new deck -->
-    <s:String x:Key="_HEARTHSTATS">_HEARTHSTATS</s:String>
-    
-    <!-- plugins -->
-    <s:String x:Key="_PLUGINS">插件</s:String>
-    
-    
-    
-    <!-- option appearane -->
-    <s:String x:Key="Theme:">Theme:</s:String>
-    <s:String x:Key="Accent:">Accent:</s:String>
-    <s:String x:Key="Icon set:">Icon set:</s:String>
-    <s:String x:Key="Class colors:">Class colors:</s:String>
-    <s:String x:Key="Deck layout:">Deck layout:</s:String>
-    <s:String x:Key="Red/green text color in stats summary">Red/green text color in stats summary</s:String>
-    <s:String x:Key="Use upper case deck names">Use upper case deck names</s:String>
-    <s:String x:Key="Use metro animations">Use metro animations</s:String>
+    <s:String x:Key="MANA">水晶</s:String>
+    <s:String x:Key="TYPE">类型</s:String>
+    <s:String x:Key="SET">设置</s:String>
 
-    <s:String x:Key="Primary:">Primary:</s:String>
-    <s:String x:Key="Alternatives:">Alternatives:</s:String>
-    <s:String x:Key="Use default font for non-latin languages">Use default font for non-latin languages</s:String>
-    <s:String x:Key="Restart HDT to apply language changes">Restart HDT to apply language changes</s:String>
-    <s:String x:Key="restart hdt">restart hdt</s:String>
+    <s:String x:Key="ALL">所有</s:String>
+    <s:String x:Key="CLASS ONLY">职业</s:String>
+    <s:String x:Key="NEUTRAL ONLY">中立</s:String>
+    <s:String x:Key="BASIC">基础</s:String>
+    <s:String x:Key="EXPERT">专家</s:String>
+    <s:String x:Key="PROMOTION">晋级</s:String>
+    <s:String x:Key="CURSE OF NAXXRAMAS">纳克萨玛斯</s:String>
+    <s:String x:Key="GOBLINS VS GNOMES">地精大战侏儒</s:String>
+    <s:String x:Key="BLACKROCK MOUNTAIN">黑石山的火焰</s:String>
+    <s:String x:Key="THE GRAND TOURNAMENT">冠军的试炼</s:String>
+    <s:String x:Key="LEAGUE OF EXPLORERS">冒险者协会</s:String>
+
+    <s:String x:Key="DECK HISTORY:">历史套牌:</s:String>
+    <s:String x:Key="NEWS:">新闻:</s:String>
+    <s:String x:Key="Previous">上一个</s:String>
+    <s:String x:Key="Next">下一个</s:String>
+    <s:String x:Key="Close">关闭</s:String>
+    
+    <s:String x:Key="Name already exists">名称已存在</s:String>
+    <s:String x:Key="syncing with HearthStats...">通过HearthStats同步...</s:String>
+    <s:String x:Key="this information is based on your last export">信息基于最后的导出</s:String>
+    <s:String x:Key="Instructions can be found in options > importing">描述可以在 选项->导入 中找到</s:String>
+    <s:String x:Key="This does not save the deck.">操作不会保存套牌</s:String>
+    <s:String x:Key="also applies to changes made to decks and new versions">同样应用到套牌和新的版本中</s:String>
+    <s:String x:Key="This will try to delete the selected decks and all matches on HearthStats as well as remove all stored IDs. The local decks will stay untouched!">删除有关数据</s:String>
+    <s:String x:Key="Deck contains cards from the Curse of Naxxramas expansion.">包含纳克萨玛斯扩展包卡牌</s:String>
+    <s:String x:Key="Deck contains cards from the Goblins vs Gnomes expansion.">包含地精大战侏儒扩展包卡牌</s:String>
+    <s:String x:Key="Deck contains cards from the Blackrock Mountain expansion.">包含黑石山的火焰扩展包卡牌包含</s:String>
+    <s:String x:Key="Deck contains cards from the The Grand Tournament expansion.">包含冠军试炼扩展包卡牌</s:String>
+    <s:String x:Key="Deck contains cards from the League of Explorers expansion.">包含冒险者协会扩展包卡牌</s:String>
+
+    <s:String x:Key="Primary:">主要:</s:String>
+    <s:String x:Key="Alternatives:">可选择:</s:String>
+    <s:String x:Key="Use default font for non-latin languages">对非拉丁语言使用默认字体</s:String>
+    <s:String x:Key="Restart HDT to apply language changes">重启HDT以应用修改后的语言</s:String>
+    <s:String x:Key="restart hdt">重启HDT</s:String>
+
+    <!-- options main -->
+    <s:String x:Key="Overlay">主题</s:String>
+    <s:String x:Key="General">通用</s:String>
+    <s:String x:Key="Deck Windows">套牌窗口</s:String>
+    <s:String x:Key="Player">玩家</s:String>
+    <s:String x:Key="Opponent">对手</s:String>
+    <s:String x:Key="Interactivity">交互</s:String>
+    <s:String x:Key="Tracker">追踪</s:String>
+    <!--<s:String x:Key="Stats">统计</s:String>-->
+    <s:String x:Key="Exporting">导出</s:String>
+    <s:String x:Key="Importing">导入</s:String>
+    <s:String x:Key="Plugins">插件</s:String>
+    <s:String x:Key="Hotkeys">热键</s:String>
+    <s:String x:Key="Notifications">通知</s:String>
+    <s:String x:Key="Appearance">外观</s:String>
+    <s:String x:Key="Settings">设置</s:String>
+    <s:String x:Key="Logging">日志</s:String>
+    <s:String x:Key="Backups">备份</s:String>
+
+    <!-- option appearane -->
+    <s:String x:Key="Theme:">主题:</s:String>
+    <s:String x:Key="Accent:">口音:</s:String>
+    <s:String x:Key="Icon set:">图标设置:</s:String>
+    <s:String x:Key="Class colors:">颜色分类:</s:String>
+    <s:String x:Key="Deck layout:">套牌显示:</s:String>
+    <s:String x:Key="Red/green text color in stats summary">摘要使用红/绿</s:String>
+    <s:String x:Key="Use upper case deck names">套牌名称大写</s:String>
+    <s:String x:Key="Use metro animations">使用metro动画</s:String>
+
 
 </ResourceDictionary>
