@@ -128,12 +128,6 @@
     <s:String x:Key="Deck contains cards from the The Grand Tournament expansion.">包含冠军试炼扩展包卡牌</s:String>
     <s:String x:Key="Deck contains cards from the League of Explorers expansion.">包含冒险者协会扩展包卡牌</s:String>
 
-    <s:String x:Key="Primary:">主要:</s:String>
-    <s:String x:Key="Alternatives:">可选择:</s:String>
-    <s:String x:Key="Use default font for non-latin languages">对非拉丁语言使用默认字体</s:String>
-    <s:String x:Key="Restart HDT to apply language changes">重启HDT以应用修改后的语言</s:String>
-    <s:String x:Key="restart hdt">重启HDT</s:String>
-
     <!-- options main -->
     <s:String x:Key="Overlay">主题</s:String>
     <s:String x:Key="General">通用</s:String>
@@ -152,8 +146,63 @@
     <s:String x:Key="Settings">设置</s:String>
     <s:String x:Key="Logging">日志</s:String>
     <s:String x:Key="Backups">备份</s:String>
+    <!-- option overlay deck window-->
+    <s:String x:Key="Topmost">置顶</s:String>
+    <s:String x:Key="Only if Hearthstone is in foreground">只有炉石在前端时</s:String>
+    <s:String x:Key="Card tooltips">卡牌提示</s:String>
+    <s:String x:Key="Timer">时间</s:String>
+    <s:String x:Key="Only if HS in foreground">只有炉石在前端时</s:String>
+    <s:String x:Key="Background:">背景:</s:String>
+    <s:String x:Key="Theme">主题</s:String>
+    <s:String x:Key="Light">轻柔</s:String>
+    <s:String x:Key="Dark">黑暗</s:String>
+    <s:String x:Key="Custom">自定义</s:String>
+    <s:String x:Key="Custom hex:">自定义数值</s:String>
+    <!-- option overlay general -->
+    <s:String x:Key="Hide (completely)">成功后隐藏</s:String>
+    <s:String x:Key="Hide in menu">菜单隐藏</s:String>
+    <s:String x:Key="Hide in spectator">隐藏观众</s:String>
+    <s:String x:Key="Hide if HS in background">炉石在后台隐藏</s:String>
+    <s:String x:Key="Hide decks">隐藏套牌</s:String>
+    <s:String x:Key="Hide timers">隐藏时间</s:String>
+    <s:String x:Key="Hide card-age">隐藏卡牌时间</s:String>
+    <s:String x:Key="Hide card-marks">隐藏卡牌标记</s:String>
+    <s:String x:Key="Hide secrets">隐藏奥秘</s:String>
+    <s:String x:Key="Hide Attack Icon: ">隐藏攻击图标:</s:String>
+    <!--<s:String x:Key="Card tooltips">隐藏工具提示</s:String>-->
+    <s:String x:Key="For secrets only">只有奥秘</s:String>
+    <s:String x:Key="Additional card tooltips">额外卡牌提示</s:String>
+    <s:String x:Key="Card-mark tooltips*">卡牌标记提示</s:String>
+    <s:String x:Key="Automatically gray out secrets">奥秘自动变灰</s:String>
+    <s:String x:Key="Do not reset decks after a game">游戏结束后不重启套牌</s:String>
+    <s:String x:Key="Gold progress always visible (in menu)">进度总是可见(菜单)</s:String>
+    <s:String x:Key="Opacity:">不透明:</s:String>
+    <s:String x:Key="Unlock Overlay">解锁覆盖层</s:String>
+    <s:String x:Key="Move/resize objects:">移动/重设 对象:</s:String>
+    <s:String x:Key="Reset">重置</s:String>
+    <s:String x:Key="Reset positions:">重置位置:</s:String>
+    <!-- option overlay interactivity -->
+    <s:String x:Key="WARNING:">警告</s:String>
+    <s:String x:Key="May cause the cursor to freeze occasionally">可能引起光标不时卡住</s:String>
+    <s:String x:Key="Force on (do not use this unless you need to)">强制打开</s:String>
+    <s:String x:Key="FEATURES:">特性:</s:String>
+    <s:String x:Key="Hide deck when friendslist is open">当好友列表打开隐藏</s:String>
+    <s:String x:Key="Click secrets to gray out">点击奥秘变灰</s:String>
+    <s:String x:Key="NOTE: May not work correctly if options > overlay > general > automatically gray out secrets is enabled.">
+        NOTE: May not work correctly if &quot;options > overlay > general > automatically gray out secrets&quot; is enabled.</s:String>
+    <!-- option overlay opponent -->
+    <s:String x:Key="Use same scaling for player/opponent">玩家/对手使用同样缩放</s:String>
+    <s:String x:Key="Scaling:">缩放:</s:String>
+    <s:String x:Key="Secret scaling:">奥秘缩放:</s:String>
+    <s:String x:Key="Secret opacity:">奥秘不透明度:</s:String>
+    <s:String x:Key="Highlight discarded from deck">从套牌取出时高亮卡牌</s:String>
+    <!-- option overlay palyer -->
+    <s:String x:Key="Highlight cards in hand">高亮手指卡牌</s:String>
+    <s:String x:Key="Highlight last drawn card">高亮最后抓取的卡牌</s:String>
+    <s:String x:Key="Remove cards if count is 0">如果套牌中卡牌数为0移除卡牌</s:String>
+    <s:String x:Key="Include obtained cards">包括获得的卡牌</s:String>
 
-    <!-- option appearane -->
+    <!-- option tracker appearane -->
     <s:String x:Key="Theme:">主题:</s:String>
     <s:String x:Key="Accent:">口音:</s:String>
     <s:String x:Key="Icon set:">图标设置:</s:String>
@@ -162,6 +211,20 @@
     <s:String x:Key="Red/green text color in stats summary">摘要使用红/绿</s:String>
     <s:String x:Key="Use upper case deck names">套牌名称大写</s:String>
     <s:String x:Key="Use metro animations">使用metro动画</s:String>
-
+    <s:String x:Key="Primary:">主要:</s:String>
+    <s:String x:Key="Alternatives:">可选择:</s:String>
+    <s:String x:Key="Use default font for non-latin languages">对非拉丁语言使用默认字体</s:String>
+    <s:String x:Key="Restart HDT to apply language changes">重启HDT以应用修改后的语言</s:String>
+    <s:String x:Key="restart hdt">重启HDT</s:String>
+    <!-- option tracker backups -->
+    <!-- option tracker exporting -->
+    <!-- option tracker general -->
+    <!-- option tracker hotkeys -->
+    <!-- option tracker importing -->
+    <!-- option tracker logging -->
+    <!-- option tracker notification -->
+    <!-- option tracker plugins -->
+    <!-- option tracker settings -->
+    <!-- option tracker stats -->
 
 </ResourceDictionary>

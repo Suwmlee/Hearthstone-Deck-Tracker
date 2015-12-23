@@ -8,43 +8,43 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <GroupBox Header="Player">
+        <GroupBox Header="{DynamicResource Player}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <CheckBox x:Name="CheckboxSameScaling"
-                                  Content="Use same scaling for player/opponent" HorizontalAlignment="Left"
+                                  Content="{DynamicResource Use same scaling for player/opponent}" HorizontalAlignment="Left"
                                   Margin="10,5,0,0" VerticalAlignment="Top" IsChecked="True"
                                   Checked="CheckboxSameScaling_Checked"
                                   Unchecked="CheckboxSameScaling_Unchecked" />
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Scaling:" />
+                        <Label Content="{DynamicResource Scaling:}" />
                         <TextBox Name="TextBoxScaling" PreviewTextInput="TextBoxScaling_OnPreviewTextInput" Text="{Binding PlayerScaling, RelativeSource={RelativeSource AncestorType=overlay:OverlayPlayer}}" DockPanel.Dock="Right" Margin="5,0,0,0" Width="50"/>
                         <Slider x:Name="SliderOverlayPlayerScaling" HorizontalAlignment="Right"
                                             VerticalAlignment="Center" Width="150" Value="{Binding PlayerScaling, RelativeSource={RelativeSource AncestorType=overlay:OverlayPlayer}}"
                                             Minimum="1" SmallChange="1" LargeChange="10" Maximum="200" />
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Opacity:" />
+                        <Label Content="{DynamicResource Opacity:}" />
                         <Slider x:Name="SliderPlayerOpacity" HorizontalAlignment="Right"
                                             VerticalAlignment="Center" Width="205" Value="100"
                                             ValueChanged="SliderPlayerOpacity_ValueChanged" SmallChange="1" LargeChange="10" />
 
                     </DockPanel>
                     <CheckBox x:Name="CheckboxHighlightCardsInHand"
-                                          Content="Highlight cards in hand" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Highlight cards in hand}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHighlightCardsInHand_Checked"
                                           Unchecked="CheckboxHighlightCardsInHand_Unchecked" />
                     <CheckBox x:Name="CheckboxHighlightLastDrawn"
-                                          Content="Highlight last drawn card" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Highlight last drawn card}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHighlightLastDrawn_Checked"
                                           Unchecked="CheckboxHighlightLastDrawn_Unchecked" />
-                    <CheckBox x:Name="CheckboxRemoveCards" Content="Remove cards if count is 0"
+                    <CheckBox x:Name="CheckboxRemoveCards" Content="{DynamicResource Remove cards if count is 0}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxRemoveCards_Checked"
                                           Unchecked="CheckboxRemoveCards_Unchecked" />
-                    <CheckBox x:Name="CheckboxShowPlayerGet" Content="Include obtained cards"
+                    <CheckBox x:Name="CheckboxShowPlayerGet" Content="{DynamicResource Include obtained cards}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxShowPlayerGet_Checked"
                                           Unchecked="CheckboxShowPlayerGet_Unchecked" />

@@ -8,23 +8,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
-        <GroupBox Header="Opponent">
+        <GroupBox Header="{DynamicResource Opponent}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <CheckBox x:Name="CheckboxSameScaling"
-                                  Content="Use same scaling for player/opponent" HorizontalAlignment="Left"
+                                  Content="{DynamicResource Use same scaling for player/opponent}" HorizontalAlignment="Left"
                                   Margin="10,5,0,0" VerticalAlignment="Top" IsChecked="True"
                                   Checked="CheckboxSameScaling_Checked"
                                   Unchecked="CheckboxSameScaling_Unchecked" />
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Scaling:" />
+                        <Label Content="{DynamicResource Scaling:}" />
                         <TextBox Name="TextBoxScaling" PreviewTextInput="TextBoxScaling_OnPreviewTextInput" Text="{Binding OpponentScaling, RelativeSource={RelativeSource AncestorType=overlay:OverlayOpponent}}" DockPanel.Dock="Right" Margin="5,0,0,0" Width="50"/>
                         <Slider x:Name="SliderOverlayOpponentScaling" HorizontalAlignment="Right"
                                             VerticalAlignment="Center" Width="150" Value="{Binding OpponentScaling, RelativeSource={RelativeSource AncestorType=overlay:OverlayOpponent}}"
                                             Minimum="1" SmallChange="1" LargeChange="10" Maximum="200" />
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Opacity:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Opacity:}" HorizontalAlignment="Left"
                                            VerticalAlignment="Top" />
                         <Slider x:Name="SliderOpponentOpacity" HorizontalAlignment="Right"
                                             VerticalAlignment="Center" Width="205" Value="100"
@@ -32,14 +32,14 @@
 
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Secret scaling:" />
+                        <Label Content="{DynamicResource Secret scaling:}" />
                         <TextBox Name="TextBoxSecretScaling" PreviewTextInput="TextBoxScaling_OnPreviewTextInput" Text="{Binding SecretScaling, RelativeSource={RelativeSource AncestorType=overlay:OverlayOpponent}}" DockPanel.Dock="Right" Margin="5,0,0,0" Width="50"/>
                         <Slider x:Name="SliderOverlaySecretScaling" HorizontalAlignment="Right"
                                             VerticalAlignment="Center" Width="150" Value="{Binding SecretScaling, RelativeSource={RelativeSource AncestorType=overlay:OverlayOpponent}}"
                                             Minimum="1" SmallChange="1" LargeChange="10" Maximum="200" />
                     </DockPanel>
                     <DockPanel Margin="10,5,10,0">
-                        <Label Content="Secret opacity:" HorizontalAlignment="Left"
+                        <Label Content="{DynamicResource Secret opacity:}" HorizontalAlignment="Left"
                                            VerticalAlignment="Top" />
                         <Slider x:Name="SliderSecretOpacity" HorizontalAlignment="Right"
                                             VerticalAlignment="Center" Width="205" Value="100"
@@ -47,7 +47,7 @@
 
                     </DockPanel>
                     <CheckBox x:Name="CheckboxHighlightDiscarded"
-                                          Content="Highlight discarded from deck" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Highlight discarded from deck}" HorizontalAlignment="Left"
                                           Margin="10,5,0,10" VerticalAlignment="Top"
                                           Checked="CheckboxHighlightDiscarded_Checked"
                                           Unchecked="CheckboxHighlightDiscarded_Unchecked" />

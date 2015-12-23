@@ -7,23 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <GroupBox Header="Interactivity">
+        <GroupBox Header="{DynamicResource Interactivity}">
             <StackPanel>
-                <Label Content="WARNING:" FontWeight="Bold" Foreground="Red"/>
-                <Label Content="May cause the cursor to freeze occasionally" Margin="0,-10,0,0" Foreground="Red" />
+                <Label Content="{DynamicResource WARNING:}" FontWeight="Bold" Foreground="Red"/>
+                <Label Content="{DynamicResource May cause the cursor to freeze occasionally}" Margin="0,-10,0,0" Foreground="Red" />
                 <controls:ToggleSwitch x:Name="ToggleSwitchExtraFeatures" Margin="10,0,0,0"
                                                    OnLabel="Enabled" OffLabel="Disabled"
                                                    Checked="ToggleSwitchExtraFeatures_Checked"
                                                    Unchecked="ToggleSwitchExtraFeatures_Unchecked" />
-                <CheckBox Name="CheckBoxForceExtraFeatures" Content="Force on (don't use this unless you need to)" Margin="10,0,5,0"
+                <CheckBox Name="CheckBoxForceExtraFeatures" Content="{DynamicResource Force on (do not use this unless you need to)}" Margin="10,0,5,0"
                                       Checked="CheckBoxForceExtraFeatures_OnChecked"
                                       Unchecked="CheckBoxForceExtraFeatures_OnUnchecked" 
                                       IsEnabled="{Binding ElementName=ToggleSwitchExtraFeatures, Path=IsChecked}"/>
                 <Separator Margin="0,20,0,10"/>
-                <Label Content="FEATURES:" FontWeight="Bold"/>
-                <CheckBox Name="CheckBoxFriendslist" Content="Hide deck when friendslist is open" Checked="CheckBoxFriendslist_OnChecked" Unchecked="CheckBoxFriendslist_OnUnchecked" Margin="10,5,0,0" IsEnabled="{Binding ElementName=ToggleSwitchExtraFeatures, Path=IsChecked}"/>
-                <CheckBox Name="CheckBoxSecrets" Content="Click secrets to gray out" Checked="CheckBoxSecrets_OnChecked" Unchecked="CheckBoxSecrets_OnUnchecked" Margin="10,5,0,0" IsEnabled="{Binding ElementName=ToggleSwitchExtraFeatures, Path=IsChecked}"/>
-                <TextBlock Text="NOTE: May not work correctly if &quot;options > overlay > general > automatically gray out secrets&quot; is enabled." TextWrapping="Wrap" FontStyle="Italic" Margin="34,0,0,0"/>
+                <Label Content="{DynamicResource FEATURES:}" FontWeight="Bold"/>
+                <CheckBox Name="CheckBoxFriendslist" Content="{DynamicResource Hide deck when friendslist is open}" Checked="CheckBoxFriendslist_OnChecked" Unchecked="CheckBoxFriendslist_OnUnchecked" Margin="10,5,0,0" IsEnabled="{Binding ElementName=ToggleSwitchExtraFeatures, Path=IsChecked}"/>
+                <CheckBox Name="CheckBoxSecrets" Content="{DynamicResource Click secrets to gray out}" Checked="CheckBoxSecrets_OnChecked" Unchecked="CheckBoxSecrets_OnUnchecked" Margin="10,5,0,0" IsEnabled="{Binding ElementName=ToggleSwitchExtraFeatures, Path=IsChecked}"/>
+                <TextBlock Text="{DynamicResource NOTE: May not work correctly if options > overlay > general > automatically gray out secrets is enabled.}" TextWrapping="Wrap" FontStyle="Italic" Margin="34,0,0,0"/>
             </StackPanel>
         </GroupBox>
     </Grid>
