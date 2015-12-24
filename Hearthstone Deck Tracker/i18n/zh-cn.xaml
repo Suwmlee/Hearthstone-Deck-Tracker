@@ -54,7 +54,7 @@
     <s:String x:Key="_IMPORT">导入</s:String>
     <s:String x:Key="FROM _WEB">从网页</s:String>
     <s:String x:Key="FROM GAME: _ARENA">从游戏中:竞技场</s:String>
-    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏中:人工(测试)</s:String>
+    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏中:构造(测试)</s:String>
     <s:String x:Key="FROM _FILE">从文件</s:String>
     <s:String x:Key="FROM _ID STRING">使用ID</s:String>
     <s:String x:Key="FROM CLIPBOARD: _CARD NAMES">从剪贴板:卡牌名称</s:String>
@@ -143,7 +143,6 @@
     <s:String x:Key="Player:">玩家:</s:String>
     <s:String x:Key="add game">添加游戏</s:String>
     <s:String x:Key="cancel">取消</s:String>
-    <!-- main arenareward -->
     <!-- main debugwindow -->
     <s:String x:Key="Cards">卡牌</s:String>
     <s:String x:Key="Entites">实体</s:String>
@@ -156,8 +155,6 @@
     <s:String x:Key="discard">舍弃</s:String>
     <s:String x:Key="keep">保留</s:String>
     <s:String x:Key="move to other deck">移动到其他套牌</s:String>
-    <!-- main gameresult -->
-    <!-- main loginwindow -->
     <!-- main movegamedialog -->
     <s:String x:Key="MOVE TO SELECTED">移动到所选项</s:String>
     <s:String x:Key="VERSION:">版本:</s:String>
@@ -177,10 +174,39 @@
     <s:String x:Key="Deck title">套牌标题</s:String>
     <!-- main splashscreen -->
     <s:String x:Key="Loading...">载入中...</s:String>
-    <!-- main stats -->
     <!-- main stats new -->
     <s:String x:Key="Move to main window">移动到主窗口</s:String>
     <!-- main timer -->
+
+    <!-- controls decklistview  -->
+    <s:String x:Key="cost">费用</s:String>
+    <s:String x:Key="name">名称</s:String>
+    <!-- controls deckversionchange  -->
+    <s:String x:Key="Hist change">变更</s:String>
+    <!-- controls manacurve  -->
+    <s:String x:Key="MECHANICS">结构</s:String>
+    <s:String x:Key="None">空</s:String>
+    <!-- controls deckpicker   -->
+    <s:String x:Key="_USE DECK">使用套牌</s:String>
+    <!--<s:String x:Key="EDIT _DECK">悬浮层</s:String>
+    <s:String x:Key="EDIT NA_ME">悬浮层</s:String>
+    <s:String x:Key="EDIT _NOTES">悬浮层</s:String>
+    <s:String x:Key="EDIT _TAGS">悬浮层</s:String>
+    <s:String x:Key="_QUICK SET TAG">悬浮层</s:String>
+    <s:String x:Key="MOVE TO ARENA">悬浮层</s:String>
+    <s:String x:Key="MOVE TO CONSTRUCTED">悬浮层</s:String>
+    <s:String x:Key="SHOW _MISSING CARDS">悬浮层</s:String>
+    <s:String x:Key="_UPDATE (WEB)">悬浮层</s:String>
+    <s:String x:Key="OPEN _WEBSITE">悬浮层</s:String>
+    <s:String x:Key="OPEN _HEARTHSTATS">悬浮层</s:String>
+    <s:String x:Key="_ARCHIVE">悬浮层</s:String>
+    <s:String x:Key="UN_ARCHIVE">悬浮层</s:String>
+    <s:String x:Key="DELETE">悬浮层</s:String>
+    <s:String x:Key="CLONE">悬浮层</s:String>
+    <s:String x:Key="ENTIRE DECK">悬浮层</s:String>
+    <s:String x:Key="SELECTED VERSION">悬浮层</s:String>-->
+    <s:String x:Key="ACTIVE DECK: ">激活套牌</s:String>
+    <s:String x:Key="NONE  -  CLICK USE ON DECK TO ACTIVATE">NONE   -   CLICK &quot;USE&quot; ON DECK TO ACTIVATE</s:String>
 
     <!-- options main -->
     <s:String x:Key="Overlay">悬浮层</s:String>
@@ -392,4 +418,12 @@
     <s:String x:Key="check for duplicate matches">检测重复游戏对局</s:String>
     <s:String x:Key="check for wrong opp. classes/names">检测错误的 分类/名称</s:String>
 
+    <!-- cs code translate -->
+    <!-- cs code translate -->
+    <!-- cs code translate -->
+    <s:String x:Key="Hearthstone install directory not found">未找到炉石传说程序</s:String>
+    <s:String x:Key="Hearthstone Deck Tracker will not work properly if Hearthstone is not installed on your machine (obviously).">如果未安装炉石传说程序,HDT不会正确运行</s:String>
+    <s:String x:Key="Ok">确认</s:String>
+    <s:String x:Key="Select manually">手动选择</s:String>
+    
 </ResourceDictionary>

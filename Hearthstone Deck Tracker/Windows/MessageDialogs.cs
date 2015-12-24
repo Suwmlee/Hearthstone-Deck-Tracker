@@ -118,11 +118,15 @@ namespace Hearthstone_Deck_Tracker.Windows
 
 		public static async Task ShowHsNotInstalledMessage(this MetroWindow window)
 		{
-			var settings = new Settings {AffirmativeButtonText = "Ok", NegativeButtonText = "Select manually"};
+            string msgok = (string)Application.Current.FindResource("Ok");
+            string msgmanua = (string)Application.Current.FindResource("Select manually");
+            string msgtitle = (string)Application.Current.FindResource("Hearthstone install directory not found");
+            string msgcontent = (string)Application.Current.FindResource("Hearthstone Deck Tracker will not work properly if Hearthstone is not installed on your machine (obviously)."); 
+			var settings = new Settings {AffirmativeButtonText = msgok, NegativeButtonText = msgmanua};
 			var result =
 				await
-				window.ShowMessageAsync("Hearthstone install directory not found",
-				                        "Hearthstone Deck Tracker will not work properly if Hearthstone is not installed on your machine (obviously).",
+				window.ShowMessageAsync(msgtitle,
+				                        msgcontent,
 				                        MessageDialogStyle.AffirmativeAndNegative, settings);
 			if(result == MessageDialogResult.Negative)
 			{
