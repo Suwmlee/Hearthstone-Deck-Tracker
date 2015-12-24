@@ -38,7 +38,7 @@
     <s:String x:Key="EDIT _TAGS">编辑标签</s:String>
     <s:String x:Key="_QUICK SET TAG">快速设置标签</s:String>
     <s:String x:Key="MOVE TO ARENA">快速设置标签</s:String>
-    <s:String x:Key="MOVE TO CONSTRUCTED">手动构造</s:String>
+    <s:String x:Key="MOVE TO CONSTRUCTED">移动到构造</s:String>
     <s:String x:Key="SHOW _MISSING CARDS">展示错过的卡牌</s:String>
     <s:String x:Key="_UPDATE (WEB)">更新(网页)</s:String>
     <s:String x:Key="OPEN _WEBSITE">打开网站</s:String>
@@ -98,6 +98,7 @@
     <s:String x:Key="SET">设置</s:String>
 
     <s:String x:Key="ALL">所有</s:String>
+    <s:String x:Key="CONSTRUCTED">构造</s:String>
     <s:String x:Key="CLASS ONLY">职业</s:String>
     <s:String x:Key="NEUTRAL ONLY">中立</s:String>
     <s:String x:Key="BASIC">基础</s:String>
@@ -114,7 +115,7 @@
     <s:String x:Key="Previous">上一个</s:String>
     <s:String x:Key="Next">下一个</s:String>
     <s:String x:Key="Close">关闭</s:String>
-    
+
     <s:String x:Key="Name already exists">名称已存在</s:String>
     <s:String x:Key="syncing with HearthStats...">通过HearthStats同步...</s:String>
     <s:String x:Key="this information is based on your last export">信息基于最后的输出</s:String>
@@ -128,12 +129,65 @@
     <s:String x:Key="Deck contains cards from the The Grand Tournament expansion.">包含冠军试炼扩展包卡牌</s:String>
     <s:String x:Key="Deck contains cards from the League of Explorers expansion.">包含冒险者协会扩展包卡牌</s:String>
 
+    <!-- main addgamedialog -->
+    <s:String x:Key="Result:">结果:</s:String>
+    <!--<s:String x:Key="Mode:">主题</s:String>-->
+    <s:String x:Key="Region:">地区:</s:String>
+    <s:String x:Key="Rank:">等级:</s:String>
+    <s:String x:Key="Coin:">硬币:</s:String>
+    <s:String x:Key="Conceded:">认输:</s:String>
+    <s:String x:Key="Turns:">回合:</s:String>
+    <s:String x:Key="Duration (min):">持续时间(最少)</s:String>
+    <s:String x:Key="Note:">备注:</s:String>
+    <s:String x:Key="Opponent:">对手:</s:String>
+    <s:String x:Key="Player:">玩家:</s:String>
+    <s:String x:Key="add game">添加游戏</s:String>
+    <s:String x:Key="cancel">取消</s:String>
+    <!-- main arenareward -->
+    <!-- main debugwindow -->
+    <s:String x:Key="Cards">卡牌</s:String>
+    <s:String x:Key="Entites">实体</s:String>
+    <s:String x:Key="Damage">伤害</s:String>
+    <!-- main deckselection -->
+    <s:String x:Key="Select your deck">选择你的卡牌</s:String>
+    <!-- main discardgame -->
+    <s:String x:Key="[GAMEINFO]">[游戏信息]</s:String>
+    <s:String x:Key="cards played do not match the selected deck">卡牌与选择的套牌不匹配</s:String>
+    <s:String x:Key="discard">舍弃</s:String>
+    <s:String x:Key="keep">保留</s:String>
+    <s:String x:Key="move to other deck">移动到其他套牌</s:String>
+    <!-- main gameresult -->
+    <!-- main loginwindow -->
+    <!-- main movegamedialog -->
+    <s:String x:Key="MOVE TO SELECTED">移动到所选项</s:String>
+    <s:String x:Key="VERSION:">版本:</s:String>
+    <!-- main notedialog -->
+    <s:String x:Key="Set">设置</s:String>
+    <s:String x:Key="Save with ENTER">ENTER键保存</s:String>
+    <!-- main opponent -->
+    <s:String x:Key="Opponent">对手</s:String>
+    <!-- main overlay -->
+    <s:String x:Key="HearthstoneOverlay">炉石悬浮层</s:String>
+    <s:String x:Key="asd">asd</s:String>
+    <s:String x:Key="Test">测试</s:String>
+    <s:String x:Key="Warning!">警告!</s:String>
+    <s:String x:Key="Cards not found in deck:">未在套牌中发现的卡牌:</s:String>
+    <s:String x:Key="Please close your friendslist so HDT can detect the gamemode/rank.">请关闭好友列表使HDT可以检测到游戏模式</s:String>
+    <!-- main player -->
+    <s:String x:Key="Deck title">套牌标题</s:String>
+    <!-- main splashscreen -->
+    <s:String x:Key="Loading...">载入中...</s:String>
+    <!-- main stats -->
+    <!-- main stats new -->
+    <s:String x:Key="Move to main window">移动到主窗口</s:String>
+    <!-- main timer -->
+
     <!-- options main -->
-    <s:String x:Key="Overlay">主题</s:String>
+    <s:String x:Key="Overlay">悬浮层</s:String>
     <s:String x:Key="General">通用</s:String>
     <s:String x:Key="Deck Windows">套牌窗口</s:String>
     <s:String x:Key="Player">玩家</s:String>
-    <s:String x:Key="Opponent">对手</s:String>
+    <!--<s:String x:Key="Opponent">对手</s:String>-->
     <s:String x:Key="Interactivity">交互</s:String>
     <s:String x:Key="Tracker">追踪</s:String>
     <!--<s:String x:Key="Stats">统计</s:String>-->
@@ -159,17 +213,16 @@
     <s:String x:Key="Custom">自定义</s:String>
     <s:String x:Key="Custom hex:">自定义数值</s:String>
     <!-- option overlay general -->
-    <s:String x:Key="Hide (completely)">成功后隐藏</s:String>
-    <s:String x:Key="Hide in menu">菜单隐藏</s:String>
-    <s:String x:Key="Hide in spectator">隐藏观众</s:String>
+    <s:String x:Key="Hide (completely)">游戏启动成功后隐藏</s:String>
+    <s:String x:Key="Hide in menu">游戏在主界面时隐藏</s:String>
+    <s:String x:Key="Hide in spectator">在观战模式隐藏</s:String>
     <s:String x:Key="Hide if HS in background">炉石在后台隐藏</s:String>
     <s:String x:Key="Hide decks">隐藏套牌</s:String>
     <s:String x:Key="Hide timers">隐藏时间</s:String>
     <s:String x:Key="Hide card-age">隐藏卡牌时间</s:String>
     <s:String x:Key="Hide card-marks">隐藏卡牌标记</s:String>
     <s:String x:Key="Hide secrets">隐藏奥秘</s:String>
-    <s:String x:Key="Hide Attack Icon: ">隐藏攻击图标:</s:String>
-    <!--<s:String x:Key="Card tooltips">隐藏工具提示</s:String>-->
+    <s:String x:Key="Hide Attack Icon:">隐藏攻击图标:</s:String>
     <s:String x:Key="For secrets only">只有奥秘</s:String>
     <s:String x:Key="Additional card tooltips">额外卡牌提示</s:String>
     <s:String x:Key="Card-mark tooltips*">卡牌标记提示</s:String>
@@ -177,7 +230,7 @@
     <s:String x:Key="Do not reset decks after a game">游戏结束后不重启套牌</s:String>
     <s:String x:Key="Gold progress always visible (in menu)">进度总是可见(菜单)</s:String>
     <s:String x:Key="Opacity:">不透明:</s:String>
-    <s:String x:Key="Unlock Overlay">解锁覆盖层</s:String>
+    <s:String x:Key="Unlock Overlay">解锁悬浮层</s:String>
     <s:String x:Key="Move/resize objects:">移动/重设 对象:</s:String>
     <s:String x:Key="Reset">重置</s:String>
     <s:String x:Key="Reset positions:">重置位置:</s:String>
@@ -215,6 +268,7 @@
     <s:String x:Key="Alternatives:">可选择:</s:String>
     <s:String x:Key="Use default font for non-latin languages">对非拉丁语言使用默认字体</s:String>
     <s:String x:Key="Restart HDT to apply language changes">重启HDT以应用修改后的语言</s:String>
+    <s:String x:Key="Card Language">卡牌语言</s:String>
     <s:String x:Key="restart hdt">重启HDT</s:String>
     <!-- option tracker backups -->
     <s:String x:Key="Restore selected">还原选择项</s:String>
@@ -225,8 +279,8 @@
     <!-- option tracker exporting -->
     <s:String x:Key="Exporting to Hearthstone">输出到炉石</s:String>
     <s:String x:Key="Speed:">速度:</s:String>
-    <s:String x:Key="Wait">等待</s:String>
-    <s:String x:Key="seconds before starting">开始前秒钟</s:String>
+    <s:String x:Key="Wait">开始前等待</s:String>
+    <s:String x:Key="seconds before starting">秒</s:String>
     <s:String x:Key="Prioritize golden cards">重点选择金色卡牌</s:String>
     <s:String x:Key="Set deck name">设置套牌名称</s:String>
     <s:String x:Key="Include version number in name">在名称中包含版本</s:String>
@@ -247,7 +301,6 @@
     <s:String x:Key="Show note dialog after game">游戏结束展示备注对话框</s:String>
     <s:String x:Key="Wait until back in menu">等待直到回到菜单</s:String>
     <s:String x:Key="Show arena reward dialog when run is over">当竞技场结束显示奖励对话框</s:String>
-    <!--<s:String x:Key="Card tooltips">HDT</s:String>-->
     <s:String x:Key="Rarity-colored card frames">稀有卡牌框架</s:String>
     <s:String x:Key="Rarity-colored card gems">稀有卡牌宝石</s:String>
     <s:String x:Key="Show Manacurve">显示水晶曲线</s:String>
@@ -273,70 +326,70 @@
     <s:String x:Key="Tag decks on import">导入套牌标签</s:String>
     <s:String x:Key="Auto save deck on import">当导入时自动保存</s:String>
     <s:String x:Key="Auto import via NetDeck">自动导入网络套牌</s:String>
-    <s:String x:Key="SHOW CONSTRUCTED IMPORTING HOW-TO">显示如何手动导入</s:String>
-    <s:String x:Key="SET UP CONSTRUCTED IMPORTING">设置手动导入</s:String>
-    <s:String x:Key="ACTIVATE HDT PROTOCOL">HDT</s:String>
+    <s:String x:Key="SHOW CONSTRUCTED IMPORTING HOW-TO">显示如何导入构造</s:String>
+    <s:String x:Key="SET UP CONSTRUCTED IMPORTING">设置构造导入</s:String>
+    <s:String x:Key="ACTIVATE HDT PROTOCOL">激活HDT协议</s:String>
     <!-- option tracker logging -->
-    <s:String x:Key="Save to file">HDT</s:String>
-    <s:String x:Key="Clear">HDT</s:String>
-    <s:String x:Key="Log level:">HDT</s:String>
-    <s:String x:Key="DebugWindow">HDT</s:String>
+    <s:String x:Key="Save to file">保存文件</s:String>
+    <s:String x:Key="Clear">清除</s:String>
+    <s:String x:Key="Log level:">日志等级:</s:String>
+    <s:String x:Key="DebugWindow">调试窗口</s:String>
     <!-- option tracker notification -->
     <!--<s:String x:Key="Notifications">HDT</s:String>-->
-    <s:String x:Key="Show notifications">HDT</s:String>
-    <s:String x:Key="Game result">HDT</s:String>
-    <s:String x:Key="Only show for unexpected casual games">HDT</s:String>
-    <s:String x:Key="Show for">HDT</s:String>
-    <s:String x:Key="seconds.">HDT</s:String>
+    <s:String x:Key="Show notifications">显示通知</s:String>
+    <s:String x:Key="Game result">游戏结果</s:String>
+    <s:String x:Key="Only show for unexpected casual games">当未知游戏时显示</s:String>
+    <s:String x:Key="Show for">显示</s:String>
+    <s:String x:Key="seconds.">秒.</s:String>
     <!-- option tracker plugins -->
-    <s:String x:Key="Available Plugins">HDT</s:String>
-    <s:String x:Key="Plugins Folder">HDT</s:String>
+    <s:String x:Key="Available Plugins">可用插件</s:String>
+    <s:String x:Key="Plugins Folder">插件文件</s:String>
     <!-- option tracker settings -->
-    <s:String x:Key="Google Analytics">HDT</s:String>
-    <s:String x:Key="Submit anonymous data">HDT</s:String>
+    <s:String x:Key="Google Analytics">Google Analytics</s:String>
+    <s:String x:Key="Submit anonymous data">提交匿名数据</s:String>
     <s:String x:Key="This only tracks two things: App starts, where the version number and login mode is submitted, as well as information about crashes.">HDT</s:String>
-    <s:String x:Key="Key on game start:">HDT</s:String>
-    <s:String x:Key="Key on game end:">HDT</s:String>
-    <s:String x:Key="Save config in AppData">HDT</s:String>
-    <s:String x:Key="Save data in AppData">HDT</s:String>
-    <s:String x:Key="Minimize to tray">HDT</s:String>
-    <s:String x:Key="Start minimized">HDT</s:String>
-    <s:String x:Key="Start with windows">HDT</s:String>
-    <s:String x:Key="Show login dialog">HDT</s:String>
-    <s:String x:Key="Show the loading splash screen">HDT</s:String>
-    <s:String x:Key="Close with Hearthstone">HDT</s:String>
-    <s:String x:Key="Check for updates">HDT</s:String>
-    <s:String x:Key="Check for BETA updates">HDT</s:String>
-    <s:String x:Key="Advanced window search">HDT</s:String>
-    <s:String x:Key="Show Log">HDT</s:String>
-    <s:String x:Key="set hearthstone path">HDT</s:String>
-    <s:String x:Key="open appdata folder">HDT</s:String>
-    <s:String x:Key="set data path">HDT</s:String>
+    <s:String x:Key="Key on game start:">开始游戏按键:</s:String>
+    <s:String x:Key="Key on game end:">游戏结束按键:</s:String>
+    <s:String x:Key="Save config in AppData">保存配置到AppData</s:String>
+    <s:String x:Key="Save data in AppData">保存数据AppData</s:String>
+    <s:String x:Key="Minimize to tray">尝试最小化</s:String>
+    <s:String x:Key="Start minimized">开始最小化</s:String>
+    <s:String x:Key="Start with windows">登录时显示窗口</s:String>
+    <s:String x:Key="Show login dialog">显示登录窗口</s:String>
+    <s:String x:Key="Show the loading splash screen">显示启动动画</s:String>
+    <s:String x:Key="Close with Hearthstone">关闭炉石</s:String>
+    <s:String x:Key="Check for updates">检查更新</s:String>
+    <s:String x:Key="Check for BETA updates">检查beta更新</s:String>
+    <s:String x:Key="Advanced window search">高级窗口查询</s:String>
+    <s:String x:Key="Show Log">显示日志</s:String>
+    <s:String x:Key="set hearthstone path">设置炉石传说路径</s:String>
+    <s:String x:Key="open appdata folder">打开AppData文件</s:String>
+    <s:String x:Key="set data path">设置数据路径</s:String>
     <!--<s:String x:Key="restart hdt">HDT</s:String>-->
     <!-- option tracker stats -->
-    <s:String x:Key="RECORD FOR">HDT</s:String>
-    <s:String x:Key="Ranked">HDT</s:String>
+    <s:String x:Key="RECORD FOR">记录</s:String>
+    <s:String x:Key="Ranked">等级</s:String>
     <!--<s:String x:Key="Arena">HDT</s:String>-->
-    <s:String x:Key="Brawl">HDT</s:String>
-    <s:String x:Key="Casual">HDT</s:String>
-    <s:String x:Key="Friendly">HDT</s:String>
-    <s:String x:Key="Adventure / Practice">HDT</s:String>
-    <s:String x:Key="Spectator">HDT</s:String>
-    <s:String x:Key="Other">HDT</s:String>
-    <s:String x:Key="Display">HDT</s:String>
-    <s:String x:Key="(on decks and in overlay)">HDT</s:String>
-    <s:String x:Key="Version(s):">HDT</s:String>
-    <s:String x:Key="Mode:">HDT</s:String>
-    <s:String x:Key="Timeframe:">HDT</s:String>
-    <s:String x:Key="Since:">HDT</s:String>
-    <s:String x:Key="Discard game if deck does not match cards">HDT</s:String>
-    <s:String x:Key="Ask before discarding">HDT</s:String>
-    <s:String x:Key="Discard games with zero turns">HDT</s:String>
-    <s:String x:Key="Record Replays">HDT</s:String>
-    <s:String x:Key="Save original HS log into replay">HDT</s:String>
-    <s:String x:Key="Keep stats when deleting a deck">HDT</s:String>
-    <s:String x:Key="Show deck stats in separate window">HDT</s:String>
-    <s:String x:Key="check for duplicate matches">HDT</s:String>
-    <s:String x:Key="check for wrong opp. classes/names">HDT</s:String>
+    <s:String x:Key="Brawl">乱斗</s:String>
+    <s:String x:Key="Casual">休闲</s:String>
+    <s:String x:Key="Friendly">好友对战</s:String>
+    <s:String x:Key="Adventure / Practice">冒险/练习</s:String>
+    <s:String x:Key="Spectator">观战</s:String>
+    <s:String x:Key="Other">其他</s:String>
+    <s:String x:Key="Display">显示</s:String>
+    <s:String x:Key="(on decks and in overlay)">(套牌和悬浮窗口)</s:String>
+    <s:String x:Key="Version(s):">版本</s:String>
+    <s:String x:Key="Mode:">模块:</s:String>
+    <s:String x:Key="Timeframe:">时间模块:</s:String>
+    <s:String x:Key="Since:">从:</s:String>
+    <s:String x:Key="Discard game if deck does not match cards">如果套牌不符合舍弃</s:String>
+    <s:String x:Key="Ask before discarding">在舍弃时询问</s:String>
+    <s:String x:Key="Discard games with zero turns">0回合时舍弃游戏</s:String>
+    <s:String x:Key="Record Replays">记录游戏</s:String>
+    <s:String x:Key="Save original HS log into replay">复盘时保存原始日志</s:String>
+    <s:String x:Key="Keep stats when deleting a deck">当删除套牌时保持统计</s:String>
+    <s:String x:Key="Show deck stats in separate window">分开窗口显示套牌统计</s:String>
+    <s:String x:Key="check for duplicate matches">检测重复游戏对局</s:String>
+    <s:String x:Key="check for wrong opp. classes/names">检测错误的 分类/名称</s:String>
 
 </ResourceDictionary>

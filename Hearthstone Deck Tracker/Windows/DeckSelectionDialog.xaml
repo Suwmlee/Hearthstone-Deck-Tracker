@@ -14,7 +14,7 @@
                 </Style>
             </ListView.Resources>
         </ListView>
-        <Label Content="Select your deck" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"
+        <Label Content="{DynamicResource Select your deck}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"
                FontWeight="Bold" Margin="10,0,0,0" />
     </Grid>
 </controls:MetroWindow>

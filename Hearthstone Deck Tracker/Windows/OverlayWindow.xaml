@@ -21,11 +21,11 @@
             <ScrollViewer x:Name="DebugViewer" Height="100" Width="400" Canvas.Left="200" Visibility="Hidden"
                           Background="Beige" Foreground="Aqua" Opacity="75"
                           VerticalScrollBarVisibility="Visible">
-                <TextBox x:Name="LblDebugLog" Text="Test" TextWrapping="Wrap" FontSize="14" Foreground="Aqua" />
+                <TextBox x:Name="LblDebugLog" Text="{DynamicResource Test}" TextWrapping="Wrap" FontSize="14" Foreground="Aqua" />
             </ScrollViewer>
 
             <StackPanel Name="StackPanelPlayer" Canvas.Left="604" Canvas.Top="203" Width="218">
-                <local:HearthstoneTextBlock x:Name="LblDeckTitle" FontSize="16" Text="Deck title" />
+                <local:HearthstoneTextBlock x:Name="LblDeckTitle" FontSize="16" Text="{DynamicResource Deck title}" />
                 <local:HearthstoneTextBlock x:Name="LblWins" FontSize="16" Text="0 - 0 (0%)" />
                 <controls:DeckListView x:Name="ListViewPlayer" Height="auto" Canvas.Left="350" Canvas.Top="147"
                                     Width="218" Background="{x:Null}" Foreground="White" FontWeight="Bold"
@@ -59,7 +59,7 @@
                     <local:HearthstoneTextBlock x:Name="LblDrawChance1" FontSize="18" Text="0%" Canvas.Left="71" Canvas.Top="8" TextAlignment="Right" Width="55" />
                     <local:HearthstoneTextBlock x:Name="LblDrawChance2" FontSize="18" Text="0%" Canvas.Left="149" Canvas.Top="8" TextAlignment="Right" Width="55" />
                 </Canvas>
-                <local:HearthstoneTextBlock x:Name="LblPlayerFatigue" FontSize="14" Text="asd" Margin="4,0,0,0" TextAlignment="Center"/>
+                <local:HearthstoneTextBlock x:Name="LblPlayerFatigue" FontSize="14" Text="{DynamicResource asd}" Margin="4,0,0,0" TextAlignment="Center"/>
 
             </StackPanel>
             <StackPanel Name="StackPanelOpponent" Width="218" Canvas.Top="203" Canvas.Left="10">
@@ -136,13 +136,13 @@
             </Grid>
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Name="StackPanelWarning">
-                    <local:HearthstoneTextBlock Text="Warning!" Margin="3" FontSize="16" Fill="Red"/>
-                    <local:HearthstoneTextBlock x:Name="LblWarning" Text="Cards not found in deck:" Margin="3" FontSize="16" Fill="White"/>
+                    <local:HearthstoneTextBlock Text="{DynamicResource Warning!}" Margin="3" FontSize="16" Fill="Red"/>
+                    <local:HearthstoneTextBlock x:Name="LblWarning" Text="{DynamicResource Cards not found in deck:}" Margin="3" FontSize="16" Fill="White"/>
                     <local:HearthstoneTextBlock x:Name="LblWarningCards" Text="" Margin="3" FontSize="16" Fill="White"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Name="StackPanelFriendsListWarning" Visibility="Collapsed">
-                    <local:HearthstoneTextBlock Text="Warning!" Margin="3" FontSize="16" Fill="Red"/>
-                    <local:HearthstoneTextBlock Text="Please close your friendslist so HDT can detect the gamemode/rank." Margin="3" FontSize="16" Fill="White"/>
+                    <local:HearthstoneTextBlock Text="{DynamicResource Warning!}" Margin="3" FontSize="16" Fill="Red"/>
+                    <local:HearthstoneTextBlock Text="{DynamicResource Please close your friendslist so HDT can detect the gamemode/rank.}" Margin="3" FontSize="16" Fill="White"/>
                 </StackPanel>
             </StackPanel>
             <Grid Name="IconBoardAttackOpponent" Canvas.Top="300" Canvas.Left="300" Width="75" Height="75">

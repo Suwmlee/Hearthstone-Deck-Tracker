@@ -24,7 +24,7 @@
                             <VisualBrush Visual="{StaticResource appbar_arrow_right_left_white}" />
                         </Rectangle.Fill>
                     </Rectangle>
-                    <TextBlock Margin="4" VerticalAlignment="Center" Text="Move to main window" />
+                    <TextBlock Margin="4" VerticalAlignment="Center" Text="{DynamicResource Move to main window}" />
                 </StackPanel>
             </Button>
         </controls:WindowCommands>

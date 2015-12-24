@@ -7,9 +7,9 @@
                       WindowStartupLocation="CenterScreen"
                       BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1">
     <DockPanel>
-        <Button DockPanel.Dock="Bottom" Margin="5,0,5,5" Content="MOVE TO SELECTED" Click="ButtonMoveToSelected_OnClick"/>
+        <Button DockPanel.Dock="Bottom" Margin="5,0,5,5" Content="{DynamicResource MOVE TO SELECTED}" Click="ButtonMoveToSelected_OnClick"/>
         <DockPanel DockPanel.Dock="Bottom" >
-            <Label Content="VERSION:" VerticalAlignment="Center"/>
+            <Label Content="{DynamicResource VERSION:}" VerticalAlignment="Center"/>
             <ComboBox Name="ComboBoxVersions" Margin="5" SelectionChanged="ComboBoxVersions_OnSelectionChanged">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
