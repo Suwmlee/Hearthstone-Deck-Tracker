@@ -11,11 +11,11 @@
     <!-- top -->
     <!-- main -->
     <s:String x:Key="_MAIN">主要</s:String>
-    <s:String x:Key="USE _NO DECK">不使用套牌</s:String>
-    <s:String x:Key="AUTO DECK SELECTION">自动选择套牌</s:String>
+    <s:String x:Key="USE _NO DECK">不使用卡组</s:String>
+    <s:String x:Key="AUTO DECK SELECTION">自动选择卡组</s:String>
     <s:String x:Key="_SORT / FILTER">顺序 / 搜索</s:String>
     <s:String x:Key="_QUICK FILTER">快速搜索</s:String>
-    <s:String x:Key="CLASS CARDS FIRST">推荐套牌</s:String>
+    <s:String x:Key="CLASS CARDS FIRST">推荐卡组</s:String>
     <s:String x:Key="E_XIT">退出</s:String>
 
     <!-- new deck -->
@@ -31,14 +31,14 @@
     <s:String x:Key="_WARRIOR">战士</s:String>
 
     <!-- deck -->
-    <s:String x:Key="_DECK">套牌</s:String>
-    <s:String x:Key="EDIT _DECK">编辑套牌</s:String>
+    <s:String x:Key="_DECK">卡组</s:String>
+    <s:String x:Key="EDIT _DECK">编辑卡组</s:String>
     <s:String x:Key="EDIT NA_ME">编辑名称</s:String>
-    <s:String x:Key="EDIT _NOTES">编辑备注</s:String>
+    <s:String x:Key="EDIT _NOTES">编辑注释</s:String>
     <s:String x:Key="EDIT _TAGS">编辑标签</s:String>
     <s:String x:Key="_QUICK SET TAG">快速设置标签</s:String>
-    <s:String x:Key="MOVE TO ARENA">快速设置标签</s:String>
-    <s:String x:Key="MOVE TO CONSTRUCTED">移动到构造</s:String>
+    <s:String x:Key="MOVE TO ARENA">移动到竞技场</s:String>
+    <s:String x:Key="MOVE TO CONSTRUCTED">移动到构筑</s:String>
     <s:String x:Key="SHOW _MISSING CARDS">展示错过的卡牌</s:String>
     <s:String x:Key="_UPDATE (WEB)">更新(网页)</s:String>
     <s:String x:Key="OPEN _WEBSITE">打开网站</s:String>
@@ -47,16 +47,16 @@
     <s:String x:Key="UN_ARCHIVE">删档</s:String>
     <s:String x:Key="DELETE">删除</s:String>
     <s:String x:Key="CLONE">克隆</s:String>
-    <s:String x:Key="ENTIRE DECK">完整套牌</s:String>
+    <s:String x:Key="ENTIRE DECK">完整卡组</s:String>
     <s:String x:Key="SELECTED VERSION">选择的版本</s:String>
 
     <!-- import deck -->
     <s:String x:Key="_IMPORT">导入</s:String>
     <s:String x:Key="FROM _WEB">从网页</s:String>
     <s:String x:Key="FROM GAME: _ARENA">从游戏中:竞技场</s:String>
-    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏中:构造(测试)</s:String>
+    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏中:构筑(测试)</s:String>
     <s:String x:Key="FROM _FILE">从文件</s:String>
-    <s:String x:Key="FROM _ID STRING">使用ID</s:String>
+    <s:String x:Key="FROM _ID STRING">从ID字符串</s:String>
     <s:String x:Key="FROM CLIPBOARD: _CARD NAMES">从剪贴板:卡牌名称</s:String>
     <s:String x:Key="FROM LAST _GAME">从最后的游戏中</s:String>
 
@@ -96,9 +96,18 @@
     <s:String x:Key="MANA">水晶</s:String>
     <s:String x:Key="TYPE">类型</s:String>
     <s:String x:Key="SET">设置</s:String>
+    <s:String x:Key="Help">帮助</s:String>
+    <s:String x:Key="Opponent Deck">对手卡组</s:String>
+    <s:String x:Key="Sort / Filter Decks">分类/过滤卡组</s:String>
+    <s:String x:Key="Notes">注释</s:String>
+    <s:String x:Key="Set tags">设置标签</s:String>
+    <s:String x:Key="Download decks">下载卡组</s:String>
+    <s:String x:Key="Upload decks">上传卡组</s:String>
+    <s:String x:Key="Errors">错误</s:String>
+    <s:String x:Key="Update Notes">更新注释</s:String>
 
     <s:String x:Key="ALL">所有</s:String>
-    <s:String x:Key="CONSTRUCTED">构造</s:String>
+    <s:String x:Key="CONSTRUCTED">构筑</s:String>
     <s:String x:Key="CLASS ONLY">职业</s:String>
     <s:String x:Key="NEUTRAL ONLY">中立</s:String>
     <s:String x:Key="BASIC">基础</s:String>
@@ -110,7 +119,7 @@
     <s:String x:Key="THE GRAND TOURNAMENT">冠军的试炼</s:String>
     <s:String x:Key="LEAGUE OF EXPLORERS">冒险者协会</s:String>
 
-    <s:String x:Key="DECK HISTORY:">历史套牌:</s:String>
+    <s:String x:Key="DECK HISTORY:">卡组历史:</s:String>
     <s:String x:Key="NEWS:">新闻:</s:String>
     <s:String x:Key="Previous">上一个</s:String>
     <s:String x:Key="Next">下一个</s:String>
@@ -120,8 +129,8 @@
     <s:String x:Key="syncing with HearthStats...">通过HearthStats同步...</s:String>
     <s:String x:Key="this information is based on your last export">信息基于最后的输出</s:String>
     <s:String x:Key="Instructions can be found in options > importing">描述可以在 选项->导入 中找到</s:String>
-    <s:String x:Key="This does not save the deck.">操作不会保存套牌</s:String>
-    <s:String x:Key="also applies to changes made to decks and new versions">同样应用到套牌和新的版本中</s:String>
+    <s:String x:Key="This does not save the deck.">操作不会保存卡组</s:String>
+    <s:String x:Key="also applies to changes made to decks and new versions">同样应用到卡组和新的版本中</s:String>
     <s:String x:Key="This will try to delete the selected decks and all matches on HearthStats as well as remove all stored IDs. The local decks will stay untouched!">删除有关数据</s:String>
     <s:String x:Key="Deck contains cards from the Curse of Naxxramas expansion.">包含纳克萨玛斯扩展包卡牌</s:String>
     <s:String x:Key="Deck contains cards from the Goblins vs Gnomes expansion.">包含地精大战侏儒扩展包卡牌</s:String>
@@ -151,10 +160,10 @@
     <s:String x:Key="Select your deck">选择你的卡牌</s:String>
     <!-- main discardgame -->
     <s:String x:Key="[GAMEINFO]">[游戏信息]</s:String>
-    <s:String x:Key="cards played do not match the selected deck">卡牌与选择的套牌不匹配</s:String>
+    <s:String x:Key="cards played do not match the selected deck">卡牌与选择的卡组不匹配</s:String>
     <s:String x:Key="discard">舍弃</s:String>
     <s:String x:Key="keep">保留</s:String>
-    <s:String x:Key="move to other deck">移动到其他套牌</s:String>
+    <s:String x:Key="move to other deck">移动到其他卡组</s:String>
     <!-- main movegamedialog -->
     <s:String x:Key="MOVE TO SELECTED">移动到所选项</s:String>
     <s:String x:Key="VERSION:">版本:</s:String>
@@ -168,10 +177,10 @@
     <s:String x:Key="asd">asd</s:String>
     <s:String x:Key="Test">测试</s:String>
     <s:String x:Key="Warning!">警告!</s:String>
-    <s:String x:Key="Cards not found in deck:">未在套牌中发现的卡牌:</s:String>
+    <s:String x:Key="Cards not found in deck:">未在卡组中发现的卡牌:</s:String>
     <s:String x:Key="Please close your friendslist so HDT can detect the gamemode/rank.">请关闭好友列表使HDT可以检测到游戏模式</s:String>
     <!-- main player -->
-    <s:String x:Key="Deck title">套牌标题</s:String>
+    <s:String x:Key="Deck title">卡组标题</s:String>
     <!-- main splashscreen -->
     <s:String x:Key="Loading...">载入中...</s:String>
     <!-- main stats new -->
@@ -187,7 +196,7 @@
     <s:String x:Key="MECHANICS">结构</s:String>
     <s:String x:Key="None">空</s:String>
     <!-- controls deckpicker   -->
-    <s:String x:Key="_USE DECK">使用套牌</s:String>
+    <s:String x:Key="_USE DECK">使用卡组</s:String>
     <!--<s:String x:Key="EDIT _DECK">悬浮层</s:String>
     <s:String x:Key="EDIT NA_ME">悬浮层</s:String>
     <s:String x:Key="EDIT _NOTES">悬浮层</s:String>
@@ -205,13 +214,14 @@
     <s:String x:Key="CLONE">悬浮层</s:String>
     <s:String x:Key="ENTIRE DECK">悬浮层</s:String>
     <s:String x:Key="SELECTED VERSION">悬浮层</s:String>-->
-    <s:String x:Key="ACTIVE DECK: ">激活套牌</s:String>
+    <s:String x:Key="ACTIVE DECK: ">激活卡组:</s:String>
     <s:String x:Key="NONE  -  CLICK USE ON DECK TO ACTIVATE">NONE   -   CLICK &quot;USE&quot; ON DECK TO ACTIVATE</s:String>
 
     <!-- options main -->
+    <s:String x:Key="Options">选项</s:String>
     <s:String x:Key="Overlay">悬浮层</s:String>
     <s:String x:Key="General">通用</s:String>
-    <s:String x:Key="Deck Windows">套牌窗口</s:String>
+    <s:String x:Key="Deck Windows">卡组窗口</s:String>
     <s:String x:Key="Player">玩家</s:String>
     <!--<s:String x:Key="Opponent">对手</s:String>-->
     <s:String x:Key="Interactivity">交互</s:String>
@@ -220,7 +230,7 @@
     <s:String x:Key="Exporting">输出</s:String>
     <s:String x:Key="Importing">导入</s:String>
     <s:String x:Key="Plugins">插件</s:String>
-    <s:String x:Key="Hotkeys">热键</s:String>
+    <s:String x:Key="Hotkeys">快捷键</s:String>
     <s:String x:Key="Notifications">通知</s:String>
     <s:String x:Key="Appearance">外观</s:String>
     <s:String x:Key="Settings">设置</s:String>
@@ -239,22 +249,22 @@
     <s:String x:Key="Custom">自定义</s:String>
     <s:String x:Key="Custom hex:">自定义数值</s:String>
     <!-- option overlay general -->
-    <s:String x:Key="Hide (completely)">游戏启动成功后隐藏</s:String>
+    <s:String x:Key="Hide (completely)">隐藏(完全)</s:String>
     <s:String x:Key="Hide in menu">游戏在主界面时隐藏</s:String>
     <s:String x:Key="Hide in spectator">在观战模式隐藏</s:String>
     <s:String x:Key="Hide if HS in background">炉石在后台隐藏</s:String>
-    <s:String x:Key="Hide decks">隐藏套牌</s:String>
-    <s:String x:Key="Hide timers">隐藏时间</s:String>
-    <s:String x:Key="Hide card-age">隐藏卡牌时间</s:String>
+    <s:String x:Key="Hide decks">隐藏卡组</s:String>
+    <s:String x:Key="Hide timers">隐藏计时器</s:String>
+    <s:String x:Key="Hide card-age">隐藏手牌回合数标记</s:String>
     <s:String x:Key="Hide card-marks">隐藏卡牌标记</s:String>
     <s:String x:Key="Hide secrets">隐藏奥秘</s:String>
-    <s:String x:Key="Hide Attack Icon:">隐藏攻击图标:</s:String>
-    <s:String x:Key="For secrets only">只有奥秘</s:String>
-    <s:String x:Key="Additional card tooltips">额外卡牌提示</s:String>
-    <s:String x:Key="Card-mark tooltips*">卡牌标记提示</s:String>
-    <s:String x:Key="Automatically gray out secrets">奥秘自动变灰</s:String>
-    <s:String x:Key="Do not reset decks after a game">游戏结束后不重启套牌</s:String>
-    <s:String x:Key="Gold progress always visible (in menu)">进度总是可见(菜单)</s:String>
+    <s:String x:Key="Hide Attack Icon:">隐藏场攻图标:</s:String>
+    <s:String x:Key="For secrets only">只显示奥秘效果</s:String>
+    <s:String x:Key="Additional card tooltips">额外卡牌效果</s:String>
+    <s:String x:Key="Card-mark tooltips*">卡牌标记说明*</s:String>
+    <s:String x:Key="Automatically gray out secrets">揭示的奥秘自动变灰</s:String>
+    <s:String x:Key="Do not reset decks after a game">游戏结束后不重置卡组</s:String>
+    <s:String x:Key="Gold progress always visible (in menu)">获取金币进度(菜单)</s:String>
     <s:String x:Key="Opacity:">不透明:</s:String>
     <s:String x:Key="Unlock Overlay">解锁悬浮层</s:String>
     <s:String x:Key="Move/resize objects:">移动/重设 对象:</s:String>
@@ -274,11 +284,11 @@
     <s:String x:Key="Scaling:">缩放:</s:String>
     <s:String x:Key="Secret scaling:">奥秘缩放:</s:String>
     <s:String x:Key="Secret opacity:">奥秘不透明度:</s:String>
-    <s:String x:Key="Highlight discarded from deck">从套牌取出时高亮卡牌</s:String>
+    <s:String x:Key="Highlight discarded from deck">从卡组取出时高亮卡牌</s:String>
     <!-- option overlay palyer -->
     <s:String x:Key="Highlight cards in hand">高亮手指卡牌</s:String>
     <s:String x:Key="Highlight last drawn card">高亮最后抓取的卡牌</s:String>
-    <s:String x:Key="Remove cards if count is 0">如果套牌中卡牌数为0移除卡牌</s:String>
+    <s:String x:Key="Remove cards if count is 0">如果卡组中卡牌数为0移除卡牌</s:String>
     <s:String x:Key="Include obtained cards">包括获得的卡牌</s:String>
 
     <!-- option tracker appearane -->
@@ -286,9 +296,9 @@
     <s:String x:Key="Accent:">口音:</s:String>
     <s:String x:Key="Icon set:">图标设置:</s:String>
     <s:String x:Key="Class colors:">颜色分类:</s:String>
-    <s:String x:Key="Deck layout:">套牌显示:</s:String>
+    <s:String x:Key="Deck layout:">卡组显示:</s:String>
     <s:String x:Key="Red/green text color in stats summary">摘要使用红/绿</s:String>
-    <s:String x:Key="Use upper case deck names">套牌名称大写</s:String>
+    <s:String x:Key="Use upper case deck names">卡组名称大写</s:String>
     <s:String x:Key="Use metro animations">使用metro动画</s:String>
     <s:String x:Key="Primary:">主要:</s:String>
     <s:String x:Key="Alternatives:">可选择:</s:String>
@@ -308,7 +318,7 @@
     <s:String x:Key="Wait">开始前等待</s:String>
     <s:String x:Key="seconds before starting">秒</s:String>
     <s:String x:Key="Prioritize golden cards">重点选择金色卡牌</s:String>
-    <s:String x:Key="Set deck name">设置套牌名称</s:String>
+    <s:String x:Key="Set deck name">设置卡组名称</s:String>
     <s:String x:Key="Include version number in name">在名称中包含版本</s:String>
     <s:String x:Key="Auto clear cards">自动清除卡牌</s:String>
     <s:String x:Key="Auto clear filters">自动清除过滤器</s:String>
@@ -318,8 +328,8 @@
     <s:String x:Key="Show dialog before exporting">在输出前显示对话框</s:String>
     <!-- option tracker general -->
     <s:String x:Key="Automatically">自动</s:String>
-    <s:String x:Key="Autoselect deck if only one possible">如果只有一副套牌,自动选择</s:String>
-    <s:String x:Key="Use no deck on Spectator mode">在旁观模式不使用套牌</s:String>
+    <s:String x:Key="Autoselect deck if only one possible">如果只有一副卡组,自动选择</s:String>
+    <s:String x:Key="Use no deck on Spectator mode">在旁观模式不使用卡组</s:String>
     <s:String x:Key="Flash Hearthstone on turn start">回合开始时界面闪光</s:String>
     <s:String x:Key="Popup Hearthstone on turn start">回合开始时弹出炉石</s:String>
     <s:String x:Key="Alert at X seconds">当剩余X秒时警告</s:String>
@@ -330,14 +340,14 @@
     <s:String x:Key="Rarity-colored card frames">稀有卡牌框架</s:String>
     <s:String x:Key="Rarity-colored card gems">稀有卡牌宝石</s:String>
     <s:String x:Key="Show Manacurve">显示水晶曲线</s:String>
-    <s:String x:Key="Full text search in New Deck">在新套牌中全文搜索</s:String>
+    <s:String x:Key="Full text search in New Deck">在新卡组中全文搜索</s:String>
     <!-- option tracker hotkeys -->
     <s:String x:Key="New">新建</s:String>
     <s:String x:Key="Mod">模组</s:String>
     <s:String x:Key="Key">按键</s:String>
     <s:String x:Key="Action">功能</s:String>
     <s:String x:Key="delete seleceted">删除选择项</s:String>
-    <s:String x:Key="Mod:">模组</s:String>
+    <s:String x:Key="Mod:">模块:</s:String>
     <s:String x:Key="Key:">按键</s:String>
     <s:String x:Key="Action:">功能</s:String>
     <s:String x:Key="Add new">添加</s:String>
@@ -346,12 +356,12 @@
     <s:String x:Key="Importing Behaviour:">导入行为:</s:String>
     <s:String x:Key="Use old arena importing method">使用旧竞技场导入方法</s:String>
     <s:String x:Key="SHOW ARENA IMPORTING HOW-TO">显示如何导入竞技场</s:String>
-    <s:String x:Key="Arena deck name template">竞技场套牌名称模板</s:String>
+    <s:String x:Key="Arena deck name template">竞技场卡组名称模板</s:String>
     <s:String x:Key="Preview:">上一个:</s:String>
     <s:String x:Key="EDIT">编辑</s:String>
-    <s:String x:Key="Tag decks on import">导入套牌标签</s:String>
+    <s:String x:Key="Tag decks on import">导入卡组标签</s:String>
     <s:String x:Key="Auto save deck on import">当导入时自动保存</s:String>
-    <s:String x:Key="Auto import via NetDeck">自动导入网络套牌</s:String>
+    <s:String x:Key="Auto import via NetDeck">自动导入网络卡组</s:String>
     <s:String x:Key="SHOW CONSTRUCTED IMPORTING HOW-TO">显示如何导入构造</s:String>
     <s:String x:Key="SET UP CONSTRUCTED IMPORTING">设置构造导入</s:String>
     <s:String x:Key="ACTIVATE HDT PROTOCOL">激活HDT协议</s:String>
@@ -403,18 +413,18 @@
     <s:String x:Key="Spectator">观战</s:String>
     <s:String x:Key="Other">其他</s:String>
     <s:String x:Key="Display">显示</s:String>
-    <s:String x:Key="(on decks and in overlay)">(套牌和悬浮窗口)</s:String>
+    <s:String x:Key="(on decks and in overlay)">(卡组和悬浮窗口)</s:String>
     <s:String x:Key="Version(s):">版本</s:String>
     <s:String x:Key="Mode:">模块:</s:String>
     <s:String x:Key="Timeframe:">时间模块:</s:String>
     <s:String x:Key="Since:">从:</s:String>
-    <s:String x:Key="Discard game if deck does not match cards">如果套牌不符合舍弃</s:String>
+    <s:String x:Key="Discard game if deck does not match cards">如果卡组不符合舍弃</s:String>
     <s:String x:Key="Ask before discarding">在舍弃时询问</s:String>
     <s:String x:Key="Discard games with zero turns">0回合时舍弃游戏</s:String>
     <s:String x:Key="Record Replays">记录游戏</s:String>
     <s:String x:Key="Save original HS log into replay">复盘时保存原始日志</s:String>
-    <s:String x:Key="Keep stats when deleting a deck">当删除套牌时保持统计</s:String>
-    <s:String x:Key="Show deck stats in separate window">分开窗口显示套牌统计</s:String>
+    <s:String x:Key="Keep stats when deleting a deck">当删除卡组时保持统计</s:String>
+    <s:String x:Key="Show deck stats in separate window">分开窗口显示卡组统计</s:String>
     <s:String x:Key="check for duplicate matches">检测重复游戏对局</s:String>
     <s:String x:Key="check for wrong opp. classes/names">检测错误的 分类/名称</s:String>
 

@@ -103,8 +103,8 @@ namespace Hearthstone_Deck_Tracker
 			{
 				if(Helper.UpdateLogConfig && Game.IsRunning)
 				{
-					MainWindow.ShowMessageAsync("Restart Hearthstone",
-					                            "This is either your first time starting HDT or the log.config file has been updated. Please restart Hearthstone, for HDT to work properly.");
+					MainWindow.ShowMessageAsync((string)App.Current.FindResource("Restart Hearthstone"),
+					                            (string)App.Current.FindResource("This is either your first time starting HDT or the log.config file has been updated. Please restart Hearthstone, for HDT to work properly."));
 				}
 				LogReaderManager.Start(Game);
 			}

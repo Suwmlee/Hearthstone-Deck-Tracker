@@ -97,11 +97,11 @@
     </controls:MetroWindow.RightWindowCommands>
     <controls:MetroWindow.Flyouts>
         <controls:FlyoutsControl Margin="{Binding TitleBarMargin, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
-            <controls:Flyout x:Name="FlyoutOptions" Position="Left" Panel.ZIndex="102" Header="Options"
+            <controls:Flyout x:Name="FlyoutOptions" Position="Left" Panel.ZIndex="102" Header="{DynamicResource Options}"
                          Width="515">
                 <flyoutControls:OptionsMain x:Name="Options"/>
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutHelp" Position="Left" Panel.ZIndex="102" Header="Help"
+            <controls:Flyout x:Name="FlyoutHelp" Position="Left" Panel.ZIndex="102" Header="{DynamicResource Help}"
                          Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
                 <local:Help x:Name="Help" />
             </controls:Flyout>
@@ -113,33 +113,33 @@
                          Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
                 <local:GameDetails x:Name="GameDetailsFlyout" />
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutDeck" Position="Left" Panel.ZIndex="102" Width="250" Header="Opponent Deck">
+            <controls:Flyout x:Name="FlyoutDeck" Position="Left" Panel.ZIndex="102" Width="250" Header="{DynamicResource Opponent Deck}">
                     <flyoutControls:DeckPanel x:Name="DeckFlyout" />
              </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutSortFilter" Header="Sort / Filter Decks" Position="Right" Width="245" Height="auto" Panel.ZIndex="100">
+            <controls:Flyout x:Name="FlyoutSortFilter" Header="{DynamicResource Sort / Filter Decks}" Position="Right" Width="245" Height="auto" Panel.ZIndex="100">
                 <local:SortFilterDecks Width="auto" Height="auto" x:Name="SortFilterDecksFlyout" />
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutNotes" Header="Notes" Position="Right" Width="255" Height="auto"
+            <controls:Flyout x:Name="FlyoutNotes" Header="{DynamicResource Notes}" Position="Right" Width="255" Height="auto"
                          Panel.ZIndex="100">
                 <local:DeckNotes Width="auto" Height="auto" x:Name="DeckNotesEditor" Margin="3,0,0,0" />
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutMyDecksSetTags" Header="Set tags" Position="Right" Width="255"
+            <controls:Flyout x:Name="FlyoutMyDecksSetTags" Header="{DynamicResource Set tags}" Position="Right" Width="255"
                          Height="auto" Panel.ZIndex="100">
                 <local:SortFilterDecks Width="auto" Height="auto" x:Name="TagControlEdit" />
             </controls:Flyout>
             <controls:Flyout x:Name="FlyoutHearthStatsLogin" Position="Top" Panel.ZIndex="1" Margin="0,50,0,0" CloseButtonVisibility="Collapsed">
                 <hearthStats:LoginControl x:Name="HearthstatsLoginControl" Margin="0,32,0,32"/>
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutHearthStatsDownload" Header="Download decks" Position="Left" CloseButtonVisibility="Collapsed" Panel.ZIndex="1" Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
+            <controls:Flyout x:Name="FlyoutHearthStatsDownload" Header="{DynamicResource Download decks}" Position="Left" CloseButtonVisibility="Collapsed" Panel.ZIndex="1" Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
                 <hearthStats:DownloadDecksControl x:Name="HearthStatsDownloadDecksControl"/>
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutHearthStatsUpload" Header="Upload decks" Position="Left" CloseButtonVisibility="Collapsed" Panel.ZIndex="1" Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
+            <controls:Flyout x:Name="FlyoutHearthStatsUpload" Header="{DynamicResource Upload decks}" Position="Left" CloseButtonVisibility="Collapsed" Panel.ZIndex="1" Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
                 <hearthStats:UploadDecksControl x:Name="HearthStatsUploadDecksControl"/>
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutErrors" Position="Top" Header="Errors">
+            <controls:Flyout x:Name="FlyoutErrors" Position="Top" Header="{DynamicResource Errors}">
                 <error:ErrorList DataContext="{Binding Errors, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}" VerticalAlignment="Center" MaxHeight="400"/>
             </controls:Flyout>
-            <controls:Flyout x:Name="FlyoutUpdateNotes" Header="Update Notes" CloseButtonVisibility="Collapsed" Position="Left" Panel.ZIndex="1" Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
+            <controls:Flyout x:Name="FlyoutUpdateNotes" Header="{DynamicResource Update Notes}" CloseButtonVisibility="Collapsed" Position="Left" Panel.ZIndex="1" Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
                 <flyoutControls:UpdateNotes x:Name="UpdateNotesControl"/>
             </controls:Flyout>
             <controls:Flyout x:Name="FlyoutNewStats" Position="Left" Panel.ZIndex="1" Width="{Binding Width, RelativeSource={RelativeSource AncestorType=windows:MainWindow}}">
