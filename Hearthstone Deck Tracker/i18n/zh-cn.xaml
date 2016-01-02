@@ -106,8 +106,15 @@
     <s:String x:Key="Errors">错误</s:String>
     <s:String x:Key="Update Notes">更新注释</s:String>
 
+    <!-- deckpicker -->
     <s:String x:Key="ALL">所有</s:String>
+    <s:String x:Key="ARENA">竞技场</s:String>
     <s:String x:Key="CONSTRUCTED">构筑</s:String>
+    <s:String x:Key="Search...">搜索...</s:String>
+    <s:String x:Key="Name...">名字...</s:String>
+    <s:String x:Key="ACTIVE">使用中</s:String>
+    <s:String x:Key="USE">可用</s:String>
+    
     <s:String x:Key="CLASS ONLY">职业</s:String>
     <s:String x:Key="NEUTRAL ONLY">中立</s:String>
     <s:String x:Key="BASIC">基础</s:String>
@@ -140,7 +147,6 @@
 
     <!-- main addgamedialog -->
     <s:String x:Key="Result:">结果:</s:String>
-    <!--<s:String x:Key="Mode:">主题</s:String>-->
     <s:String x:Key="Region:">地区:</s:String>
     <s:String x:Key="Rank:">等级:</s:String>
     <s:String x:Key="Coin:">硬币:</s:String>
@@ -197,24 +203,7 @@
     <s:String x:Key="None">空</s:String>
     <!-- controls deckpicker   -->
     <s:String x:Key="_USE DECK">使用卡组</s:String>
-    <!--<s:String x:Key="EDIT _DECK">悬浮层</s:String>
-    <s:String x:Key="EDIT NA_ME">悬浮层</s:String>
-    <s:String x:Key="EDIT _NOTES">悬浮层</s:String>
-    <s:String x:Key="EDIT _TAGS">悬浮层</s:String>
-    <s:String x:Key="_QUICK SET TAG">悬浮层</s:String>
-    <s:String x:Key="MOVE TO ARENA">悬浮层</s:String>
-    <s:String x:Key="MOVE TO CONSTRUCTED">悬浮层</s:String>
-    <s:String x:Key="SHOW _MISSING CARDS">悬浮层</s:String>
-    <s:String x:Key="_UPDATE (WEB)">悬浮层</s:String>
-    <s:String x:Key="OPEN _WEBSITE">悬浮层</s:String>
-    <s:String x:Key="OPEN _HEARTHSTATS">悬浮层</s:String>
-    <s:String x:Key="_ARCHIVE">悬浮层</s:String>
-    <s:String x:Key="UN_ARCHIVE">悬浮层</s:String>
-    <s:String x:Key="DELETE">悬浮层</s:String>
-    <s:String x:Key="CLONE">悬浮层</s:String>
-    <s:String x:Key="ENTIRE DECK">悬浮层</s:String>
-    <s:String x:Key="SELECTED VERSION">悬浮层</s:String>-->
-    <s:String x:Key="ACTIVE DECK: ">激活卡组:</s:String>
+    <s:String x:Key="ACTIVE DECK">使用的卡组:</s:String>
     <s:String x:Key="NONE  -  CLICK USE ON DECK TO ACTIVATE">NONE   -   CLICK &quot;USE&quot; ON DECK TO ACTIVATE</s:String>
 
     <!-- options main -->
@@ -223,10 +212,8 @@
     <s:String x:Key="General">通用</s:String>
     <s:String x:Key="Deck Windows">卡组窗口</s:String>
     <s:String x:Key="Player">玩家</s:String>
-    <!--<s:String x:Key="Opponent">对手</s:String>-->
     <s:String x:Key="Interactivity">交互</s:String>
     <s:String x:Key="Tracker">追踪</s:String>
-    <!--<s:String x:Key="Stats">统计</s:String>-->
     <s:String x:Key="Exporting">输出</s:String>
     <s:String x:Key="Importing">导入</s:String>
     <s:String x:Key="Plugins">插件</s:String>
@@ -371,7 +358,6 @@
     <s:String x:Key="Log level:">日志等级:</s:String>
     <s:String x:Key="DebugWindow">调试窗口</s:String>
     <!-- option tracker notification -->
-    <!--<s:String x:Key="Notifications">HDT</s:String>-->
     <s:String x:Key="Show notifications">显示通知</s:String>
     <s:String x:Key="Game result">游戏结果</s:String>
     <s:String x:Key="Only show for unexpected casual games">当未知游戏时显示</s:String>
@@ -401,11 +387,9 @@
     <s:String x:Key="set hearthstone path">设置炉石传说路径</s:String>
     <s:String x:Key="open appdata folder">打开AppData文件</s:String>
     <s:String x:Key="set data path">设置数据路径</s:String>
-    <!--<s:String x:Key="restart hdt">HDT</s:String>-->
     <!-- option tracker stats -->
     <s:String x:Key="RECORD FOR">记录</s:String>
     <s:String x:Key="Ranked">等级</s:String>
-    <!--<s:String x:Key="Arena">HDT</s:String>-->
     <s:String x:Key="Brawl">乱斗</s:String>
     <s:String x:Key="Casual">休闲</s:String>
     <s:String x:Key="Friendly">好友对战</s:String>
@@ -428,7 +412,56 @@
     <s:String x:Key="check for duplicate matches">检测重复游戏对局</s:String>
     <s:String x:Key="check for wrong opp. classes/names">检测错误的 分类/名称</s:String>
 
+    <!--  where -->
+    <s:String x:Key="Weapons: 0">武器: 0</s:String>
+    <s:String x:Key="Weapons: ">武器</s:String>
+    <s:String x:Key="Spells: 0">法术: 0</s:String>
+    <s:String x:Key="Spells: ">法术: </s:String>
+    <s:String x:Key="Minions: 0">随从: 0</s:String>
+    <s:String x:Key="Minions: ">随从: </s:String>
+    <s:String x:Key="Dust">尘</s:String>
+    <s:String x:Key="Gold">金币</s:String>
+    <s:String x:Key="Golden">金色的</s:String>
+    <s:String x:Key="Money">金钱</s:String>
+    <s:String x:Key="Save">保存</s:String>
+    <s:String x:Key="Show automatically">自动显示</s:String>
+    <s:String x:Key="Packs">保存</s:String>
+    <s:String x:Key="Payment method">保存</s:String>
+    <s:String x:Key="MENU">菜单</s:String>
+    <s:String x:Key="Arena Runs">保存</s:String>
+    <s:String x:Key="Summary">保存</s:String>
+    <s:String x:Key="Runs   matches"> 开始  匹配</s:String>
+    <s:String x:Key="Advanced charts">保存</s:String>
+    <s:String x:Key="[more coming soon]">保存</s:String>
+    <s:String x:Key="Constructed">保存</s:String>
+    <s:String x:Key="[coming soon]">保存</s:String>
+    <s:String x:Key="Filters">保存</s:String>
+    <s:String x:Key="Time:">保存</s:String>
+    <s:String x:Key="Start">保存</s:String>
+    <s:String x:Key="End">保存</s:String>
+    <s:String x:Key="Class:">保存</s:String>
+    <s:String x:Key="Archived:">保存</s:String>
+    <s:String x:Key="Include">保存</s:String>
+    <s:String x:Key="HIDE">隐藏</s:String>
+    
+    
     <!-- cs code translate -->
+    <s:String x:Key="Battlecry">战吼</s:String>
+    <s:String x:Key="Charge">冲锋</s:String>
+    <s:String x:Key="Combo">连击</s:String>
+    <s:String x:Key="Deathrattle">嘲讽</s:String>
+    <s:String x:Key="Divine Shield">圣盾</s:String>
+    <s:String x:Key="Freeze">冰冻</s:String>
+    <s:String x:Key="Inspire">激励</s:String>
+    <s:String x:Key="Secret">奥秘</s:String>
+    <s:String x:Key="Spellpower">法强</s:String>
+    <s:String x:Key="Taunt">嘲讽</s:String>
+    <s:String x:Key="Windfury">风怒</s:String>
+    
+    <s:String x:Key="HEALTH">生命值</s:String>
+    <s:String x:Key="ATTACK">攻击力</s:String>
+    <s:String x:Key="OVERLOAD">超载</s:String>
+		
     <!-- cs code translate -->
     <!-- cs code translate -->
     <s:String x:Key="Hearthstone install directory not found">未找到炉石传说程序</s:String>

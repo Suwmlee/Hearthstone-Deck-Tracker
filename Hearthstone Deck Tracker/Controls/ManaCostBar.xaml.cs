@@ -37,9 +37,9 @@ namespace Hearthstone_Deck_Tracker
 
 		public void SetTooltipValues(int weapons, int spells, int minions)
 		{
-			McbToolTip.TextblockWeapons.Text = "Weapons: " + weapons;
-			McbToolTip.TextblockSpells.Text = "Spells: " + spells;
-			McbToolTip.TextblockMinions.Text = "Minions: " + minions;
+			McbToolTip.TextblockWeapons.Text =(string)App.Current.FindResource("Weapons: ") + weapons;
+			McbToolTip.TextblockSpells.Text = (string)App.Current.FindResource("Spells: ") + spells;
+			McbToolTip.TextblockMinions.Text = (string)App.Current.FindResource("Minions: ") + minions;
 		}
 
 		public void SetValues(double weapons, double spells, double minions, int count)

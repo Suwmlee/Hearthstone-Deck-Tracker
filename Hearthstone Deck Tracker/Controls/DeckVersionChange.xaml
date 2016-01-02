@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel Orientation="Vertical">
-        <TextBlock x:Name="Label" Text="Hist change" FontSize="12" VerticalAlignment="Center" TextAlignment="Center" FontWeight="Medium"/>
+        <TextBlock x:Name="Label" Text="{DynamicResource Hist change}" FontSize="12" VerticalAlignment="Center" TextAlignment="Center" FontWeight="Medium"/>
         <ListView x:Name="ListViewDeck" Grid.Row="0"
                                     ItemsSource="{Binding}"
                                     Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"

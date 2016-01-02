@@ -11,7 +11,7 @@
         <Border
             Visibility="{Binding VisibilitySearchBar, RelativeSource={RelativeSource AncestorType=deckPicker:DeckPicker}}"
             BorderThickness="1" DockPanel.Dock="Top" Margin="0,0,0,2" BorderBrush="{DynamicResource TextBrush}">
-            <TextBox Name="TextBoxSearchBar" controls1:TextBoxHelper.Watermark="Search..."
+            <TextBox Name="TextBoxSearchBar" controls1:TextBoxHelper.Watermark="{DynamicResource Search...}"
                      controls1:TextBoxHelper.IsWaitingForData="True" PreviewKeyDown="TextBoxSearchBar_OnPreviewKeyDown" />
         </Border>
         <Border BorderThickness="1"
@@ -84,7 +84,7 @@
     <Border BorderThickness="1" DockPanel.Dock="Bottom" Margin="0,2,0,0" BorderBrush="{DynamicResource TextBrush}"
             PreviewMouseDown="ActiveDeckPanel_OnPreviewMouseDown" Height="26">
         <DockPanel>
-            <TextBlock Name="TextBlockLabelActiveDeck" Text="ACTIVE DECK: " FontWeight="SemiBold" FontSize="14"
+            <TextBlock Name="TextBlockLabelActiveDeck" Text="{DynamicResource ACTIVE DECK}" FontWeight="SemiBold" FontSize="14"
                        VerticalAlignment="Center" Margin="5,0,0,0" DockPanel.Dock="Left" />
             <Image
                 Source="{Binding ActiveDeck.ClassImage, RelativeSource={RelativeSource AncestorType=deckPicker:DeckPicker}}"
@@ -116,36 +116,36 @@
               SelectionMode="Extended" BorderThickness="1" MouseDoubleClick="ListViewDecks_OnMouseDoubleClick">
         <ListView.ContextMenu>
             <ContextMenu Opened="ContextMenu_OnOpened">
-                <MenuItem Name="MenuItemUseDeck" Header="_USE DECK" Click="BtnUseDeck_Click"/>
+                <MenuItem Name="MenuItemUseDeck" Header="{DynamicResource _USE DECK}" Click="BtnUseDeck_Click"/>
                 <Separator Name="SeparatorUseDeck" />
-                <MenuItem Header="EDIT _DECK" Click="BtnEditDeck_Click" />
-                <MenuItem Header="EDIT NA_ME" Click="BtnName_Click" />
-                <MenuItem Header="EDIT _NOTES" Click="BtnNotes_Click" />
-                <MenuItem Header="EDIT _TAGS" Click="BtnTags_Click" />
-                <MenuItem Name="MenuItemQuickSetTag" Header="_QUICK SET TAG">
+                <MenuItem Header="{DynamicResource EDIT _DECK}" Click="BtnEditDeck_Click" />
+                <MenuItem Header="{DynamicResource EDIT NA_ME}" Click="BtnName_Click" />
+                <MenuItem Header="{DynamicResource EDIT _NOTES}" Click="BtnNotes_Click" />
+                <MenuItem Header="{DynamicResource EDIT _TAGS}" Click="BtnTags_Click" />
+                <MenuItem Name="MenuItemQuickSetTag" Header="{DynamicResource _QUICK SET TAG}">
                     <MenuItem.ItemTemplate>
                         <DataTemplate>
                             <CheckBox Content="{Binding Name}" IsChecked="{Binding Selected}" Margin="-24,0,0,0" />
                         </DataTemplate>
                     </MenuItem.ItemTemplate>
                 </MenuItem>
-                <MenuItem Name="MenuItemMoveDecktoArena" Header="MOVE TO ARENA" Click="BtnMoveDeckToArena_Click"
+                <MenuItem Name="MenuItemMoveDecktoArena" Header="{DynamicResource MOVE TO ARENA}" Click="BtnMoveDeckToArena_Click"
                           Visibility="Collapsed" />
-                <MenuItem Name="MenuItemMoveDeckToConstructed" Header="MOVE TO CONSTRUCTED"
+                <MenuItem Name="MenuItemMoveDeckToConstructed" Header="{DynamicResource MOVE TO CONSTRUCTED}"
                           Click="BtnMoveDeckToConstructed_Click" Visibility="Collapsed" />
                 <Separator Name="SeparatorDeck1" />
-                <MenuItem Name="MenuItemMissingCards" Header="SHOW _MISSING CARDS"
+                <MenuItem Name="MenuItemMissingCards" Header="{DynamicResource SHOW _MISSING CARDS}"
                           ToolTip="this information is based on your last export" Click="MenuItemMissingDust_OnClick" />
-                <MenuItem Name="MenuItemUpdateDeck" Header="_UPDATE (WEB)" Click="BtnUpdateDeck_Click" />
-                <MenuItem Name="MenuItemOpenUrl" Header="OPEN _WEBSITE" Click="BtnOpenDeckUrl_Click" />
-                <MenuItem Name="MenuItemOpenHearthStats" Header="OPEN _HEARTHSTATS" Click="BtnOpenHearthStats_Click" />
+                <MenuItem Name="MenuItemUpdateDeck" Header="{DynamicResource _UPDATE (WEB)}" Click="BtnUpdateDeck_Click" />
+                <MenuItem Name="MenuItemOpenUrl" Header="{DynamicResource OPEN _WEBSITE}" Click="BtnOpenDeckUrl_Click" />
+                <MenuItem Name="MenuItemOpenHearthStats" Header="{DynamicResource OPEN _HEARTHSTATS}" Click="BtnOpenHearthStats_Click" />
                 <Separator />
-                <MenuItem Name="MenuItemArchive" Header="_ARCHIVE" Click="BtnArchiveDeck_Click" />
-                <MenuItem Name="MenuItemUnarchive" Header="UN_ARCHIVE" Click="BtnUnarchiveDeck_Click" />
-                <MenuItem Header="DELETE" Click="BtnDeleteDeck_Click" />
-                <MenuItem Header="CLONE">
-                    <MenuItem Header="ENTIRE DECK" Click="BtnCloneDeck_Click" />
-                    <MenuItem Header="SELECTED VERSION" Click="BtnCloneSelectedVersion_Click" />
+                <MenuItem Name="MenuItemArchive" Header="{DynamicResource _ARCHIVE}" Click="BtnArchiveDeck_Click" />
+                <MenuItem Name="MenuItemUnarchive" Header="{DynamicResource UN_ARCHIVE}" Click="BtnUnarchiveDeck_Click" />
+                <MenuItem Header="{DynamicResource DELETE}" Click="BtnDeleteDeck_Click" />
+                <MenuItem Header="{DynamicResource CLONE}">
+                    <MenuItem Header="{DynamicResource ENTIRE DECK}" Click="BtnCloneDeck_Click" />
+                    <MenuItem Header="{DynamicResource SELECTED VERSION}" Click="BtnCloneSelectedVersion_Click" />
                 </MenuItem>
             </ContextMenu>
         </ListView.ContextMenu>

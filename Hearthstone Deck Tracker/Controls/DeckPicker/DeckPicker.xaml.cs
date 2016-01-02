@@ -55,7 +55,7 @@ namespace Hearthstone_Deck_Tracker.Controls.DeckPicker
 			SelectedClasses = new ObservableCollection<HeroClassAll>();
 			_displayedDecks = new ObservableCollection<DeckPickerItem>();
 			ListViewDecks.ItemsSource = _displayedDecks;
-			DeckTypeItems = new ObservableCollection<string> {"ALL", "ARENA", "CONSTRUCTED"};
+			DeckTypeItems = new ObservableCollection<string> {(string)App.Current.FindResource("ALL"), (string)App.Current.FindResource("ARENA"), (string)App.Current.FindResource("CONSTRUCTED")};
 		}
 
 		public List<Deck> SelectedDecks
@@ -580,18 +580,30 @@ namespace Hearthstone_Deck_Tracker.Controls.DeckPicker
 				var item = e.AddedItems[0] as string;
 				if(item != null)
 				{
-					switch(item)
-					{
-						case "ALL":
-							Config.Instance.SelectedDeckType = DeckType.All;
-							break;
-						case "ARENA":
-							Config.Instance.SelectedDeckType = DeckType.Arena;
-							break;
-						case "CONSTRUCTED":
-							Config.Instance.SelectedDeckType = DeckType.Constructed;
-							break;
-					}
+                    if (item == (string)App.Current.FindResource("ALL"))
+                    {
+                        Config.Instance.SelectedDeckType = DeckType.All;
+                    }
+                    else if (item == (string)App.Current.FindResource("ARENA"))
+                    {
+                        Config.Instance.SelectedDeckType = DeckType.Arena;
+                    }
+                    else if (item == (string)App.Current.FindResource("CONSTRUCTED"))
+                    {
+                        Config.Instance.SelectedDeckType = DeckType.Constructed;
+                    }
+                    //switch(item)
+                    //{
+                    //    case "ALL":
+                    //        Config.Instance.SelectedDeckType = DeckType.All;
+                    //        break;
+                    //    case "ARENA":
+                    //        Config.Instance.SelectedDeckType = DeckType.Arena;
+                    //        break;
+                    //    case "CONSTRUCTED":
+                    //        Config.Instance.SelectedDeckType = DeckType.Constructed;
+                    //        break;
+                    //}
 				}
 				Config.Save();
 				UpdateDecks();

@@ -16,25 +16,25 @@
     </UserControl.Resources>
     <DockPanel>
         <DockPanel>
-            <GroupBox Header="MENU" DockPanel.Dock="Top">
+            <GroupBox Header="{DynamicResource MENU}" DockPanel.Dock="Top">
                 <TreeView Name="TreeViewStats" Height="175">
                     <TreeViewItem Name="TreeViewItemArenaRuns" IsExpanded="True"
-                                  Selected="TreeViewItemArenaRuns_OnSelected" Header="Arena Runs"
+                                  Selected="TreeViewItemArenaRuns_OnSelected" Header="{DynamicResource Arena Runs}"
                                   DataContext="{Binding ArenaStatsSummary, RelativeSource={RelativeSource AncestorType=UserControl}}">
                         <TreeViewItem Name="TreeViewItemArenaRunsSummary"
-                                      Selected="TreeViewItemArenaRunsSummary_OnSelected" Header="Summary"
+                                      Selected="TreeViewItemArenaRunsSummary_OnSelected" Header="{DynamicResource Summary}"
                                       IsSelected="True"
                                       DataContext="{Binding ArenaStatsSummary, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                         <TreeViewItem Name="TreeViewItemArenaRunsOverview"
-                                      Selected="TreeViewItemArenaRunsOverview_OnSelected" Header="Runs &amp; matches"
+                                      Selected="TreeViewItemArenaRunsOverview_OnSelected" Header="{DynamicResource Runs   matches}"
                                       DataContext="{Binding ArenaRuns, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                         <TreeViewItem Name="TreeViewItemArenaRunsAdvanced"
-                                      Selected="TreeViewItemArenaRunsAdvanced_OnSelected" Header="Advanced charts"
+                                      Selected="TreeViewItemArenaRunsAdvanced_OnSelected" Header="{DynamicResource Advanced charts}"
                                       DataContext="{Binding ArenaAdvancedCharts, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                        <TreeViewItem Header="[more coming soon]" IsEnabled="False"/>
+                        <TreeViewItem Header="{DynamicResource [more coming soon]}" IsEnabled="False"/>
                     </TreeViewItem>
-                    <TreeViewItem Header="Constructed" IsExpanded="True" IsEnabled="False">
-                        <TreeViewItem Header="[coming soon]" />
+                    <TreeViewItem Header="{DynamicResource Constructed}" IsExpanded="True" IsEnabled="False">
+                        <TreeViewItem Header="{DynamicResource [coming soon]}" />
                         <!--<TreeViewItem Header="Overall" IsExpanded="False">
                             <TreeViewItem Header="Overview"/>
                             <TreeViewItem Header="Games"/>
@@ -46,7 +46,7 @@
                     </TreeViewItem>
                 </TreeView>
             </GroupBox>
-            <GroupBox Header="Filters" Width="180">
+            <GroupBox Header="{DynamicResource Filters}" Width="180">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -60,7 +60,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Label Content="Time:" Grid.Column="0" Grid.Row="0"/>
+                        <Label Content="{DynamicResource Time:}" Grid.Column="0" Grid.Row="0"/>
                         <ComboBox Name="ComboBoxTimeframe" SelectedIndex="3" Grid.Column="1" Grid.Row="0"
                               SelectionChanged="ComboBoxTimeframe_OnSelectionChanged">
                             <ComboBox.ItemTemplate>
@@ -71,16 +71,16 @@
                         </ComboBox>
                         <StackPanel Margin="0,5,0,0"  Grid.Column="1" Grid.Row="1"
                                 Visibility="{Binding ElementName=ComboBoxTimeframe, Path=SelectedItem, Converter={StaticResource CustomTimeframeVisibilityConverter}}">
-                            <Label Content="Start" />
+                            <Label Content="{DynamicResource Start}" />
                             <DatePicker Name="DatePickerCustomTimeFrameStart" DockPanel.Dock="Right"
                                     SelectedDate="{Binding Path=ArenaStatsTimeFrameCustomStart, Source={StaticResource ConfigWrapper}}"
                                     SelectedDateChanged="DatePickerCustomTimeFrame_OnSelectedDateChanged" />
-                            <Label Content="End" />
+                            <Label Content="{DynamicResource End}" />
                             <DatePicker Name="DatePickerCustomTimeFrameEnd" DockPanel.Dock="Right"
                                     SelectedDate="{Binding Path=ArenaStatsTimeFrameCustomEnd, Source={StaticResource ConfigWrapper}}"
                                     SelectedDateChanged="DatePickerCustomTimeFrame_OnSelectedDateChanged" />
                         </StackPanel>
-                        <Label Content="Class:" Margin="0,5,0,0" Grid.Column="0" Grid.Row="2"/>
+                        <Label Content="{DynamicResource Class:}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="2"/>
                         <ComboBox Name="ComboBoxClass"  Margin="0,5,0,0" SelectedIndex="0" Grid.Column="1" Grid.Row="2"
                               SelectionChanged="ComboBoxClass_OnSelectionChanged">
                             <ComboBox.ItemTemplate>
@@ -94,7 +94,7 @@
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <Label Content="Region:" Margin="0,5,0,0" Grid.Column="0" Grid.Row="3"/>
+                        <Label Content="{DynamicResource Region:}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="3"/>
                         <ComboBox Name="ComboBoxRegion" SelectedIndex="0" Margin="0,5,0,0" Grid.Column="1" Grid.Row="3"
                               SelectionChanged="ComboBoxRegion_OnSelectionChanged">
                             <ComboBox.ItemTemplate>
@@ -103,8 +103,8 @@
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <Label Content="Archived:" Margin="0,5,0,0" Grid.Column="0" Grid.Row="4"/>
-                        <CheckBox Name="CheckBoxArchived" Content="Include" Margin="0,5,0,0" Grid.Column="1" Grid.Row="4"
+                        <Label Content="{DynamicResource Archived:}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="4"/>
+                        <CheckBox Name="CheckBoxArchived" Content="{DynamicResource Include}" Margin="0,5,0,0" Grid.Column="1" Grid.Row="4"
                               IsChecked="{Binding Path=ArenaStatsIncludeArchived, Source={StaticResource ConfigWrapper}}"
                               Checked="CheckBoxArchived_OnChecked" Unchecked="CheckBoxArchived_OnUnchecked" />
                     </Grid>

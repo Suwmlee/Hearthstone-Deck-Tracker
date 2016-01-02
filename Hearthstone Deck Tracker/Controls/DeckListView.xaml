@@ -8,7 +8,7 @@
           d:DesignHeight="300" d:DesignWidth="300" Height="auto" Background="Transparent">
     <ListView.View>
         <GridView>
-            <GridViewColumn Header="cost" Width="32">
+            <GridViewColumn Header="{DynamicResource cost}" Width="32">
                 <GridViewColumn.CellTemplate>
                     <DataTemplate>
                         <local:OutlinedTextBlock Fill="{Binding ColorPlayer}" Margin="1,-3,0,0" Width="32" Height="25"
@@ -19,7 +19,7 @@
                     </DataTemplate>
                 </GridViewColumn.CellTemplate>
             </GridViewColumn>
-            <GridViewColumn Header="name" Width="155">
+            <GridViewColumn Header="{DynamicResource name}" Width="155">
                 <GridViewColumn.CellTemplate>
                     <DataTemplate>
                         <local:OutlinedTextBlock Fill="{Binding ColorPlayer}" Margin="-2,0,0,0" Height="16"

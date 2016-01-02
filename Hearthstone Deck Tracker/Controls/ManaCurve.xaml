@@ -22,7 +22,7 @@
                             </Style.Triggers>
                         </Style>
                     </Grid.Style>
-                    <TextBlock Name="TextBlockManaCurveMechanics" Text="MECHANICS" Margin="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"
+                    <TextBlock Name="TextBlockManaCurveMechanics" Text="{DynamicResource MECHANICS}" Margin="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"
                            FontWeight="SemiBold"/>
                 </Grid>
             </Border>
@@ -112,7 +112,7 @@
                                 </ItemsControl.ItemTemplate>
                             </ItemsControl>
                         </ScrollViewer>
-                        <TextBlock Name="TextBlockNoMechanics" Text="None"  Background="{DynamicResource WindowBackgroundBrush}" FontSize="14"
+                        <TextBlock Name="TextBlockNoMechanics" Text="{DynamicResource None}"  Background="{DynamicResource WindowBackgroundBrush}" FontSize="14"
                            FontWeight="SemiBold" Margin="2,0,0,0"/>
                     </Grid>
                 </Border>

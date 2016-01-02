@@ -560,7 +560,7 @@
                             Width="235" Grid.ColumnSpan="2">
                     <Border Width="107"
             BorderThickness="1" DockPanel.Dock="Top" BorderBrush="{DynamicResource TextBrush}">
-                        <TextBox controls:TextBoxHelper.Watermark="Name..." TextWrapping="NoWrap"
+                        <TextBox controls:TextBoxHelper.Watermark="{DynamicResource Name...}" TextWrapping="NoWrap"
                              TextChanged="TextBoxDeckName_TextChanged" Name="TextBoxDeckName" 
                      controls:TextBoxHelper.IsWaitingForData="True"/>
                     </Border>
@@ -572,7 +572,7 @@
                     </Rectangle>
                     <Border Width="125"
             BorderThickness="1" DockPanel.Dock="Top" Margin="3,0,0,0" BorderBrush="{DynamicResource TextBrush}">
-                        <TextBox  controls:TextBoxHelper.Watermark="Search..." x:Name="TextBoxDBFilter"
+                        <TextBox  controls:TextBoxHelper.Watermark="{DynamicResource Search...}" x:Name="TextBoxDBFilter"
                              TextChanged="TextBoxDBFilter_TextChanged" TextWrapping="NoWrap" 
                              PreviewKeyDown="TextBoxDBFilter_PreviewKeyDown"
                      controls:TextBoxHelper.IsWaitingForData="True" />

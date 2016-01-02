@@ -13,7 +13,7 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 
 		public string DisplayValue
 		{
-			get { return string.Format("{0}: {1}", Name, Count); }
+			get { return string.Format("{0}: {1}",(string)App.Current.FindResource(Name), Count); }
 		}
 	}
 }

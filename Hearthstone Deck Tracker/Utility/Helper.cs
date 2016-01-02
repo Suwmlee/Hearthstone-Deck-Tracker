@@ -143,35 +143,35 @@ namespace Hearthstone_Deck_Tracker
 
 		public static async Task<Version> CheckForUpdates(bool beta)
 		{
-			var betaString = beta ? "BETA" : "LIVE";
-			Logger.WriteLine("Checking for " + betaString + " updates...", "Helper");
+            //var betaString = beta ? "BETA" : "LIVE";
+            //Logger.WriteLine("Checking for " + betaString + " updates...", "Helper");
 
-			var versionXmlUrl = beta
-				                    ? @"https://raw.githubusercontent.com/Epix37/HDT-Data/master/beta-version"
-				                    : @"https://raw.githubusercontent.com/Epix37/HDT-Data/master/live-version";
+            //var versionXmlUrl = beta
+            //                        ? @"https://raw.githubusercontent.com/Epix37/HDT-Data/master/beta-version"
+            //                        : @"https://raw.githubusercontent.com/Epix37/HDT-Data/master/live-version";
 
-			var currentVersion = GetCurrentVersion();
+            //var currentVersion = GetCurrentVersion();
 
-			if(currentVersion != null)
-			{
-				try
-				{
-					Logger.WriteLine("Current version: " + currentVersion, "Helper");
-					string xml;
-					using(var wc = new WebClient())
-						xml = await wc.DownloadStringTaskAsync(versionXmlUrl);
+            //if(currentVersion != null)
+            //{
+            //    try
+            //    {
+            //        Logger.WriteLine("Current version: " + currentVersion, "Helper");
+            //        string xml;
+            //        using(var wc = new WebClient())
+            //            xml = await wc.DownloadStringTaskAsync(versionXmlUrl);
 
-					var newVersion = new Version(XmlManager<SerializableVersion>.LoadFromString(xml).ToString());
-					Logger.WriteLine("Latest " + betaString + " version: " + newVersion, "Helper");
+            //        var newVersion = new Version(XmlManager<SerializableVersion>.LoadFromString(xml).ToString());
+            //        Logger.WriteLine("Latest " + betaString + " version: " + newVersion, "Helper");
 
-					if(newVersion > currentVersion)
-						return newVersion;
-				}
-				catch(Exception e)
-				{
-					MessageBox.Show("Error checking for new " + betaString + " version.\n\n" + e.Message + "\n\n" + e.InnerException);
-				}
-			}
+            //        if(newVersion > currentVersion)
+            //            return newVersion;
+            //    }
+            //    catch(Exception e)
+            //    {
+            //        MessageBox.Show("Error checking for new " + betaString + " version.\n\n" + e.Message + "\n\n" + e.InnerException);
+            //    }
+            //}
 			return null;
 		}
 
