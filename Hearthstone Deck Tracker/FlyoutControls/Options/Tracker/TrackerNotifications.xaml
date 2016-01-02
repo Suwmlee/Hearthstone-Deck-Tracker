@@ -18,13 +18,13 @@
             <GroupBox Header="{DynamicResource Game result}">
                 <StackPanel>
                     <CheckBox Name="CheckBoxShowNotifications" Content="{DynamicResource Show notifications}" Checked="CheckBoxShowNotifications_OnChecked" Unchecked="CheckBoxShowNotifications_OnUnchecked"/>
-                    <CheckBox Name="CheckBoxUnexpectedOnly" Content="{DynamicResource Only show for unexpected casual games}" 
+                    <CheckBox Name="CheckBoxUnexpectedOnly" Content="{DynamicResource Only show for unexpected casual games}" ToolTip="In case HDT likely failed to detect gamemode as ranked (previous game was ranked)"
                               IsEnabled="{Binding Path=IsChecked, ElementName=CheckBoxShowNotifications}"
                               Margin="0,5,0,0" Checked="CheckBoxUnexpectedOnly_OnChecked" Unchecked="CheckBoxUnexpectedOnly_OnUnchecked"/>
-                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0" 
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0"
                               IsEnabled="{Binding Path=IsChecked, ElementName=CheckBoxShowNotifications}">
                         <TextBlock Text="{DynamicResource Show for}" VerticalAlignment="Center"/>
-                        <TextBox x:Name="TextboxTimerAlert" 
+                        <TextBox x:Name="TextboxTimerAlert"
                                              HorizontalAlignment="Right" Height="23" HorizontalContentAlignment="Center"
                                              Margin="5,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top"
                                              Width="40" TextChanged="TextboxTimerAlert_TextChanged" PreviewTextInput="TextboxTimerAlert_PreviewTextInput"/>
