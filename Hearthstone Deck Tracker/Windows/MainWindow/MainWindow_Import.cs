@@ -261,8 +261,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 				if(Config.Instance.ShowArenaImportMessage || Core.Game.PossibleArenaCards.Count < 10)
 				{
 					await
-						this.ShowMessageAsync("How this works:",
-						                      "1) Build your arena deck (or enter the arena screen if you're done already)\n\n2) Leave the arena screen (go back to the main menu)\n\n3) Press \"IMPORT > FROM GAME: ARENA\"\n\n4) Adjust the numbers\n\nWhy the last step? Because this is not perfect. It is only detectable which cards are in the deck but NOT how many of each. You can increase the count of a card by just right clicking it.\n\nYou can see this information again in 'options > tracker > importing'");
+						this.ShowMessageAsync((string)App.Current.FindResource("How this works:"),
+						                      "import tips arena all");
 
 					if(Config.Instance.ShowArenaImportMessage)
 					{
@@ -428,10 +428,10 @@ namespace Hearthstone_Deck_Tracker.Windows
 				{
 					var result =
 						await
-						this.ShowMessageAsync("Setting up",
-						                      "This functionality requires a quick semi-automatic setup. HDT needs to know whichs cards on the first page for each class exist as golden and normal.\n\nYou may have to run the setup again if those cards change: 'options > tracker > importing'",
+						this.ShowMessageAsync((string)App.Current.FindResource("Setting up"),
+						                      (string)App.Current.FindResource("import prepare"),
 						                      MessageDialogStyle.AffirmativeAndNegative,
-						                      new MessageDialogs.Settings {AffirmativeButtonText = "start", NegativeButtonText = "cancel"});
+						                      new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("start"), NegativeButtonText = (string)App.Current.FindResource("cancel")});
 					if(result != MessageDialogResult.Affirmative)
 						return;
 					await Helper.SetupConstructedImporting(Core.Game);
@@ -439,8 +439,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 					Config.Save();
 				}
 				await
-					this.ShowMessageAsync("How this works:",
-					                      "0) Build your deck\n\n1) Go to the main menu (always start from here)\n\n2) Open \"My Collection\" and open the deck you want to import (do not edit the deck at this point)\n\n3) Go straight back to the main menu\n\n4) Press \"IMPORT > FROM GAME: CONSTRUCTED\"\n\n5) Adjust the numbers\n\nWhy the last step? Because this is not perfect. It is only detectable which cards are in the deck but NOT how many of each. Depening on what requires less clicks, non-legendary cards will default to 1 or 2. There may issues importing druid cards that exist as normal and golden on your first page.\n\nYou can see this information again in 'options > tracker > importing'");
+					this.ShowMessageAsync((string)App.Current.FindResource("How this works:"),
+					                      (string)App.Current.FindResource("import tips constructed all"));
 				if(Core.Game.PossibleConstructedCards.Count(c => c.PlayerClass == "Druid" || c.PlayerClass == null) < 10
 				   && Core.Game.PossibleConstructedCards.Count(c => c.PlayerClass != "Druid") < 10)
 					return;

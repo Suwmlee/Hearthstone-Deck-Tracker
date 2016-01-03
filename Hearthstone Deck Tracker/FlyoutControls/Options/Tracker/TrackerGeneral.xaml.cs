@@ -83,7 +83,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 				return;
 			Config.Instance.TrackerCardToolTips = true;
 			Config.Save();
-			Core.MainWindow.ShowMessage("Restart required.", "Please restart HDT for this setting to take effect.");
+			Core.MainWindow.ShowMessage((string)App.Current.FindResource("Restart required."), (string)App.Current.FindResource("Please restart HDT for this setting to take effect."));
 		}
 
 		private void CheckboxTrackerCardToolTips_Unchecked(object sender, RoutedEventArgs e)
@@ -93,7 +93,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 				return;
 			Config.Instance.TrackerCardToolTips = false;
 			Config.Save();
-			Core.MainWindow.ShowMessage("Restart required.", "Please restart HDT for this setting to take effect.");
+			Core.MainWindow.ShowMessage((string)App.Current.FindResource("Restart required."), (string)App.Current.FindResource("Please restart HDT for this setting to take effect."));
 		}
 
 		private void CheckboxFullTextSearch_Checked(object sender, RoutedEventArgs e)
@@ -264,7 +264,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 				return;
 			Config.Instance.AutoUseDeck = true;
 			Config.Save();
-			Core.MainWindow.ShowMessage("Restart required.", "Please restart HDT for this setting to take effect.");
+			Core.MainWindow.ShowMessage((string)App.Current.FindResource("Restart required."), (string)App.Current.FindResource("Please restart HDT for this setting to take effect."));
 		}
 
 		private void CheckBoxAutoUse_OnUnchecked(object sender, RoutedEventArgs e)
@@ -273,7 +273,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 				return;
 			Config.Instance.AutoUseDeck = false;
 			Config.Save();
-			Core.MainWindow.ShowMessage("Restart required.", "Please restart HDT for this setting to take effect.");
+			Core.MainWindow.ShowMessage((string)App.Current.FindResource("Restart required."), (string)App.Current.FindResource("Please restart HDT for this setting to take effect."));
 		}
 
 		private void CheckboxArenaRewardDialog_Checked(object sender, RoutedEventArgs e)

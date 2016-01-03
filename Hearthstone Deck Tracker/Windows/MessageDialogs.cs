@@ -142,7 +142,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 				{
 					Config.Instance.HearthstoneDirectory = Path.GetDirectoryName(dialog.FileName);
 					Config.Save();
-					Core.MainWindow.ShowMessage("Restart required.", "Please restart HDT for this to take effect.");
+			        Core.MainWindow.ShowMessage((string)App.Current.FindResource("Restart required."), (string)App.Current.FindResource("Please restart HDT for this setting to take effect."));
 				}
 			}
 		}

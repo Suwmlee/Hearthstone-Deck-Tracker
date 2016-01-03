@@ -7,7 +7,7 @@
     <s:String x:Key="Hearthstone Deck Tracker">炉石传说 记牌器</s:String>
     <s:String x:Key="options">选项</s:String>
     <s:String x:Key="help">帮助</s:String>
-    <s:String x:Key="donate">捐赠</s:String>
+    <s:String x:Key="donate">捐赠给原作者</s:String>
     <!-- top -->
     <!-- main -->
     <s:String x:Key="_MAIN">主要</s:String>
@@ -54,8 +54,8 @@
     <s:String x:Key="_IMPORT">导入</s:String>
     <s:String x:Key="Import">导入</s:String>
     <s:String x:Key="FROM _WEB">从网页</s:String>
-    <s:String x:Key="FROM GAME: _ARENA">从游戏中:竞技场</s:String>
-    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏中:构筑(测试)</s:String>
+    <s:String x:Key="FROM GAME: _ARENA">从游戏内竞技场</s:String>
+    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏内构筑(测试)</s:String>
     <s:String x:Key="FROM _FILE">从文件</s:String>
     <s:String x:Key="FROM _ID STRING">从ID字符串</s:String>
     <s:String x:Key="FROM CLIPBOARD: _CARD NAMES">从剪贴板:卡牌名称</s:String>
@@ -77,9 +77,6 @@
     <s:String x:Key="_LATEST REPLAY">最新的录像</s:String>
     <s:String x:Key="_SELECT REPLAY">选择录像</s:String>
     <s:String x:Key="LOAD REPLAY FROM _FILE">从文件中导入录像</s:String>
-
-    <!-- new deck -->
-    <s:String x:Key="_HEARTHSTATS">_HEARTHSTATS</s:String>
 
     <!-- plugins -->
     <s:String x:Key="_PLUGINS">插件</s:String>
@@ -128,6 +125,7 @@
     <s:String x:Key="SHOW FILTERED">过滤后显示</s:String>
     
     <!-- hearthstats -->
+    <s:String x:Key="_HEARTHSTATS">某炉石网站</s:String>
     <s:String x:Key="SYNC">同步</s:String>
     <s:String x:Key="Decks found on HearthStats">Decks found on HearthStats</s:String>
 
@@ -315,7 +313,7 @@
     <!-- controls deckpicker   -->
     <s:String x:Key="_USE DECK">使用卡组</s:String>
     <s:String x:Key="ACTIVE DECK">使用的卡组:</s:String>
-    <s:String x:Key="NONE  -  CLICK USE ON DECK TO ACTIVATE">NONE   -   CLICK &quot;USE&quot; ON DECK TO ACTIVATE</s:String>
+    <s:String x:Key="NONE  -  CLICK USE ON DECK TO ACTIVATE">NONE - CLICK USE ON DECK TO ACTIVATE</s:String>
 
     <!-- options main -->
     <s:String x:Key="Options">选项</s:String>
@@ -426,6 +424,7 @@
     <s:String x:Key="Show dialog before exporting">在输出前显示对话框</s:String>
     <!-- option tracker general -->
     <s:String x:Key="Automatically">自动</s:String>
+    <s:String x:Key="Automatically USE decks. (disables button on decks)">点击自动选择使用套牌,使用套牌按钮不可用</s:String>
     <s:String x:Key="Autoselect deck if only one possible">如果只有一副卡组,自动选择</s:String>
     <s:String x:Key="Use no deck on Spectator mode">在旁观模式不使用卡组</s:String>
     <s:String x:Key="Flash Hearthstone on turn start">回合开始时界面闪光</s:String>
@@ -579,5 +578,26 @@
     <s:String x:Key="Hearthstone Deck Tracker will not work properly if Hearthstone is not installed on your machine (obviously).">如果未安装炉石传说程序,HDT不会正确运行</s:String>
     <s:String x:Key="Ok">确认</s:String>
     <s:String x:Key="Select manually">手动选择</s:String>
+    <s:String x:Key="Restart required.">需要重启</s:String>
+    <s:String x:Key="Please restart HDT for this setting to take effect.">重启HDT使设置生效</s:String>
+    <s:String x:Key="Please restart HDT for the new iconset to be loaded.">重启HDT使皮肤生效</s:String>
+    <s:String x:Key="Please restart HDT for the new layout to be loaded.">重启HDT使布局设置生效</s:String>
+    <s:String x:Key="Click ok to restart HDT">点击OK重启HDT</s:String>
     
+    <!-- import tips -->
+    <s:String x:Key="start">开始</s:String>
+    <s:String x:Key="Step 0:">步骤 0:</s:String>
+    <s:String x:Key="Start Hearthstone">打开炉石传说</s:String>
+    <s:String x:Key="Step 1:">步骤 1:</s:String>
+    <s:String x:Key="Go to the main menu">到主界面</s:String>
+    <s:String x:Key="Step 2:">步骤 2:</s:String>
+    <s:String x:Key="import step2" xml:space="preserve" >打开"我的收藏",点击上部的每个职业图标一次.&#x0a;- 不要点击中立&#10;- 不要打开任何套牌&#13;- 不要进行翻页.</s:String>
+    
+    <s:String x:Key="Setting up">设置:</s:String>
+    <s:String x:Key="import prepare" xml:space="preserve">这功能需要半自动化设置. HDT需要知道每个职业哪些卡牌是金色的还是普通的. &#10;&#10; 如果你的牌库有变更,必须重新设置一遍: '选项 > 追踪 > 导入'</s:String>
+    <s:String x:Key="How this works:">如何工作的:</s:String>
+    <s:String x:Key="import tips arena" xml:space="preserve">1) 创建你的竞技场套牌 (或者 如果未组好套牌就进入竞技场界面) &#10;&#10; 2) 离开在竞技场界面 (返回主菜单) &#10;&#10; 3) 点击 "导入 > 从游戏内竞技场" &#10;&#10; 4) 调整导入卡牌的数量 &#10;&#10; 为什么要调整? 因为导入功能并不完美. 它只会检测有什么卡牌但不会知道有多少张. 你只需要通过点击卡牌就可以增加其数目.</s:String>
+    <s:String x:Key="import tips constructed" xml:space="preserve">0) 创建你的套牌 &#10;&#10; 1) 回主菜单 (总是从这里开始) &#10;&#10; 2)进入"我的收藏"界面,打开你想要导入的套牌 (这时候请不要进行修改) &#10;&#10; 3)离开收藏界面,返回主菜单 &#10;&#10; 4) 点击 "导入 > 从游戏内构筑" &#10;&#10; 5) 调整导入卡牌的数量 &#10;&#10; 为什么要调整? 因为导入功能并不完美. 它只会检测有什么卡牌但不会检测有多少张. 依赖于较少的点击, 非传说卡牌会默认为1-2张.</s:String>
+    <s:String x:Key="import tips arena all" xml:space="preserve">1) 创建你的竞技场套牌 (或者 如果未组好套牌就进入竞技场界面) &#10;&#10; 2) 离开在竞技场界面 (返回主菜单) &#10;&#10; 3) 点击 "导入 > 从游戏内竞技场" &#10;&#10; 4) 调整导入卡牌的数量 &#10;&#10; 为什么要调整? 因为导入功能并不完美. 它只会检测有什么卡牌但不会知道有多少张. 你只需要通过点击卡牌就可以增加其数目. &#10;&#10; 你可以再次看到这个信息,在'选项 > 追踪 > 导入'中</s:String>
+    <s:String x:Key="import tips constructed all" xml:space="preserve">0) 创建你的套牌 &#10;&#10; 1) 回主菜单 (总是从这里开始) &#10;&#10; 2)进入"我的收藏"界面,打开你想要导入的套牌 (这时候请不要进行修改) &#10;&#10; 3)离开收藏界面,返回主菜单 &#10;&#10; 4) 点击 "导入 > 从游戏内构筑" &#10;&#10; 5) 调整导入卡牌的数量 &#10;&#10; 为什么要调整? 因为导入功能并不完美. 它只会检测有什么卡牌但不会检测有多少张. 依赖于较少的点击, 非传说卡牌会默认为1-2张. &#10; 在导入德鲁伊第一页金色或者普通卡牌是可能出现问题.&#10;你可以再次看到这个信息,在'选项 > 追踪 > 导入'中</s:String>
 </ResourceDictionary>

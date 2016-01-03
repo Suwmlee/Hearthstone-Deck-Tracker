@@ -10,7 +10,7 @@
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <CheckBox x:Name="CheckBoxAutoUse" Margin="10,5,0,0"  
-                              Content="Automatically &quot;USE&quot; decks. (disables button on decks)" 
+                              Content="{DynamicResource Automatically USE decks. (disables button on decks)}" 
                               Checked="CheckBoxAutoUse_OnChecked" Unchecked="CheckBoxAutoUse_OnUnchecked"/>
                     <CheckBox x:Name="CheckboxAutoSelectDeck"
                                           Content="{DynamicResource Autoselect deck if only one possible}" HorizontalAlignment="Left"
