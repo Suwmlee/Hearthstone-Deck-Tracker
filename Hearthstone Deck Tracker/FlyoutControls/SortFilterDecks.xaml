@@ -9,9 +9,9 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <DockPanel Margin="6,0,6,6">
-            <GroupBox Name="GroupBoxSortingAllConstructed" Header="Deck sorting: All/Constructed" DockPanel.Dock="Top">
+            <GroupBox Name="GroupBoxSortingAllConstructed" Header="{DynamicResource Deck sorting: All/Constructed}" DockPanel.Dock="Top">
                 <StackPanel>
-                    <CheckBox Name="CheckBoxSortByClass" Content="Sort by class"
+                    <CheckBox Name="CheckBoxSortByClass" Content="{DynamicResource Sort by class}"
                         Checked="CheckBoxSortByClass_OnChecked" Unchecked="CheckBoxSortByClass_OnUnchecked" />
                     <ComboBox Name="ComboboxDeckSorting" SelectionChanged="Selector_OnSelectionChanged"
                         Margin="0,5,0,0">
@@ -24,9 +24,9 @@
                     </ComboBox>
                 </StackPanel>
             </GroupBox>
-            <GroupBox Name="GroupBoxSortingArena" Header="Deck sorting: Arena" DockPanel.Dock="Top">
+            <GroupBox Name="GroupBoxSortingArena" Header="{DynamicResource Deck sorting: Arena}" DockPanel.Dock="Top">
                 <StackPanel>
-                    <CheckBox Name="CheckBoxSortByClassArena" Content="Sort by class"
+                    <CheckBox Name="CheckBoxSortByClassArena" Content="{DynamicResource Sort by class}"
                             Checked="CheckBoxSortByClassArena_OnChecked" Unchecked="CheckBoxSortByClassArena_OnUnchecked" />
                         <ComboBox Name="ComboboxDeckSortingArena" SelectionChanged="SelectorArena_OnSelectionChanged"
                             Margin="0,5,0,0">
@@ -39,7 +39,7 @@
                         </ComboBox>
                     </StackPanel>
             </GroupBox>
-            <GroupBox Header="Filter">
+            <GroupBox Header="{DynamicResource Filter}">
                 <DockPanel>
 
                     <Grid Margin="0,3,0,0" DockPanel.Dock="Bottom">
@@ -49,13 +49,13 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Button Name="BtnUp" Margin="0,0,3,0" Grid.Column="0" Content="up" Click="BtnUp_OnClick" />
-                        <Button Name="BtnDown" Margin="3,0,3,0" Grid.Column="1" Content="down" Click="BtnDown_OnClick" />
-                        <Button Name="BtnTop" Margin="3,0,3,0" Grid.Column="2" Content="top" Click="BtnTop_OnClick" />
-                        <Button Name="BtnBottom" Margin="3,0,0,0" Grid.Column="3" Content="bottom"
+                        <Button Name="BtnUp" Margin="0,0,3,0" Grid.Column="0" Content="{DynamicResource up}" Click="BtnUp_OnClick" />
+                        <Button Name="BtnDown" Margin="3,0,3,0" Grid.Column="1" Content="{DynamicResource down}" Click="BtnDown_OnClick" />
+                        <Button Name="BtnTop" Margin="3,0,3,0" Grid.Column="2" Content="{DynamicResource top}" Click="BtnTop_OnClick" />
+                        <Button Name="BtnBottom" Margin="3,0,0,0" Grid.Column="3" Content="{DynamicResource bottom}"
                                 Click="BtnBottom_OnClick" />
                     </Grid>
-                    <Button x:Name="BtnDeleteTag" DockPanel.Dock="Bottom" Margin="0,3,0,0" Content="Delete Selected"
+                    <Button x:Name="BtnDeleteTag" DockPanel.Dock="Bottom" Margin="0,3,0,0" Content="{DynamicResource Delete Selected}"
                             VerticalAlignment="Bottom" Width="auto" Click="BtnDeteleTag_Click" Height="26" />
 
                     <Grid Margin="0,3,0,0" DockPanel.Dock="Bottom">
@@ -66,10 +66,10 @@
                         <TextBox controls:TextBoxHelper.Watermark="New Tag" Name="TextboxNewTag" TextWrapping="NoWrap"
                                  Text=""
                                  Grid.Column="0" Width="auto" Margin="0,0,3,0" />
-                        <Button Name="BtnAddTag" Content="Add" Click="BtnAddTag_Click" Height="26" Grid.Column="1"
+                        <Button Name="BtnAddTag" Content="{DynamicResource Add}" Click="BtnAddTag_Click" Height="26" Grid.Column="1"
                                 Margin="3,0,0,0" Width="auto" />
                     </Grid>
-                    <controls:ToggleSwitch Name="OperationSwitch" Header="Filter operation" DockPanel.Dock="Bottom"
+                    <controls:ToggleSwitch Name="OperationSwitch" Header="{DynamicResource Filter operation}" DockPanel.Dock="Bottom"
                                            OnLabel="And" OffLabel="Or" Width="124" HorizontalAlignment="Right"
                                            Checked="OperationSwitch_OnChecked" Unchecked="OperationSwitch_OnUnchecked" />
 

@@ -35,7 +35,7 @@
                                     <VisualBrush Visual="{StaticResource action_attack}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxAttack" Content="Attack" Checked="CheckBoxAttack_OnChecked" Unchecked="CheckBoxAttack_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxAttack" Content="{DynamicResource Attack}" Checked="CheckBoxAttack_OnChecked" Unchecked="CheckBoxAttack_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="-24,0,0,0">
                             <Rectangle Width="24" Height="24">
@@ -43,7 +43,7 @@
                                     <VisualBrush Visual="{StaticResource action_play}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxPlay" Content="Play" Checked="CheckBoxPlay_OnChecked" Unchecked="CheckBoxPlay_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxPlay" Content="{DynamicResource Play}" Checked="CheckBoxPlay_OnChecked" Unchecked="CheckBoxPlay_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="-24,0,0,0">
                             <Rectangle Width="24" Height="24">
@@ -51,7 +51,7 @@
                                     <VisualBrush Visual="{StaticResource action_draw}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxDraw" Content="Draw" Checked="CheckBoxDraw_OnChecked" Unchecked="CheckBoxDraw_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxDraw" Content="{DynamicResource Draw}" Checked="CheckBoxDraw_OnChecked" Unchecked="CheckBoxDraw_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="-24,0,0,0">
                             <Rectangle Width="24" Height="24">
@@ -59,7 +59,7 @@
                                     <VisualBrush Visual="{StaticResource action_discard}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxDiscard" Content="Discard" Checked="CheckBoxDiscard_OnChecked" Unchecked="CheckBoxDiscard_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxDiscard" Content="{DynamicResource Discard}" Checked="CheckBoxDiscard_OnChecked" Unchecked="CheckBoxDiscard_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="-24,0,0,0">
                             <Rectangle Width="24" Height="24">
@@ -67,7 +67,7 @@
                                     <VisualBrush Visual="{StaticResource action_play}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxHeroPower" Content="HeroPower" Checked="CheckBoxHeroPower_OnChecked" Unchecked="CheckBoxHeroPower_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxHeroPower" Content="{DynamicResource HeroPower}" Checked="CheckBoxHeroPower_OnChecked" Unchecked="CheckBoxHeroPower_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="-24,0,0,0">
                             <Rectangle Width="24" Height="24">
@@ -75,7 +75,7 @@
                                     <VisualBrush Visual="{StaticResource action_death}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxDeath" Content="Death" Checked="CheckBoxDeath_OnChecked" Unchecked="CheckBoxDeath_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxDeath" Content="{DynamicResource Death}" Checked="CheckBoxDeath_OnChecked" Unchecked="CheckBoxDeath_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="-24,0,0,0">
                             <Rectangle Width="24" Height="24">
@@ -83,7 +83,7 @@
                                     <VisualBrush Visual="{StaticResource action_secret}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxSecret" Content="Secret" Checked="CheckBoxSecret_OnChecked" Unchecked="CheckBoxSecret_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxSecret" Content="{DynamicResource Secret}" Checked="CheckBoxSecret_OnChecked" Unchecked="CheckBoxSecret_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="-24,0,0,0">
                             <Rectangle Width="24" Height="24">
@@ -91,7 +91,7 @@
                                     <VisualBrush Visual="{StaticResource action_summon}" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <CheckBox Name="CheckBoxSummon" Content="Summon" Checked="CheckBoxSummon_OnChecked" Unchecked="CheckBoxSummon_OnUnchecked" Margin="5,0,0,0"/>
+                            <CheckBox Name="CheckBoxSummon" Content="{DynamicResource Summon}" Checked="CheckBoxSummon_OnChecked" Unchecked="CheckBoxSummon_OnUnchecked" Margin="5,0,0,0"/>
                         </StackPanel>
                     </ContextMenu>
                     </Button.ContextMenu>
@@ -166,8 +166,8 @@
                                         <Rectangle Width="Auto" Height="20" Stroke="{DynamicResource AccentColorBrush}" Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Grid.ColumnSpan="3" Visibility="{Binding VisibilityTurnRow}">
                                             <Rectangle.ContextMenu>
                                                 <ContextMenu>
-                                                    <MenuItem Header="SHOW ALL" Visibility="{Binding VisibilityShowAll}" Click="MenuItemShowAll_OnClick"/>
-                                                    <MenuItem Header="SHOW FILTERED" Visibility="{Binding VisibilityShowFiltered}" Click="MenuItemShowFiltered_OnClick"/>
+                                                    <MenuItem Header="{DynamicResource SHOW ALL}" Visibility="{Binding VisibilityShowAll}" Click="MenuItemShowAll_OnClick"/>
+                                                    <MenuItem Header="{DynamicResource SHOW FILTERED}" Visibility="{Binding VisibilityShowFiltered}" Click="MenuItemShowFiltered_OnClick"/>
                                                 </ContextMenu>
                                             </Rectangle.ContextMenu>
                                         </Rectangle>

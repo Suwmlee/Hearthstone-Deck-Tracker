@@ -52,6 +52,7 @@
 
     <!-- import deck -->
     <s:String x:Key="_IMPORT">导入</s:String>
+    <s:String x:Key="Import">导入</s:String>
     <s:String x:Key="FROM _WEB">从网页</s:String>
     <s:String x:Key="FROM GAME: _ARENA">从游戏中:竞技场</s:String>
     <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏中:构筑(测试)</s:String>
@@ -71,7 +72,7 @@
 
     <!-- stats -->
     <s:String x:Key="_STATS">统计</s:String>
-    <s:String x:Key="[OLD] GAMES _STATISTICS">[OLD] GAMES  &amp; _STATISTICS</s:String>
+    <s:String x:Key="[OLD] GAMES _STATISTICS">[旧] 游戏统计 </s:String>
     <s:String x:Key="ARENA RUNS _STATISTICS">竞技场统计</s:String>
     <s:String x:Key="_LATEST REPLAY">最新的录像</s:String>
     <s:String x:Key="_SELECT REPLAY">选择录像</s:String>
@@ -115,6 +116,116 @@
     <s:String x:Key="ACTIVE">使用中</s:String>
     <s:String x:Key="USE">可用</s:String>
     
+    <!-- replay -->
+    <s:String x:Key="Attack">攻击</s:String>
+    <s:String x:Key="Play">开始游戏</s:String>
+    <s:String x:Key="Draw">平局</s:String>
+    <s:String x:Key="Discard">抛弃</s:String>
+    <s:String x:Key="HeroPower">英雄技能</s:String>
+    <s:String x:Key="Death">死亡</s:String>
+    <s:String x:Key="Summon">召唤</s:String>
+    <s:String x:Key="SHOW ALL">显示所有</s:String>
+    <s:String x:Key="SHOW FILTERED">过滤后显示</s:String>
+    
+    <!-- hearthstats -->
+    <s:String x:Key="SYNC">同步</s:String>
+    <s:String x:Key="Decks found on HearthStats">Decks found on HearthStats</s:String>
+
+    <!-- stats windows -->
+    <s:String x:Key="Note">注释</s:String>
+    <s:String x:Key="Class distribution by wins">职业胜率分布</s:String>
+    <s:String x:Key="Win/Loss vs class">对战各类胜率</s:String>
+    <s:String x:Key="These charts render a bit slow. Press refresh to update them.">图表显示较慢</s:String>
+    <s:String x:Key="Runs :">开始:</s:String>
+    <s:String x:Key="Total games :">总局数:</s:String>
+    <s:String x:Key="Hours played :">游戏时间:</s:String>
+    <s:String x:Key="Average wins :">平局胜场:</s:String>
+    <s:String x:Key="Win rate :">胜率:</s:String>
+    <s:String x:Key="Best run :">最佳线路:</s:String>
+    <s:String x:Key="Best matchup :">优势对局:</s:String>
+    <s:String x:Key="Worst matchup :">劣势对局:</s:String>
+    <s:String x:Key="Total :">合计:</s:String>
+    <s:String x:Key="Average :">平均:</s:String>
+    <s:String x:Key="Spent :">花费:</s:String>
+    <s:String x:Key="Classic :">经典:</s:String>
+    <s:String x:Key="Goblins vs Gnomes :">地精大战侏儒:</s:String>
+    <s:String x:Key="The Grand Tournament :">冠军的试炼:</s:String>
+    <s:String x:Key="Golden :">金色:</s:String>
+    <s:String x:Key="Wins">胜利</s:String>
+    <s:String x:Key="Losses">失败</s:String>
+    <s:String x:Key="Duration">时长</s:String>
+    <s:String x:Key="Region">区域</s:String>
+    <s:String x:Key="Highlights">高亮</s:String>
+    <s:String x:Key="Classes">级别</s:String>
+    <s:String x:Key="Rewards">奖励</s:String>
+    <s:String x:Key="CHARTS">图表</s:String>
+    <s:String x:Key="show legends">显示传说</s:String>
+    <s:String x:Key="Played">出战</s:String>
+    <s:String x:Key="Opponents">对手</s:String>
+    <s:String x:Key="Average wins per class">对战各职业胜率</s:String>
+    <s:String x:Key="Total">总数</s:String>
+    <s:String x:Key="Best">最好</s:String>
+    <s:String x:Key="Worst">最差</s:String>
+    <s:String x:Key="Most picked">多数选择</s:String>
+    <s:String x:Key="Least picked">较少选择</s:String>
+    <s:String x:Key="Filter">过滤</s:String>
+    <s:String x:Key="Deck">套牌</s:String>
+    <s:String x:Key="Overview Class:  wins - losses">职业概况: 胜利 - 失败</s:String>
+    <s:String x:Key="Overview Deck:  wins - losses">套牌概括: 胜利 - 失败</s:String>
+    <s:String x:Key="Ver.">版本</s:String>
+    <s:String x:Key="Games">游戏</s:String>
+    <s:String x:Key="Rank">等级</s:String>
+    <s:String x:Key="Name">名字</s:String>
+    <s:String x:Key="Mode">模式</s:String>
+    <s:String x:Key="Turns">回合</s:String>
+    <s:String x:Key="Coin">硬币</s:String>
+    <s:String x:Key="Time">时间</s:String>
+    <s:String x:Key="Overall">全部</s:String>
+    <s:String x:Key="Overview Detail: wins - losses">细节概括: 胜利 - 失败</s:String>
+    <s:String x:Key="You \ Vs">你 \ VS</s:String>
+    <s:String x:Key="Hero">英雄</s:String>
+    <s:String x:Key="ADD NEW GAME">添加新的游戏</s:String>
+    <s:String x:Key="Move to other deck">移动到其他套牌</s:String>
+    <s:String x:Key="Show Replay">显示回放</s:String>
+    <s:String x:Key="Show Opp. Deck">显示对手套牌</s:String>
+    <s:String x:Key="Edit Note">编辑注释</s:String>
+    <s:String x:Key="Edit Game">编辑游戏</s:String>
+    <s:String x:Key="Apply tag filters">应用标签过滤</s:String>
+    <s:String x:Key="Show as percent">显示百分比</s:String>
+    <s:String x:Key="Games:">游戏:</s:String>
+    <s:String x:Key="Delete">删除</s:String>
+    <s:String x:Key="Plays">开始</s:String>
+    <s:String x:Key="Draws">平局</s:String>
+    <s:String x:Key="Mulligan">最后一击</s:String>
+    <s:String x:Key="Import opponent deck">导入对手套牌</s:String>
+    <s:String x:Key="Game Details">游戏详情</s:String>
+    <s:String x:Key="Turn">回合</s:String>
+    <s:String x:Key="Card">卡牌</s:String>
+
+    <s:String x:Key="Deck sorting: All/Constructed">套牌排序: 所有/构筑</s:String>
+    <s:String x:Key="Deck sorting: Arena">套牌排序: 竞技场</s:String>
+    <s:String x:Key="Filter operation">过滤选项</s:String>
+    <s:String x:Key="Sort by class">职业排序</s:String>
+    <s:String x:Key="up">上升</s:String>
+    <s:String x:Key="down">下降</s:String>
+    <s:String x:Key="top">顶端</s:String>
+    <s:String x:Key="bottom">下面</s:String>
+    <s:String x:Key="Delete Selected">删除选中</s:String>
+    <s:String x:Key="Add">添加</s:String>
+
+
+    <s:String x:Key="ARENA RUNS">竞技场运行</s:String>
+    <s:String x:Key="Edit rewards">编辑奖励</s:String>
+    <s:String x:Key="Show own deck">显示自己套牌</s:String>
+    <s:String x:Key="Show opp. deck">显示对手套牌</s:String>
+    <s:String x:Key="Show replay">显示回放</s:String>
+    <s:String x:Key="Add game">添加游戏</s:String>
+    <s:String x:Key="Edit game">编辑游戏</s:String>
+    <s:String x:Key="Delete game">删除游戏</s:String>
+    <s:String x:Key="Started">开始</s:String>
+    <s:String x:Key="Result">结果</s:String>
+    <s:String x:Key="Class">职业</s:String>
+
     <s:String x:Key="CLASS ONLY">职业</s:String>
     <s:String x:Key="NEUTRAL ONLY">中立</s:String>
     <s:String x:Key="BASIC">基础</s:String>
@@ -425,23 +536,23 @@
     <s:String x:Key="Money">金钱</s:String>
     <s:String x:Key="Save">保存</s:String>
     <s:String x:Key="Show automatically">自动显示</s:String>
-    <s:String x:Key="Packs">保存</s:String>
-    <s:String x:Key="Payment method">保存</s:String>
+    <s:String x:Key="Packs">包</s:String>
+    <s:String x:Key="Payment method">支付方式</s:String>
     <s:String x:Key="MENU">菜单</s:String>
-    <s:String x:Key="Arena Runs">保存</s:String>
-    <s:String x:Key="Summary">保存</s:String>
+    <s:String x:Key="Arena Runs">竞技场运行</s:String>
+    <s:String x:Key="Summary">概要</s:String>
     <s:String x:Key="Runs   matches"> 开始  匹配</s:String>
-    <s:String x:Key="Advanced charts">保存</s:String>
-    <s:String x:Key="[more coming soon]">保存</s:String>
-    <s:String x:Key="Constructed">保存</s:String>
-    <s:String x:Key="[coming soon]">保存</s:String>
-    <s:String x:Key="Filters">保存</s:String>
-    <s:String x:Key="Time:">保存</s:String>
-    <s:String x:Key="Start">保存</s:String>
-    <s:String x:Key="End">保存</s:String>
-    <s:String x:Key="Class:">保存</s:String>
-    <s:String x:Key="Archived:">保存</s:String>
-    <s:String x:Key="Include">保存</s:String>
+    <s:String x:Key="Advanced charts">高级图表</s:String>
+    <s:String x:Key="[more coming soon]">[更快到来]</s:String>
+    <s:String x:Key="Constructed">构筑</s:String>
+    <s:String x:Key="[coming soon]">[很快到来]</s:String>
+    <s:String x:Key="Filters">过滤</s:String>
+    <s:String x:Key="Time:">时间:</s:String>
+    <s:String x:Key="Start">开始</s:String>
+    <s:String x:Key="End">结束</s:String>
+    <s:String x:Key="Class:">职业:</s:String>
+    <s:String x:Key="Archived:">存档:</s:String>
+    <s:String x:Key="Include">包括</s:String>
     <s:String x:Key="HIDE">隐藏</s:String>
     
     

@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="245">
     <DockPanel>
-        <Button Name="ButtonImport" DockPanel.Dock="Bottom" Content="Import" Click="ButtonImport_OnClick" Margin="5"/>
+        <Button Name="ButtonImport" DockPanel.Dock="Bottom" Content="{DynamicResource Import}" Click="ButtonImport_OnClick" Margin="5"/>
         <ListView x:Name="ListViewDeck"
                   Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"
                   Foreground="White" FontWeight="Bold" BorderThickness="1"

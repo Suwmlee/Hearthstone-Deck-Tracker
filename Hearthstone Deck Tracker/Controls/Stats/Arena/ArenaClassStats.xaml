@@ -38,7 +38,7 @@
         </StackPanel>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Runs: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Runs :}"/>
                 <TextBlock VerticalAlignment="Center">
                     <TextBlock.Text>
                         <MultiBinding StringFormat="{}{0} ({1}% of total)" FallbackValue="0">
@@ -49,7 +49,7 @@
                 </TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Total games: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Total games :}"/>
                 <TextBlock VerticalAlignment="Center">
                     <TextBlock.Text>
                         <MultiBinding StringFormat="{}{0} ({1}-{2})" FallbackValue="0">
@@ -61,7 +61,7 @@
                 </TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Hours played: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Hours played :}"/>
                 <TextBlock VerticalAlignment="Center">
                     <TextBlock.Text>
                         <Binding StringFormat="{}{0:0}" Path="Duration.TotalHours" FallbackValue="0"/>
@@ -69,13 +69,13 @@
                 </TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Average wins: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Average wins :}"/>
                 <TextBlock VerticalAlignment="Center" Text="{Binding AverageWins}" Foreground="{Binding WinRateTextBrush}"
                            Style="{StaticResource StyleVisibilityCollapsedIfDataContextNull}"/>
                 <TextBlock VerticalAlignment="Center" Text="-" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Win rate: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Win rate :}"/>
                 <TextBlock VerticalAlignment="Center" Foreground="{Binding WinRateTextBrush}" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNull}">
                     <TextBlock.Text>
                         <Binding StringFormat="{}{0}%" Path="WinRatePercent"/>
@@ -84,7 +84,7 @@
                 <TextBlock VerticalAlignment="Center" Text="-" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Best run: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Best run :}"/>
                 <TextBlock VerticalAlignment="Center" Foreground="{Binding BestRunTextBrush}" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNull}">
                     <TextBlock.Text>
                         <MultiBinding StringFormat="{}{0} - {1}">
@@ -93,10 +93,10 @@
                         </MultiBinding>
                     </TextBlock.Text>
                 </TextBlock>
-                <TextBlock VerticalAlignment="Center" Text="None" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource None}" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Best matchup: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Best matchup :}"/>
                 <TextBlock VerticalAlignment="Center" Foreground="{Binding BestMatchup.WinRateTextBrush}" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNull}">
                     <TextBlock.Text>
                         <MultiBinding StringFormat="{}{0} ({1}-{2}, {3}%)">
@@ -107,10 +107,10 @@
                         </MultiBinding>
                     </TextBlock.Text>
                 </TextBlock>
-                <TextBlock VerticalAlignment="Center" Text="None" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource None}" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Worst matchup: "/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource Worst matchup :}"/>
                 <TextBlock VerticalAlignment="Center" Foreground="{Binding WorstMatchup.WinRateTextBrush}" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNull}">
                     <TextBlock.Text>
                         <MultiBinding StringFormat="{}{0} ({1}-{2}, {3}%)">
@@ -121,7 +121,7 @@
                         </MultiBinding>
                     </TextBlock.Text>
                 </TextBlock>
-                <TextBlock VerticalAlignment="Center" Text="None" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
+                <TextBlock VerticalAlignment="Center" Text="{DynamicResource None}" Style="{StaticResource StyleVisibilityCollapsedIfDataContextNotNull}"/>
             </StackPanel>
         </StackPanel>
     </StackPanel>

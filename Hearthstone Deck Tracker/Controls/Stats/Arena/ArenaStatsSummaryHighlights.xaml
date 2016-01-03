@@ -10,7 +10,7 @@
              d:DesignHeight="300" d:DesignWidth="600">
     <StackPanel Orientation="Horizontal">
         <DockPanel>
-            <Label DockPanel.Dock="Top" Content="Total" FontSize="16" Margin="10,0,0,0"/>
+            <Label DockPanel.Dock="Top" Content="{DynamicResource Total}" FontSize="16" Margin="10,0,0,0"/>
             <DockPanel>
                 <Image Width="68" Height="68" Source="/HearthstoneDeckTracker;component/Resources/lightforgekey.png" RenderOptions.BitmapScalingMode="Fant" Margin="-5,0,0,0"/>
                 <arena:ArenaClassStats ImageVisiblity="Collapsed" DataContext="{Binding Path=ClassStatsAll, Source={x:Static compiledStats:ArenaStats.Instance}, IsAsync=True}" Margin="0,0,-63,0"/>
@@ -18,22 +18,22 @@
         </DockPanel>
         <Rectangle Height="Auto" Width="1" Fill="{DynamicResource TextBrush}"/>
         <DockPanel>
-            <Label DockPanel.Dock="Top" Content="Best" FontSize="16" Margin="10,0,0,0"/>
+            <Label DockPanel.Dock="Top" Content="{DynamicResource Best}" FontSize="16" Margin="10,0,0,0"/>
             <arena:ArenaClassStats DataContext="{Binding Path=ClassStatsBest, Source={x:Static compiledStats:ArenaStats.Instance}, IsAsync=True}"/>
         </DockPanel>
         <Rectangle Height="Auto" Width="1" Fill="{DynamicResource TextBrush}"/>
         <DockPanel>
-            <Label DockPanel.Dock="Top" Content="Worst" FontSize="16" Margin="10,0,0,0"/>
+            <Label DockPanel.Dock="Top" Content="{DynamicResource Worst}" FontSize="16" Margin="10,0,0,0"/>
             <arena:ArenaClassStats DataContext="{Binding Path=ClassStatsWorst, Source={x:Static compiledStats:ArenaStats.Instance}, IsAsync=True}"/>
         </DockPanel>
         <Rectangle Height="Auto" Width="1" Fill="{DynamicResource TextBrush}"/>
         <DockPanel>
-            <Label DockPanel.Dock="Top" Content="Most picked" FontSize="16" Margin="10,0,0,0"/>
+            <Label DockPanel.Dock="Top" Content="{DynamicResource Most picked}" FontSize="16" Margin="10,0,0,0"/>
             <arena:ArenaClassStats DataContext="{Binding Path=ClassStatsMostPicked, Source={x:Static compiledStats:ArenaStats.Instance}, IsAsync=True}"/>
         </DockPanel>
         <Rectangle Height="Auto" Width="1" Fill="{DynamicResource TextBrush}"/>
         <DockPanel>
-            <Label DockPanel.Dock="Top" Content="Least picked" FontSize="16" Margin="10,0,0,0"/>
+            <Label DockPanel.Dock="Top" Content="{DynamicResource Least picked}" FontSize="16" Margin="10,0,0,0"/>
             <arena:ArenaClassStats DataContext="{Binding Path=ClassStatsLeastPicked, Source={x:Static compiledStats:ArenaStats.Instance}, IsAsync=True}"/>
         </DockPanel>
     </StackPanel>
