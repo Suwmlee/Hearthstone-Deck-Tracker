@@ -71,7 +71,7 @@ namespace Hearthstone_Deck_Tracker.Exporting
 		{
 			if(!User32.IsHearthstoneInForeground())
 			{
-				Core.MainWindow.ShowMessage("Exporting aborted", "Hearthstone window lost focus.");
+				Core.MainWindow.ShowMessage((string)App.Current.FindResource("Exporting aborted"), (string)App.Current.FindResource("Hearthstone window lost focus."));
 				Logger.WriteLine("Exporting aborted, window lost focus", "DeckExporter");
 				return -1;
 			}

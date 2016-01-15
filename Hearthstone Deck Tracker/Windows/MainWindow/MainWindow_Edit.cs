@@ -36,8 +36,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 				                    : "The stats will be deleted (can be changed in options)";
 			var result =
 				await
-				this.ShowMessageAsync("Deleting " + (decks.Count == 1 ? decks.First().Name : decks.Count + " decks"),
-				                      "Are you Sure?\n" + keepStatsInfo, MessageDialogStyle.AffirmativeAndNegative, settings);
+				this.ShowMessageAsync((string)App.Current.FindResource("Deleting") + (decks.Count == 1 ? decks.First().Name : decks.Count + (string)App.Current.FindResource("decks")),
+				                      (string)App.Current.FindResource("Are you Sure?\n") + keepStatsInfo, MessageDialogStyle.AffirmativeAndNegative, settings);
 			if(result == MessageDialogResult.Negative)
 				return;
 			DeckManagerEvents.OnDeckDeleted.Execute(decks);
@@ -178,12 +178,12 @@ namespace Hearthstone_Deck_Tracker.Windows
 				return;
 			var cloneStats =
 				(await
-				 this.ShowMessageAsync("Clone game history?", "(Cloned games do not count towards class or overall stats.)",
+				 this.ShowMessageAsync((string)App.Current.FindResource("Clone game history?"), (string)App.Current.FindResource("(Cloned games do not count towards class or overall stats.)"),
 				                       MessageDialogStyle.AffirmativeAndNegative,
 				                       new MessageDialogs.Settings
 				                       {
-					                       AffirmativeButtonText = "clone history",
-					                       NegativeButtonText = "do not clone history"
+					                       AffirmativeButtonText = (string)App.Current.FindResource("clone history"),
+					                       NegativeButtonText = (string)App.Current.FindResource("do not clone history")
 				                       })) == MessageDialogResult.Affirmative;
 
 			var clone = (Deck)deck.CloneWithNewId(false);
@@ -229,12 +229,12 @@ namespace Hearthstone_Deck_Tracker.Windows
 
 			var cloneStats =
 				(await
-				 this.ShowMessageAsync("Clone game history?", "(Cloned games do not count towards class or overall stats.)",
+				 this.ShowMessageAsync((string)App.Current.FindResource("Clone game history?"), (string)App.Current.FindResource("(Cloned games do not count towards class or overall stats.)"),
 				                       MessageDialogStyle.AffirmativeAndNegative,
 				                       new MessageDialogs.Settings
 				                       {
-					                       AffirmativeButtonText = "clone history",
-					                       NegativeButtonText = "do not clone history"
+					                       AffirmativeButtonText = (string)App.Current.FindResource("clone history"),
+					                       NegativeButtonText = (string)App.Current.FindResource("do not clone history")
 				                       })) == MessageDialogResult.Affirmative;
 
 			var clone = (Deck)deck.CloneWithNewId(false);
@@ -294,7 +294,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			var deck = await DeckImporter.Import(selectedDeck.Url);
 			if(deck == null)
 			{
-				await this.ShowMessageAsync("Error", "Could not load deck from specified url.");
+				await this.ShowMessageAsync((string)App.Current.FindResource("Error"), (string)App.Current.FindResource("Could not load deck from specified url."));
 				return;
 			}
 			//this could be expanded to check against the last version of the deck that was not modified after downloading

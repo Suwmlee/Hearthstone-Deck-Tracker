@@ -123,7 +123,7 @@ namespace Hearthstone_Deck_Tracker.Utility.HotKeys
 		public static async void ImportFromArena()
 		{
 			if(!Core.Game.TempArenaDeck.Cards.Any())
-				await Core.MainWindow.ShowMessageAsync("No arena deck found", "Please enter the arena screen (and build your deck).");
+				await Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("No arena deck found"), (string)App.Current.FindResource("Please enter the arena screen (and build your deck)."));
 			else
 				Core.MainWindow.SetNewDeck(Core.Game.TempArenaDeck);
 			Core.MainWindow.ActivateWindow();

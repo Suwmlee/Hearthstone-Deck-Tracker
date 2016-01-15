@@ -277,17 +277,17 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			_awaitingMainWindowOpen = true;
 
 			if(Core.MainWindow.WindowState == WindowState.Minimized)
-				Core.TrayIcon.ShowMessage("New arena deck detected!");
+				Core.TrayIcon.ShowMessage((string)App.Current.FindResource("New arena deck detected!"));
 
 			while(Core.MainWindow.Visibility != Visibility.Visible || Core.MainWindow.WindowState == WindowState.Minimized)
 				await Task.Delay(100);
 
 			var result =
 				await
-				Core.MainWindow.ShowMessageAsync("New arena deck detected!",
-				                                 "You can change this behaviour to \"auto save&import\" or \"manual\" in [options > tracker > importing]",
+				Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("New arena deck detected!"),
+				                                 (string)App.Current.FindResource("You can change this behaviour to auto save import or manual in [options > tracker > importing]"),
 				                                 MessageDialogStyle.AffirmativeAndNegative,
-				                                 new MessageDialogs.Settings {AffirmativeButtonText = "import", NegativeButtonText = "cancel"});
+				                                 new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("import"), NegativeButtonText = (string)App.Current.FindResource("cancel")});
 
 			if(result == MessageDialogResult.Affirmative)
 			{

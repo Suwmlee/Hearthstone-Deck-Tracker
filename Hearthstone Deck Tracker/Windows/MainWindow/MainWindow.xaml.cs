@@ -901,7 +901,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 				}
 				else
 				{
-					this.ShowMessage("Deck detection disabled.", "Can be re-enabled in \"DECKS\" menu.");
+					this.ShowMessage((string)App.Current.FindResource("Deck detection disabled."), (string)App.Current.FindResource("Can be re-enabled in DECKS menu."));
 					CheckboxDeckDetection.IsChecked = false;
 					Config.Save();
 				}

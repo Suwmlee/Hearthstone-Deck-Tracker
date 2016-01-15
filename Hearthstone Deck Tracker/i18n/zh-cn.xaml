@@ -10,12 +10,12 @@
     <s:String x:Key="donate">捐赠给原作者</s:String>
     <!-- top -->
     <!-- main -->
-    <s:String x:Key="_MAIN">主要</s:String>
+    <s:String x:Key="_MAIN">主菜单</s:String>
     <s:String x:Key="USE _NO DECK">不使用卡组</s:String>
     <s:String x:Key="AUTO DECK SELECTION">自动选择卡组</s:String>
-    <s:String x:Key="_SORT / FILTER">顺序 / 搜索</s:String>
-    <s:String x:Key="_QUICK FILTER">快速搜索</s:String>
-    <s:String x:Key="CLASS CARDS FIRST">推荐卡组</s:String>
+    <s:String x:Key="_SORT / FILTER">排序/过滤</s:String>
+    <s:String x:Key="_QUICK FILTER">快速过滤</s:String>
+    <s:String x:Key="CLASS CARDS FIRST">优先职业卡牌</s:String>
     <s:String x:Key="E_XIT">退出</s:String>
 
     <!-- new deck -->
@@ -34,58 +34,59 @@
     <s:String x:Key="_DECK">卡组</s:String>
     <s:String x:Key="EDIT _DECK">编辑卡组</s:String>
     <s:String x:Key="EDIT NA_ME">编辑名称</s:String>
-    <s:String x:Key="EDIT _NOTES">编辑注释</s:String>
+    <s:String x:Key="EDIT _NOTES">编辑笔记</s:String>
     <s:String x:Key="EDIT _TAGS">编辑标签</s:String>
     <s:String x:Key="_QUICK SET TAG">快速设置标签</s:String>
     <s:String x:Key="MOVE TO ARENA">移动到竞技场</s:String>
     <s:String x:Key="MOVE TO CONSTRUCTED">移动到构筑</s:String>
-    <s:String x:Key="SHOW _MISSING CARDS">展示错过的卡牌</s:String>
-    <s:String x:Key="_UPDATE (WEB)">更新(网页)</s:String>
+    <s:String x:Key="SHOW _MISSING CARDS">显示缺失的卡牌</s:String>
+    <s:String x:Key="_UPDATE (WEB)">更新卡组(网络)</s:String>
     <s:String x:Key="OPEN _WEBSITE">打开网站</s:String>
     <s:String x:Key="OPEN _HEARTHSTATS">打开 HEARTHSTATS</s:String>
-    <s:String x:Key="_ARCHIVE">归档</s:String>
-    <s:String x:Key="UN_ARCHIVE">删档</s:String>
+    <s:String x:Key="_ARCHIVE">存档</s:String>
+    <s:String x:Key="UN_ARCHIVE">取档</s:String>
     <s:String x:Key="DELETE">删除</s:String>
-    <s:String x:Key="CLONE">克隆</s:String>
-    <s:String x:Key="ENTIRE DECK">完整卡组</s:String>
+    <s:String x:Key="CLONE">复制</s:String>
+    <s:String x:Key="ENTIRE DECK">整个卡组</s:String>
     <s:String x:Key="SELECTED VERSION">选择的版本</s:String>
 
     <!-- import deck -->
     <s:String x:Key="_IMPORT">导入</s:String>
     <s:String x:Key="Import">导入</s:String>
     <s:String x:Key="FROM _WEB">从网页</s:String>
-    <s:String x:Key="FROM GAME: _ARENA">从游戏内竞技场</s:String>
-    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏内构筑(测试)</s:String>
+    <s:String x:Key="FROM GAME: _ARENA">从游戏内:竞技场</s:String>
+    <s:String x:Key="FROM GAME: _CONSTRUCTED (BETA)">从游戏内:构筑(测试)</s:String>
     <s:String x:Key="FROM _FILE">从文件</s:String>
-    <s:String x:Key="FROM _ID STRING">从ID字符串</s:String>
+    <s:String x:Key="FROM _ID STRING">从卡牌ID字符串</s:String>
     <s:String x:Key="FROM CLIPBOARD: _CARD NAMES">从剪贴板:卡牌名称</s:String>
-    <s:String x:Key="FROM LAST _GAME">从最后的游戏中</s:String>
+    <s:String x:Key="FROM LAST _GAME">从最后一局游戏中</s:String>
 
     <!-- export deck -->
-    <s:String x:Key="E_XPORT">输出</s:String>
+    <s:String x:Key="E_XPORT">导出</s:String>
     <s:String x:Key="TO _HEARTHSTONE">到炉石传说</s:String>
-    <s:String x:Key="TO HEARTHSTONE FROM _WEB">到网页炉石</s:String>
-    <s:String x:Key="SAVE AS _XML">保存为xml格式</s:String>
-    <s:String x:Key="COPY IDS TO _CLIPBOARD">复制IDS到剪贴板</s:String>
-    <s:String x:Key="COPY _NAMES TO CLIPBOARD">复制名称到剪贴板</s:String>
+    <s:String x:Key="TO HEARTHSTONE FROM _WEB">从网页到炉石</s:String>
+    <s:String x:Key="SAVE AS _XML">保存为xml文件</s:String>
+    <s:String x:Key="COPY IDS TO _CLIPBOARD">复制卡牌ID到剪贴板</s:String>
+    <s:String x:Key="COPY _NAMES TO CLIPBOARD">复制卡牌名称到剪贴板</s:String>
     <s:String x:Key="_SCREENSHOT">截图</s:String>
 
     <!-- stats -->
-    <s:String x:Key="_STATS">统计</s:String>
-    <s:String x:Key="[OLD] GAMES _STATISTICS">[旧] 游戏统计 </s:String>
-    <s:String x:Key="ARENA RUNS _STATISTICS">竞技场统计</s:String>
-    <s:String x:Key="_LATEST REPLAY">最新的录像</s:String>
-    <s:String x:Key="_SELECT REPLAY">选择录像</s:String>
-    <s:String x:Key="LOAD REPLAY FROM _FILE">从文件中导入录像</s:String>
+    <s:String x:Key="_STATS">数据</s:String>
+    <s:String x:Key="[OLD] GAMES _STATISTICS">[旧] 游戏&amp;数据统计 </s:String>
+    <s:String x:Key="ARENA RUNS _STATISTICS">竞技场运行&amp;数据统计</s:String>
+    <s:String x:Key="_LATEST REPLAY">回放最后一局对战</s:String>
+    <s:String x:Key="_SELECT REPLAY">回放指定一局对战</s:String>
+    <s:String x:Key="LOAD REPLAY FROM _FILE">从文件中载入对战回放</s:String>
 
     <!-- plugins -->
     <s:String x:Key="_PLUGINS">插件</s:String>
-    <s:String x:Key="EMPTY...">清空</s:String>
+    <s:String x:Key="EMPTY...">空...</s:String>
 
     <s:String x:Key="Move to new window">在新窗口打开</s:String>
     <s:String x:Key="Stats">统计</s:String>
     <!-- mid -->
-    <s:String x:Key="START LAUNCHER / HEARTHSTONE">运行 炉石</s:String>
+    <s:String x:Key="START LAUNCHER / HEARTHSTONE">运行 战网/炉石传说</s:String>
+    <s:String x:Key="STARTING LAUNCHER...">正在启动 战网登陆器</s:String>
     <s:String x:Key="SELECTED VERSION:">选择版本:</s:String>
     <s:String x:Key="CARDS:">卡牌:</s:String>
     <s:String x:Key="SAVE">保存</s:String>
@@ -102,6 +103,7 @@
     <s:String x:Key="Download decks">下载卡组</s:String>
     <s:String x:Key="Upload decks">上传卡组</s:String>
     <s:String x:Key="Errors">错误</s:String>
+    <s:String x:Key="Error">错误</s:String>
     <s:String x:Key="Update Notes">更新注释</s:String>
 
     <!-- deckpicker -->
@@ -112,7 +114,7 @@
     <s:String x:Key="Name...">名字...</s:String>
     <s:String x:Key="ACTIVE">使用中</s:String>
     <s:String x:Key="USE">可用</s:String>
-    
+
     <!-- replay -->
     <s:String x:Key="Attack">攻击</s:String>
     <s:String x:Key="Play">开始游戏</s:String>
@@ -123,7 +125,7 @@
     <s:String x:Key="Summon">召唤</s:String>
     <s:String x:Key="SHOW ALL">显示所有</s:String>
     <s:String x:Key="SHOW FILTERED">过滤后显示</s:String>
-    
+
     <!-- hearthstats -->
     <s:String x:Key="_HEARTHSTATS">某炉石网站</s:String>
     <s:String x:Key="SYNC">同步</s:String>
@@ -322,7 +324,7 @@
     <s:String x:Key="Deck Windows">卡组窗口</s:String>
     <s:String x:Key="Player">玩家</s:String>
     <s:String x:Key="Interactivity">交互</s:String>
-    <s:String x:Key="Tracker">追踪</s:String>
+    <s:String x:Key="Tracker">记牌器</s:String>
     <s:String x:Key="Exporting">输出</s:String>
     <s:String x:Key="Importing">导入</s:String>
     <s:String x:Key="Plugins">插件</s:String>
@@ -347,27 +349,29 @@
     <!-- option overlay general -->
     <s:String x:Key="Hide (completely)">隐藏(完全)</s:String>
     <s:String x:Key="Hide in menu">游戏在主界面时隐藏</s:String>
-    <s:String x:Key="Hide in spectator">在观战模式隐藏</s:String>
-    <s:String x:Key="Hide if HS in background">炉石在后台隐藏</s:String>
+    <s:String x:Key="Hide in spectator">观战模式隐藏</s:String>
+    <s:String x:Key="Hide if HS in background">炉石传说在后台隐藏</s:String>
     <s:String x:Key="Hide decks">隐藏卡组</s:String>
     <s:String x:Key="Hide timers">隐藏计时器</s:String>
-    <s:String x:Key="Hide card-age">隐藏手牌回合数标记</s:String>
-    <s:String x:Key="Hide card-marks">隐藏卡牌标记</s:String>
-    <s:String x:Key="Hide secrets">隐藏奥秘</s:String>
-    <s:String x:Key="Hide Attack Icon:">隐藏场攻图标:</s:String>
+    <s:String x:Key="Hide card-age">隐藏手牌回合标记</s:String>
+    <s:String x:Key="Hide card-marks">隐藏手牌来源标记</s:String>
+    <s:String x:Key="Hide secrets">隐藏奥秘提示</s:String>
+    <s:String x:Key="Hide Attack Icon:">隐藏总场攻图标:</s:String>
     <s:String x:Key="For secrets only">只显示奥秘效果</s:String>
     <s:String x:Key="Additional card tooltips">额外卡牌效果</s:String>
     <s:String x:Key="Card-mark tooltips*">卡牌标记说明*</s:String>
     <s:String x:Key="Automatically gray out secrets">揭示的奥秘自动变灰</s:String>
-    <s:String x:Key="Do not reset decks after a game">游戏结束后不重置卡组</s:String>
-    <s:String x:Key="Gold progress always visible (in menu)">获取金币进度(菜单)</s:String>
-    <s:String x:Key="Opacity:">不透明:</s:String>
+    <s:String x:Key="Do not reset decks after a game">一场游戏结束后不重置卡组</s:String>
+    <s:String x:Key="Gold progress always visible (in menu)">获取金币进度(主界面)</s:String>
+    <s:String x:Key="Opacity:">透明度:</s:String>
     <s:String x:Key="Unlock Overlay">解锁悬浮层</s:String>
-    <s:String x:Key="Move/resize objects:">移动/重设 对象:</s:String>
+    <s:String x:Key="Move/resize objects:">移动/改变大小:</s:String>
     <s:String x:Key="Reset">重置</s:String>
     <s:String x:Key="Reset positions:">重置位置:</s:String>
     <!-- option overlay interactivity -->
     <s:String x:Key="WARNING:">警告</s:String>
+    <s:String x:Key="Enabled">可用</s:String>
+    <s:String x:Key="Disabled">不可用</s:String>
     <s:String x:Key="May cause the cursor to freeze occasionally">可能引起光标不时卡住</s:String>
     <s:String x:Key="Force on (do not use this unless you need to)">强制打开</s:String>
     <s:String x:Key="FEATURES:">特性:</s:String>
@@ -553,8 +557,8 @@
     <s:String x:Key="Archived:">存档:</s:String>
     <s:String x:Key="Include">包括</s:String>
     <s:String x:Key="HIDE">隐藏</s:String>
-    
-    
+
+
     <!-- cs code translate -->
     <s:String x:Key="Battlecry">战吼</s:String>
     <s:String x:Key="Charge">冲锋</s:String>
@@ -567,11 +571,11 @@
     <s:String x:Key="Spellpower">法强</s:String>
     <s:String x:Key="Taunt">嘲讽</s:String>
     <s:String x:Key="Windfury">风怒</s:String>
-    
+
     <s:String x:Key="HEALTH">生命值</s:String>
     <s:String x:Key="ATTACK">攻击力</s:String>
     <s:String x:Key="OVERLOAD">超载</s:String>
-		
+
     <!-- cs code translate -->
     <!-- cs code translate -->
     <s:String x:Key="Hearthstone install directory not found">未找到炉石传说程序</s:String>
@@ -583,7 +587,71 @@
     <s:String x:Key="Please restart HDT for the new iconset to be loaded.">重启HDT使皮肤生效</s:String>
     <s:String x:Key="Please restart HDT for the new layout to be loaded.">重启HDT使布局设置生效</s:String>
     <s:String x:Key="Click ok to restart HDT">点击OK重启HDT</s:String>
-    
+    <s:String x:Key="show">显示</s:String>
+    <s:String x:Key="exit">退出</s:String>
+
+    <s:String x:Key="Exporting aborted">导出中断</s:String>
+    <s:String x:Key="Exporting error">导出出错</s:String>
+    <s:String x:Key="Hearthstone window lost focus.">炉石传说失去焦点</s:String>
+    <s:String x:Key="Can't find Hearthstone window.">无法发现炉石传说窗口</s:String>
+    <s:String x:Key="Restore backup .">恢复备份</s:String>
+    <s:String x:Key="This can not be undone! Make sure you have a current backup (if necessary). To create one, CANCEL and click CREATE NEW.">This can not be undone! Make sure you have a current backup (if necessary). To create one, CANCEL and click \"CREATE NEW\".</s:String>
+    <s:String x:Key="Success">成功</s:String>
+    <s:String x:Key="Please restart HDT for this to take effect.">重启HDT使设置生效</s:String>
+    <s:String x:Key="Delete backup">删除备份 </s:String>
+    <s:String x:Key="Are you sure? This can not be undone!">你确定?这无法完成</s:String>
+    <s:String x:Key="Plugins directory not found and can not be created. Please manually create it in the Hearthstone Deck Tracker folder.">Plugins directory not found and can not be created. Please manually create it in the Hearthstone Deck Tracker folder.</s:String>
+    <s:String x:Key="Done.">完成.</s:String>
+    <s:String x:Key="Fixed names/classes for">修复 名称/职业 </s:String>
+    <s:String x:Key="matches."> 对局.</s:String>
+    <s:String x:Key="This will permanentely delete the deck and all associated stats. Are you sure?">这会永久删除套牌和相关数据.你确定?</s:String>
+    <s:String x:Key="Deleted">删除</s:String>
+    <s:String x:Key="duplicates.">重复.</s:String>
+    <s:String x:Key="New arena deck detected!">检测到新的竞技场套牌</s:String>
+    <s:String x:Key="You can change this behaviour to auto save import or manual in [options > tracker > importing]">You can change this behaviour to "auto save &amp; import" or "manual" in [options > tracker > importing]</s:String>
+    <s:String x:Key="import">导入</s:String>
+    <s:String x:Key="duplicate matches.">重复对局.</s:String>
+    <s:String x:Key="Due to sync issues some matches have been duplicated, click fix now to see and delete duplicates. Sorry about this.">Due to sync issues some matches have been duplicated, click \"fix now\" to see and delete duplicates. Sorry about this.</s:String>
+    <s:String x:Key="fix now">现在修复</s:String>
+    <s:String x:Key="fix later">稍后修复</s:String>
+    <s:String x:Key="don't fix">不修复</s:String>
+    <s:String x:Key="No duplicate matches found.">没有发现重复对局</s:String>
+    <s:String x:Key="Cancelled">取消</s:String>
+    <s:String x:Key="Fix remaining names on next start?">下次修复遗留的名字</s:String>
+    <s:String x:Key="Error starting battle.net launcher">打开战网出错</s:String>
+    <s:String x:Key="Could not find or start the battle.net launcher.">无法发现或打开战网启动器.</s:String>
+    <s:String x:Key="No arena deck found">没有发现竞技场套牌</s:String>
+    <s:String x:Key="Please enter the arena screen (and build your deck).">请进入竞技场(创建你的套牌)</s:String>
+    <s:String x:Key="Deck detection disabled.">重复套牌失效</s:String>
+    <s:String x:Key="Can be re-enabled in DECKS menu.">可以在 套牌 菜单中重新可用</s:String>
+    <s:String x:Key="Deleting">删除</s:String>
+    <s:String x:Key="deck">套牌</s:String>
+    <s:String x:Key="Are you Sure?\n">你确定</s:String>
+    <s:String x:Key="Clone game history?">复制游戏历史</s:String>
+    <s:String x:Key="(Cloned games do not count towards class or overall stats.)">(复制的游戏不会记录到职业和总统计中)</s:String>
+    <s:String x:Key="clone history">复制历史</s:String>
+    <s:String x:Key="do not clone history">不复制历史</s:String>
+    <s:String x:Key="Could not load deck from specified url">无法从指定地址载入套牌</s:String>
+    <s:String x:Key="Arena cards found!">发现竞技场套牌</s:String>
+    <s:String x:Key="Arena cards found message tips" xml:space="preserve">[操作步骤]请进入竞技场界面,点击OK,等待HDT载入套牌 &#10;&#10; 请不要移动鼠标 &#10;&#10; 提示:目前,此功能只能检测卡牌数量为1或者2. 多于2张大重复卡牌需要手动添加</s:String>
+    <s:String x:Key="Please wait...">请等待...</s:String>
+    <s:String x:Key="Detecting card counts...">检测卡牌数量...</s:String>
+    <s:String x:Key="Not 30 cards">不足30张卡牌</s:String>
+    <s:String x:Key="Deck contains">套牌包括</s:String>
+    <s:String x:Key="cards. Is this what you want to save anyway?"> 卡牌. 这些是你想要保留的吗?</s:String>
+    <s:String x:Key="Deck type?">套牌类型?</s:String>
+    <s:String x:Key="Please select a deck type.">请选择一个套牌类型</s:String>
+    <s:String x:Key="constructed">构筑</s:String>
+    <s:String x:Key="arena run">竞技场</s:String>
+    <s:String x:Key="Cancel editing">取消编辑</s:String>
+    <s:String x:Key="Cancel deck creation">取消创建套牌</s:String>
+    <s:String x:Key="All changes made to the deck will be lost.">这套套牌的所有历史都会丢失</s:String>
+    <s:String x:Key="The new deck will be lost.">新套牌会丢失</s:String>
+    <s:String x:Key="No missing cards">没有缺少的卡牌</s:String>
+    <s:String x:Key="No cards were missing when you last exported this deck. (or you have not recently exported this deck)">最后一次导出这套套牌,没有卡牌丢失(或者你最近没有导出套牌)</s:String>
+    <s:String x:Key="OK">确定</s:String>
+    <s:String x:Key="Export incomplete">导出完成</s:String>
+
     <!-- import tips -->
     <s:String x:Key="start">开始</s:String>
     <s:String x:Key="Step 0:">步骤 0:</s:String>
@@ -592,7 +660,7 @@
     <s:String x:Key="Go to the main menu">到主界面</s:String>
     <s:String x:Key="Step 2:">步骤 2:</s:String>
     <s:String x:Key="import step2" xml:space="preserve" >打开"我的收藏",点击上部的每个职业图标一次.&#x0a;- 不要点击中立&#10;- 不要打开任何套牌&#13;- 不要进行翻页.</s:String>
-    
+
     <s:String x:Key="Setting up">设置:</s:String>
     <s:String x:Key="import prepare" xml:space="preserve">这功能需要半自动化设置. HDT需要知道每个职业哪些卡牌是金色的还是普通的. &#10;&#10; 如果你的牌库有变更,必须重新设置一遍: '选项 > 追踪 > 导入'</s:String>
     <s:String x:Key="How this works:">如何工作的:</s:String>

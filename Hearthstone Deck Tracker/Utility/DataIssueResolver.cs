@@ -63,14 +63,14 @@ namespace Hearthstone_Deck_Tracker.Utility
 					Logger.WriteLine(numMatches + " duplicate matches found.");
 					var result =
 						await
-						Core.MainWindow.ShowMessageAsync("Detected " + numMatches + " duplicate matches.",
-						                                 "Due to sync issues some matches have been duplicated, click \"fix now\" to see and delete duplicates. Sorry about this.",
+						Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("Detected") + numMatches + (string)App.Current.FindResource("duplicate matches."),
+						                                 (string)App.Current.FindResource("Due to sync issues some matches have been duplicated, click fix now to see and delete duplicates. Sorry about this."),
 						                                 MessageDialogStyle.AffirmativeAndNegativeAndSingleAuxiliary,
 						                                 new MessageDialogs.Settings
 						                                 {
-							                                 AffirmativeButtonText = "fix now",
-							                                 NegativeButtonText = "fix later",
-							                                 FirstAuxiliaryButtonText = "don't fix"
+							                                 AffirmativeButtonText = (string)App.Current.FindResource("fix now"),
+							                                 NegativeButtonText = (string)App.Current.FindResource("fix later"),
+							                                 FirstAuxiliaryButtonText = (string)App.Current.FindResource("don't fix")
 						                                 });
 					if(result == MessageDialogResult.Affirmative)
 					{
@@ -85,7 +85,7 @@ namespace Hearthstone_Deck_Tracker.Utility
 					}
 				}
 				else if(showDialogIfNoneFound)
-					await Core.MainWindow.ShowMessageAsync("No duplicate matches found.", "");
+					await Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("No duplicate matches found."), "");
 			}
 			catch(Exception e)
 			{
@@ -190,11 +190,11 @@ namespace Hearthstone_Deck_Tracker.Utility
 			{
 				var fix =
 					await
-					Core.MainWindow.ShowMessageAsync("Cancelled", "Fix remaining names on next start?", MessageDialogStyle.AffirmativeAndNegative,
+					Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("Cancelled"), (string)App.Current.FindResource("Fix remaining names on next start?"), MessageDialogStyle.AffirmativeAndNegative,
 					                                 new MessageDialogs.Settings
 					                                 {
-						                                 AffirmativeButtonText = "next time",
-						                                 NegativeButtonText = "don\'t fix"
+						                                 AffirmativeButtonText = (string)App.Current.FindResource("next time"),
+						                                 NegativeButtonText = (string)App.Current.FindResource("don't fix")
 					                                 });
 				if(fix == MessageDialogResult.Negative)
 				{

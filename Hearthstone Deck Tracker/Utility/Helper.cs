@@ -586,7 +586,7 @@ namespace Hearthstone_Deck_Tracker
 					Process.Start("battlenet://");
 
 					var foundBnetWindow = false;
-					Core.MainWindow.TextBlockBtnStartHearthstone.Text = "STARTING LAUNCHER...";
+					Core.MainWindow.TextBlockBtnStartHearthstone.Text = (string)App.Current.FindResource("STARTING LAUNCHER...");
 					for(int i = 0; i < 20; i++)
 					{
 						bnetProc = Process.GetProcessesByName("Battle.net").FirstOrDefault();
@@ -597,10 +597,10 @@ namespace Hearthstone_Deck_Tracker
 						}
 						await Task.Delay(500);
 					}
-					Core.MainWindow.TextBlockBtnStartHearthstone.Text = "START LAUNCHER / HEARTHSTONE";
+					Core.MainWindow.TextBlockBtnStartHearthstone.Text = (string)App.Current.FindResource("START LAUNCHER / HEARTHSTONE");
 					if(!foundBnetWindow)
 					{
-						Core.MainWindow.ShowMessageAsync("Error starting battle.net launcher", "Could not find or start the battle.net launcher.");
+						Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("Error starting battle.net launcher"), (string)App.Current.FindResource("Could not find or start the battle.net launcher."));
 						Core.MainWindow.BtnStartHearthstone.IsEnabled = true;
 						return;
 					}

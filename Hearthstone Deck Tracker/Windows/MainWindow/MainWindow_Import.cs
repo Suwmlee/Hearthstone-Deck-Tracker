@@ -45,7 +45,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 					SaveDeckWithOverwriteCheck();
 			}
 			else
-				await this.ShowMessageAsync("Error", "Could not load deck from specified url");
+				await this.ShowMessageAsync((string)App.Current.FindResource("Error"), (string)App.Current.FindResource("Could not load deck from specified url"));
 		}
 
 		private async Task<string> InputDeckURL()
@@ -262,7 +262,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 				{
 					await
 						this.ShowMessageAsync((string)App.Current.FindResource("How this works:"),
-						                      "import tips arena all");
+						                      (string)App.Current.FindResource("import tips arena all"));
 
 					if(Config.Instance.ShowArenaImportMessage)
 					{
@@ -283,9 +283,9 @@ namespace Hearthstone_Deck_Tracker.Windows
 				if(Config.Instance.DeckImportAutoDetectCardCount)
 				{
 					await
-						this.ShowMessageAsync("Arena cards found!",
-						                      "[WORK IN PROGRESS] Please enter the arena screen, then click ok. Wait until HDT has loaded the deck.\n\nPlease don't move your mouse.\n\nNote: For right now, this can currently only detect if a card has 1 or more than 1 copy (sets count to 2). Cards with more than 2 copies still have to be manually adjusted.");
-					var controller = await this.ShowProgressAsync("Please wait...", "Detecting card counts...");
+						this.ShowMessageAsync((string)App.Current.FindResource("Arena cards found!"),
+						                      (string)App.Current.FindResource("Arena cards found message tips"));
+					var controller = await this.ShowProgressAsync((string)App.Current.FindResource("Please wait..."), (string)App.Current.FindResource("Detecting card counts..."));
 					await GetCardCounts(deck);
 					await controller.CloseAsync();
 				}
@@ -294,7 +294,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			else
 			{
 				if(!Core.Game.TempArenaDeck.Cards.Any())
-					await this.ShowMessageAsync("No arena deck found", "Please enter the arena screen (and build your deck).");
+					await this.ShowMessageAsync((string)App.Current.FindResource("No arena deck found"), (string)App.Current.FindResource("Please enter the arena screen (and build your deck)."));
 				else
 					SetNewDeck(Core.Game.TempArenaDeck);
 			}

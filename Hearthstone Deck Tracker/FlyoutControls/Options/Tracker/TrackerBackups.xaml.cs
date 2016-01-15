@@ -42,8 +42,8 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 			{
 				var result =
 					await
-					Core.MainWindow.ShowMessageAsync("Restore backup " + selected.DisplayName,
-					                                 "This can not be undone! Make sure you have a current backup (if necessary). To create one, CANCEL and click \"CREATE NEW\".",
+					Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("Restore backup .") + selected.DisplayName,
+					                                 (string)App.Current.FindResource("This can not be undone! Make sure you have a current backup (if necessary). To create one, CANCEL and click CREATE NEW."),
 					                                 MessageDialogStyle.AffirmativeAndNegative);
 				if(result == MessageDialogResult.Affirmative)
 				{
@@ -57,7 +57,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 					DeckStatsList.Save();
 					DefaultDeckStats.Load();
 					DefaultDeckStats.Save();
-					Core.MainWindow.ShowMessage("Success", "Please restart HDT for this to take effect.");
+					Core.MainWindow.ShowMessage((string)App.Current.FindResource("Success"),(string)App.Current.FindResource("Please restart HDT for this to take effect."));
 				}
 			}
 		}
@@ -74,10 +74,10 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 			if(ListBoxBackups.SelectedItems.Count == 0)
 				return;
 			var msg = ListBoxBackups.SelectedItems.Count == 1
-				          ? "Delete backup " + ((BackupFile)ListBoxBackups.SelectedItem).DisplayName
-				          : "Delete " + ListBoxBackups.SelectedItems.Count + " backups";
+				          ? (string)App.Current.FindResource("Delete backup") + ((BackupFile)ListBoxBackups.SelectedItem).DisplayName
+				          : (string)App.Current.FindResource("Delete") + ListBoxBackups.SelectedItems.Count + (string)App.Current.FindResource("Backups");
 			var result =
-				await Core.MainWindow.ShowMessageAsync(msg, "Are you sure? This can not be undone!", MessageDialogStyle.AffirmativeAndNegative);
+				await Core.MainWindow.ShowMessageAsync(msg, (string)App.Current.FindResource("Are you sure? This can not be undone!"), MessageDialogStyle.AffirmativeAndNegative);
 			if(result == MessageDialogResult.Affirmative)
 			{
 				foreach(var backupFile in ListBoxBackups.SelectedItems.OfType<BackupFile>())

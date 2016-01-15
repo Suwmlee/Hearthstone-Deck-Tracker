@@ -360,8 +360,8 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Tracker
 			var fixCount = await DataIssueResolver.FixOppNameAndClass(games, controller);
 			await controller.CloseAsync();
 			await
-				Core.MainWindow.ShowMessageAsync("Done.",
-				                                 fixCount > 0 ? "Fixed names/classes for " + fixCount + " matches." : "No incorrect stats found.");
+				Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("Done."),
+				                                 fixCount > 0 ? (string)App.Current.FindResource("Fixed names/classes for") + fixCount + (string)App.Current.FindResource("matches.") : (string)App.Current.FindResource("No incorrect stats found."));
 		}
 	}
 }

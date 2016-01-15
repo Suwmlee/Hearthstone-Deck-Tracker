@@ -137,9 +137,9 @@ namespace Hearthstone_Deck_Tracker.Windows
 
 				var result =
 					await
-					this.ShowMessageAsync("Not 30 cards",
-					                      string.Format("Deck contains {0} cards. Is this what you want to save anyway?",
-					                                    _newDeck.Cards.Sum(c => c.Count)), MessageDialogStyle.AffirmativeAndNegative, settings);
+					this.ShowMessageAsync((string)App.Current.FindResource("Not 30 cards"),
+                                          (string)App.Current.FindResource("Deck contains")+_newDeck.Cards.Sum(c => c.Count).ToString() +(string)App.Current.FindResource("cards. Is this what you want to save anyway?"),
+					                       MessageDialogStyle.AffirmativeAndNegative, settings);
 				if(result != MessageDialogResult.Affirmative)
 					return;
 			}
@@ -534,8 +534,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 
 			var result =
 				await
-				this.ShowMessageAsync("Deck type?", "Please select a deck type.", MessageDialogStyle.AffirmativeAndNegative,
-				                      new MessageDialogs.Settings {AffirmativeButtonText = "constructed", NegativeButtonText = "arena run"});
+				this.ShowMessageAsync((string)App.Current.FindResource("Deck type?"), (string)App.Current.FindResource("Please select a deck type."), MessageDialogStyle.AffirmativeAndNegative,
+				                      new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("constructed"), NegativeButtonText = (string)App.Current.FindResource("arena run")});
 			if(result == MessageDialogResult.Negative)
 				_newDeck.IsArenaDeck = true;
 
@@ -571,8 +571,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 			{
 				var result =
 					await
-					this.ShowMessageAsync(EditingDeck ? "Cancel editing" : "Cancel deck creation",
-					                      EditingDeck ? "All changes made to the deck will be lost." : "The new deck will be lost.",
+					this.ShowMessageAsync(EditingDeck ? (string)App.Current.FindResource("Cancel editing") : (string)App.Current.FindResource("Cancel deck creation"),
+					                      EditingDeck ? (string)App.Current.FindResource("All changes made to the deck will be lost.") : (string)App.Current.FindResource("The new deck will be lost."),
 					                      MessageDialogStyle.AffirmativeAndNegative);
 				if(result != MessageDialogResult.Affirmative)
 					return;

@@ -213,7 +213,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			if(deck != null)
 				ExportDeck(deck);
 			else
-				await this.ShowMessageAsync("Error", "Could not load deck from specified url");
+				await this.ShowMessageAsync((string)App.Current.FindResource("Error"), (string)App.Current.FindResource("Could not load deck from specified url"));
 		}
 
 		internal void MenuItemMissingDust_OnClick(object sender, RoutedEventArgs e)

@@ -152,9 +152,9 @@ namespace Hearthstone_Deck_Tracker.Windows
 			if(!deck.MissingCards.Any())
 			{
 				await
-					window.ShowMessageAsync("No missing cards",
-					                        "No cards were missing when you last exported this deck. (or you have not recently exported this deck)",
-					                        MessageDialogStyle.Affirmative, new Settings {AffirmativeButtonText = "OK"});
+					window.ShowMessageAsync((string)App.Current.FindResource("No missing cards"),
+					                        (string)App.Current.FindResource("No cards were missing when you last exported this deck. (or you have not recently exported this deck)"),
+					                        MessageDialogStyle.Affirmative, new Settings {AffirmativeButtonText = (string)App.Current.FindResource("OK")});
 				return;
 			}
 			var message = "The following cards were not found:\n";
@@ -176,7 +176,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			}
 			message += string.Format("\n\nYou need {0} dust {1}{2}to craft the missing cards.", totalDust, nax, promo);
 			await
-				window.ShowMessageAsync("Export incomplete", message, MessageDialogStyle.Affirmative, new Settings {AffirmativeButtonText = "OK"});
+				window.ShowMessageAsync((string)App.Current.FindResource("Export incomplete"), message, MessageDialogStyle.Affirmative, new Settings {AffirmativeButtonText = "OK"});
 		}
 
 		public static async Task<bool> ShowAddGameDialog(this MetroWindow window, Deck deck)
@@ -184,7 +184,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			if(deck == null)
 				return false;
 			var dialog = new AddGameDialog(deck);
-			await window.ShowMetroDialogAsync(dialog, new MetroDialogSettings {AffirmativeButtonText = "save", NegativeButtonText = "cancel"});
+			await window.ShowMetroDialogAsync(dialog, new MetroDialogSettings {AffirmativeButtonText = (string)App.Current.FindResource("Save"), NegativeButtonText = (string)App.Current.FindResource("cancel")});
 			var game = await dialog.WaitForButtonPressAsync();
 			await window.HideMetroDialogAsync(dialog);
 			if(game == null)

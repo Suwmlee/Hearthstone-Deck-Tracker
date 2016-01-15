@@ -89,7 +89,7 @@ namespace Hearthstone_Deck_Tracker.HearthStats.Controls
 				Core.MainWindow.DeckPickerList.UpdateDecks();
 				await controller.CloseAsync();
 			}
-			await this.ShowMessageAsync("Success", "Deleted " + _allWrappers.Count(x => x.ToDelete) + " duplicates.");
+			await this.ShowMessageAsync((string)App.Current.FindResource("Success"),(string)App.Current.FindResource("Deleted") + _allWrappers.Count(x => x.ToDelete) + (string)App.Current.FindResource("duplicates."));
 			Config.Instance.FixedDuplicateMatches = true;
 			Config.Save();
 			Close();

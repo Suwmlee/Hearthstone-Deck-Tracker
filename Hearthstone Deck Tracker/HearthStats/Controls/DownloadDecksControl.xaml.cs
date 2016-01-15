@@ -61,10 +61,10 @@ namespace Hearthstone_Deck_Tracker.HearthStats.Controls
 			//show warning
 			var result =
 				await
-				Core.MainWindow.ShowMessageAsync("Delete " + deck.Name,
-				                                 "This will permanentely delete the deck and all associated stats. Are you sure?",
+				Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("Delete") + deck.Name,
+				                                 (string)App.Current.FindResource("This will permanentely delete the deck and all associated stats. Are you sure?"),
 				                                 MessageDialogStyle.AffirmativeAndNegative,
-				                                 new MessageDialogs.Settings {AffirmativeButtonText = "delete", NegativeButtonText = "cancel"});
+				                                 new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("Delete"), NegativeButtonText = (string)App.Current.FindResource("cancel")});
 			if(result == MessageDialogResult.Affirmative)
 			{
 				var deleted = await HearthStatsManager.DeleteDeckAsync(deck, false, true);

@@ -32,24 +32,24 @@ namespace Hearthstone_Deck_Tracker
 				Text = "Hearthstone Deck Tracker v" + (Helper.GetCurrentVersion() ?? new Version("0.0")).ToVersionString()
 			};
 
-			var startHearthstonMenuItem = new MenuItem("Start Launcher/Hearthstone", (sender, args) => Helper.StartHearthstoneAsync());
+			var startHearthstonMenuItem = new MenuItem((string)App.Current.FindResource("START LAUNCHER / HEARTHSTONE"), (sender, args) => Helper.StartHearthstoneAsync());
 			startHearthstonMenuItem.Name = "startHearthstone";
 			_notifyIcon.ContextMenu.MenuItems.Add(startHearthstonMenuItem);
 
-			var useNoDeckMenuItem = new MenuItem("Use no deck", (sender, args) => UseNoDeckContextMenu());
+			var useNoDeckMenuItem = new MenuItem((string)App.Current.FindResource("USE _NO DECK"), (sender, args) => UseNoDeckContextMenu());
 			useNoDeckMenuItem.Name = "useNoDeck";
 			_notifyIcon.ContextMenu.MenuItems.Add(useNoDeckMenuItem);
 
-			var autoSelectDeckMenuItem = new MenuItem("Autoselect deck", (sender, args) => AutoDeckDetectionContextMenu());
+			var autoSelectDeckMenuItem = new MenuItem((string)App.Current.FindResource("AUTO DECK SELECTION"), (sender, args) => AutoDeckDetectionContextMenu());
 			autoSelectDeckMenuItem.Name = "autoSelectDeck";
 			_notifyIcon.ContextMenu.MenuItems.Add(autoSelectDeckMenuItem);
 
-			var classCardsFirstMenuItem = new MenuItem("Class cards first", (sender, args) => SortClassCardsFirstContextMenu());
+			var classCardsFirstMenuItem = new MenuItem((string)App.Current.FindResource("CLASS CARDS FIRST"), (sender, args) => SortClassCardsFirstContextMenu());
 			classCardsFirstMenuItem.Name = "classCardsFirst";
 			_notifyIcon.ContextMenu.MenuItems.Add(classCardsFirstMenuItem);
 
-			_notifyIcon.ContextMenu.MenuItems.Add("Show", (sender, args) => Core.MainWindow.ActivateWindow());
-			_notifyIcon.ContextMenu.MenuItems.Add("Exit", (sender, args) => Core.MainWindow.Close());
+			_notifyIcon.ContextMenu.MenuItems.Add((string)App.Current.FindResource("show"), (sender, args) => Core.MainWindow.ActivateWindow());
+			_notifyIcon.ContextMenu.MenuItems.Add((string)App.Current.FindResource("exit"), (sender, args) => Core.MainWindow.Close());
 			_notifyIcon.MouseClick += (sender, args) =>
 			{
 				if(args.Button == MouseButtons.Left)
