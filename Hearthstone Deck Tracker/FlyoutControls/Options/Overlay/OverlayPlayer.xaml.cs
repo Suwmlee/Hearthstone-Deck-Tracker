@@ -67,27 +67,27 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 				switch(itemName)
 				{
 					case "Deck Title":
-						ElementSorterPlayer.AddItem(new ElementSorterItem("Deck Title", Config.Instance.ShowDeckTitle,
+						ElementSorterPlayer.AddItem(new ElementSorterItem("Deck Title",(string)App.Current.FindResource("Deck Title"), Config.Instance.ShowDeckTitle,
 						                                                  value => Config.Instance.ShowDeckTitle = value, true));
 						break;
 					case "Cards":
-						ElementSorterPlayer.AddItem(new ElementSorterItem("Cards", !Config.Instance.HidePlayerCards,
+						ElementSorterPlayer.AddItem(new ElementSorterItem("Cards",(string)App.Current.FindResource("Cards"), !Config.Instance.HidePlayerCards,
 						                                                  value => Config.Instance.HidePlayerCards = !value, true));
 						break;
 					case "Card Counter":
-						ElementSorterPlayer.AddItem(new ElementSorterItem("Card Counter", !Config.Instance.HidePlayerCardCount,
+						ElementSorterPlayer.AddItem(new ElementSorterItem("Card Counter",(string)App.Current.FindResource("Card Counter"), !Config.Instance.HidePlayerCardCount,
 						                                                  value => Config.Instance.HidePlayerCardCount = !value, true));
 						break;
 					case "Fatigue Counter":
-						ElementSorterPlayer.AddItem(new ElementSorterItem("Fatigue Counter", !Config.Instance.HidePlayerFatigueCount,
+						ElementSorterPlayer.AddItem(new ElementSorterItem("Fatigue Counter",(string)App.Current.FindResource("Fatigue Counter"), !Config.Instance.HidePlayerFatigueCount,
 						                                                  value => Config.Instance.HidePlayerFatigueCount = !value, true));
 						break;
 					case "Draw Chances":
-						ElementSorterPlayer.AddItem(new ElementSorterItem("Draw Chances", !Config.Instance.HideDrawChances,
+						ElementSorterPlayer.AddItem(new ElementSorterItem("Draw Chances",(string)App.Current.FindResource("Draw Chances"), !Config.Instance.HideDrawChances,
 						                                                  value => Config.Instance.HideDrawChances = !value, true));
 						break;
 					case "Wins":
-						ElementSorterPlayer.AddItem(new ElementSorterItem("Wins", Config.Instance.ShowDeckWins,
+						ElementSorterPlayer.AddItem(new ElementSorterItem("Wins", (string)App.Current.FindResource("Win Rate"), Config.Instance.ShowDeckWins,
 						                                                  value => Config.Instance.ShowDeckWins = value, true));
 						break;
 				}

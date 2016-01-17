@@ -18,10 +18,10 @@ namespace Hearthstone_Deck_Tracker
 		private readonly Action<bool> _setConfigValue;
 		public readonly string ItemName;
 
-		public ElementSorterItem(string name, bool isChecked, Action<bool> setConfigValue, bool isPlayerList)
+		public ElementSorterItem(string name,string showname, bool isChecked, Action<bool> setConfigValue, bool isPlayerList)
 		{
 			InitializeComponent();
-			CheckBox.Content = name;
+			CheckBox.Content = showname;
 			ItemName = name;
 			CheckBox.IsChecked = isChecked;
 			_setConfigValue = setConfigValue;

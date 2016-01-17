@@ -83,23 +83,23 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 				switch(itemName)
 				{
 					case "Cards":
-						ElementSorterOpponent.AddItem(new ElementSorterItem("Cards", !Config.Instance.HideOpponentCards,
+						ElementSorterOpponent.AddItem(new ElementSorterItem("Cards",(string)App.Current.FindResource("Cards"), !Config.Instance.HideOpponentCards,
 						                                                    value => Config.Instance.HideOpponentCards = !value, false));
 						break;
 					case "Card Counter":
-						ElementSorterOpponent.AddItem(new ElementSorterItem("Card Counter", !Config.Instance.HideOpponentCardCount,
+						ElementSorterOpponent.AddItem(new ElementSorterItem("Card Counter",(string)App.Current.FindResource("Card Counter"), !Config.Instance.HideOpponentCardCount,
 						                                                    value => Config.Instance.HideOpponentCardCount = !value, false));
 						break;
 					case "Fatigue Counter":
-						ElementSorterOpponent.AddItem(new ElementSorterItem("Fatigue Counter", !Config.Instance.HideOpponentFatigueCount,
+						ElementSorterOpponent.AddItem(new ElementSorterItem("Fatigue Counter",(string)App.Current.FindResource("Fatigue Counter"), !Config.Instance.HideOpponentFatigueCount,
 						                                                    value => Config.Instance.HideOpponentFatigueCount = !value, false));
 						break;
 					case "Draw Chances":
-						ElementSorterOpponent.AddItem(new ElementSorterItem("Draw Chances", !Config.Instance.HideOpponentDrawChances,
+						ElementSorterOpponent.AddItem(new ElementSorterItem("Draw Chances",(string)App.Current.FindResource("Draw Chances"), !Config.Instance.HideOpponentDrawChances,
 						                                                    value => Config.Instance.HideOpponentDrawChances = !value, false));
 						break;
 					case "Win Rate":
-						ElementSorterOpponent.AddItem(new ElementSorterItem("Win Rate", Config.Instance.ShowWinRateAgainst,
+						ElementSorterOpponent.AddItem(new ElementSorterItem("Win Rate",(string)App.Current.FindResource("Win Rate"), Config.Instance.ShowWinRateAgainst,
 						                                                    value => Config.Instance.ShowWinRateAgainst = value, false));
 						break;
 				}

@@ -393,15 +393,15 @@
 
     <!-- option tracker appearane -->
     <s:String x:Key="Theme:">主题:</s:String>
-    <s:String x:Key="Accent:">口音:</s:String>
-    <s:String x:Key="Icon set:">图标设置:</s:String>
-    <s:String x:Key="Class colors:">颜色分类:</s:String>
-    <s:String x:Key="Deck layout:">卡组显示:</s:String>
-    <s:String x:Key="Red/green text color in stats summary">摘要使用红/绿</s:String>
+    <s:String x:Key="Accent:">色调:</s:String>
+    <s:String x:Key="Icon set:">图标组:</s:String>
+    <s:String x:Key="Class colors:">职业颜色:</s:String>
+    <s:String x:Key="Deck layout:">卡组布局:</s:String>
+    <s:String x:Key="Red/green text color in stats summary">统计页面用红/绿标注胜负场次</s:String>
     <s:String x:Key="Use upper case deck names">卡组名称大写</s:String>
     <s:String x:Key="Use metro animations">使用metro动画</s:String>
-    <s:String x:Key="Primary:">主要:</s:String>
-    <s:String x:Key="Alternatives:">可选择:</s:String>
+    <s:String x:Key="Primary:">首选:</s:String>
+    <s:String x:Key="Alternatives:">可选:</s:String>
     <s:String x:Key="Use default font for non-latin languages">对非拉丁语言使用默认字体</s:String>
     <s:String x:Key="Restart HDT to apply language changes">重启HDT以应用修改后的语言</s:String>
     <s:String x:Key="Card Language">卡牌语言</s:String>
@@ -652,6 +652,13 @@
     <s:String x:Key="OK">确定</s:String>
     <s:String x:Key="Export incomplete">导出完成</s:String>
 
+    <!-- elementsorter -->
+    <s:String x:Key="Draw Chances">抓到概率</s:String>
+    <s:String x:Key="Fatigue Counter">疲劳数值</s:String>
+    <s:String x:Key="Card Counter">卡牌计数</s:String>
+    <s:String x:Key="Deck Title">卡组名称</s:String>
+    <s:String x:Key="Win Rate">胜率</s:String>
+    
     <!-- import tips -->
     <s:String x:Key="start">开始</s:String>
     <s:String x:Key="Step 0:">步骤 0:</s:String>
