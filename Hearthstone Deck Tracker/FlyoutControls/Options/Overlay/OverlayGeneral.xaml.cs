@@ -75,7 +75,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 		{
 			if(User32.GetHearthstoneWindow() == IntPtr.Zero)
 				return;
-			BtnUnlockOverlay.Content = await Core.Overlay.UnlockUI() ? "Lock" : "Unlock";
+			BtnUnlockOverlay.Content = await Core.Overlay.UnlockUI() ? (string)App.Current.FindResource("Lock") : (string)App.Current.FindResource("Unlock");
 		}
 
 		private async void BtnResetOverlay_Click(object sender, RoutedEventArgs e)
@@ -88,10 +88,10 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 			if(result != MessageDialogResult.Affirmative)
 				return;
 
-			if((string)BtnUnlockOverlay.Content == "Lock")
+			if((string)BtnUnlockOverlay.Content == (string)App.Current.FindResource("Lock"))
 			{
 				await Core.Overlay.UnlockUI();
-				BtnUnlockOverlay.Content = "Unlock";
+				BtnUnlockOverlay.Content = (string)App.Current.FindResource("Unlock");
 			}
 
 

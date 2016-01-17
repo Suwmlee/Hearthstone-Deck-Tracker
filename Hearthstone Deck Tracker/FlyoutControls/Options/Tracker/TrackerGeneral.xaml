@@ -85,7 +85,7 @@
                                           Checked="CheckboxFullTextSearch_Checked"
                                           Unchecked="CheckboxFullTextSearch_Unchecked" />
                     <Separator Margin="0,5,0,0"/>
-                    <TextBlock Text="* Neither 75s not 90s are quite correct. The base time is 75s but it's extended to up to ~100s, depending on animations playing." TextWrapping="Wrap" Margin="10,5,10,0" FontStyle="Italic"/>
+                    <TextBlock Text="{DynamicResource * Neither 75s not 90s are quite correct. The base time is 75s but it is extended to up to ~100s depending on animations playing.}" TextWrapping="Wrap" Margin="10,5,10,0" FontStyle="Italic"/>
                 </StackPanel>
             </ScrollViewer>
         </GroupBox>

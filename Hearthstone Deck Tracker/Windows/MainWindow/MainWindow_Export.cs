@@ -30,26 +30,24 @@ namespace Hearthstone_Deck_Tracker.Windows
 			var export = true;
 			if(Config.Instance.ShowExportingDialog)
 			{
-				var message =
-					string.Format(
-					              "1) create a new {0} deck{1}.\n\n2) leave the deck creation screen open.\n\n3) do not move your mouse or type after clicking \"export\".",
-					              deck.Class, (Config.Instance.AutoClearDeck ? " (or open an existing one to be cleared automatically)" : ""));
+                var message = (string)App.Current.FindResource("1) create a new") + " " + (string)App.Current.FindResource(deck.Class) + " " + (string)App.Current.FindResource("deck") +
+                    (Config.Instance.AutoClearDeck ? (string)App.Current.FindResource("(or open an existing one to be cleared automatically)") : "").ToString() +
+                    (string)App.Current.FindResource("export tips 2");
 
 				if(deck.GetSelectedDeckVersion().Cards.Any(c => c.Name == "Stalagg" || c.Name == "Feugen"))
 				{
-					message +=
-						"\n\nIMPORTANT: If you own golden versions of Feugen or Stalagg please make sure to configure\nOptions > Other > Exporting";
+                    message += (string)App.Current.FindResource("export tips note");
 				}
 
-				var settings = new MessageDialogs.Settings {AffirmativeButtonText = "Export"};
+				var settings = new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("Export"),NegativeButtonText = (string)App.Current.FindResource("cancel")};
 				var result =
 					await
-					this.ShowMessageAsync("Export " + deck.Name + " to Hearthstone", message, MessageDialogStyle.AffirmativeAndNegative, settings);
+					this.ShowMessageAsync((string)App.Current.FindResource("Export") + " " + deck.Name + " " + (string)App.Current.FindResource("to Hearthstone"), message, MessageDialogStyle.AffirmativeAndNegative, settings);
 				export = result == MessageDialogResult.Affirmative;
 			}
 			if(export)
 			{
-				var controller = await this.ShowProgressAsync("Creating Deck", "Please do not move your mouse or type.");
+				var controller = await this.ShowProgressAsync((string)App.Current.FindResource("Creating Deck"), (string)App.Current.FindResource("Please do not move your mouse or type."));
 				Topmost = false;
 				await Task.Delay(500);
 				await DeckExporter.Export(deck);

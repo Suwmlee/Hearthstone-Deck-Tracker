@@ -17,7 +17,7 @@
         </Border>
         <ScrollViewer>
             <StackPanel>
-                <GroupBox Header="FAQ">
+                <GroupBox Header="{DynamicResource FAQ}">
                     <TextBlock Margin="10,0,10,0" VerticalAlignment="Top" Width="auto" TextWrapping="Wrap">
                         <Hyperlink
                             NavigateUri="https://github.com/Epix37/Hearthstone-Deck-Tracker/wiki/FAQ"
@@ -26,78 +26,78 @@
                         </Hyperlink>
                     </TextBlock>
                 </GroupBox>
-                <GroupBox Header="The Overlay">
+                <GroupBox Header="{DynamicResource The Overlay}">
                     <StackPanel>
-                        <GroupBox Header="Card marks">
+                        <GroupBox Header="{DynamicResource Card marks}">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/HearthstoneDeckTracker;component/Images/card-icon-coin.png"
                                        RenderOptions.BitmapScalingMode="Fant" Width="16" />
-                                <Label Content="The Coin" />
+                                <Label Content="{DynamicResource The Coin}" />
                                 <Image Source="/HearthstoneDeckTracker;component/Images/card-icon-mulligan.png"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Width="16" Margin="10,0,0,0" />
-                                <Label Content="Mulliganed" />
+                                <Label Content="{DynamicResource Mulliganed}" />
                                 <Image Source="/HearthstoneDeckTracker;component/Images/card-icon-returned.png"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Width="16" Margin="10,0,0,0" />
-                                <Label Content="Returned" />
+                                <Label Content="{DynamicResource Returned}" />
                                 <Image Source="/HearthstoneDeckTracker;component/Images/card-icon-created.png"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Width="16" Margin="10,0,0,0" />
-                                <Label Content="Created" />
+                                <Label Content="{DynamicResource Created}" />
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox Header="Percentages">
+                        <GroupBox Header="{DynamicResource Percentages}">
                             <StackPanel Margin="10,0">
-                                <TextBlock Text="General:" FontWeight="Bold" />
+                                <TextBlock Text="{DynamicResource General:}" FontWeight="Bold" />
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/HearthstoneDeckTracker;component/Resources/overlay_1.png"
                                            Height="13" Margin="5,0,0,0" RenderOptions.BitmapScalingMode="Fant" />
                                     <TextBlock Text=" /" VerticalAlignment="Center" />
                                     <Image Source="/HearthstoneDeckTracker;component/Resources/overlay_2.png"
                                            Height="13" Margin="5,0,0,0" RenderOptions.BitmapScalingMode="Fant" />
-                                    <TextBlock Text=" The number of copies left in the deck for a specific card."
+                                    <TextBlock Text="{DynamicResource The number of copies left in the deck for a specific card.}"
                                                VerticalAlignment="Center" />
                                 </StackPanel>
-                                <TextBlock Text="Draw chance:" FontWeight="Bold" Margin="0,5,0,0"/>
+                                <TextBlock Text="{DynamicResource Draw chance:}" FontWeight="Bold" Margin="0,5,0,0"/>
                                 <StackPanel Orientation="Horizontal" Margin="0,5">
                                     <Image Source="/HearthstoneDeckTracker;component/Resources/overlay_deck.png"
                                            Width="18" Margin="5,0,0,0" RenderOptions.BitmapScalingMode="Fant" />
-                                    <TextBlock Text="The chance of drawing a card with X copies left in the deck."
+                                    <TextBlock Text="{DynamicResource The chance of drawing a card with X copies left in the deck.}"
                                                Margin="5,0,0,0" VerticalAlignment="Center" />
                                 </StackPanel>
-                                <TextBlock Text="Holding chance:" FontWeight="Bold" />
+                                <TextBlock Text="{DynamicResource Holding chance:}" FontWeight="Bold" />
                                 <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                                     <Image Source="/HearthstoneDeckTracker;component/Resources/overlay_hand.png"
                                            Width="18" Margin="5,0,0,0" RenderOptions.BitmapScalingMode="Fant" />
                                     <TextBlock Margin="5,0,0,0"
-                                               Text="The chance of your opponent holding a card at the start of the next turn with X copies left in play."
+                                               Text="{DynamicResource The chance of your opponent holding a card at the start of the next turn with X copies left in play.}"
                                                VerticalAlignment="Center" />
                                 </StackPanel>
                                 <TextBlock Margin="28,0,0,0"
-                                           Text="This includes the next draw but nothing beyond that."
+                                           Text="{DynamicResource This includes the next draw but nothing beyond that.}"
                                            FontStyle="Italic" />
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox Header="Customization">
+                        <GroupBox Header="{DynamicResource Customization}">
                             <StackPanel Margin="10, 0">
                                 <TextBlock
-                                    Text="Almost everything in the overlay can be turn on or off, moved and resized." />
-                                <TextBlock Text="On/off: " FontWeight="Bold" Margin="0,5,0,0" />
+                                    Text="{DynamicResource Almost everything in the overlay can be turn on or off. moved and resized.}" />
+                                <TextBlock Text="{DynamicResource On/off :}" FontWeight="Bold" Margin="0,5,0,0" />
                                 <TextBlock>
-                                    <Run>Options for this can be found under </Run>
+                                    <Run Text="{DynamicResource Options for this can be found under}"></Run>
                                     <Italic>
-                                        <Run>options > overlay > general / player / opponent</Run>
+                                        <Run Text="{DynamicResource options > overlay > general / player / opponent}"></Run>
                                     </Italic>
                                     <Run>.</Run>
                                 </TextBlock>
-                                <TextBlock Text="Moving/resizing: " FontWeight="Bold" Margin="0,5,0,0" />
+                                <TextBlock Text="{DynamicResource Moving/resizing :}" FontWeight="Bold" Margin="0,5,0,0" />
                                 <TextBlock>
-                                    <Run>The overlay can be unlocked via </Run>
+                                    <Run Text="{DynamicResource The overlay can be unlocked via}"> </Run>
                                     <Italic>
-                                        <Run>options > overlay > general > unlock </Run>
+                                        <Run Text="{DynamicResource options > overlay > general > unlock}"> </Run>
                                     </Italic>
-                                    <Run>(button at the bottom).</Run>
+                                    <Run Text="{DynamicResource (button at the bottom).}"></Run>
                                 </TextBlock>
                             </StackPanel>
                         </GroupBox>
@@ -111,7 +111,7 @@
                     </StackPanel>
 
                 </GroupBox>
-                <GroupBox Header="Reporting bugs / requesting features">
+                <GroupBox Header="{DynamicResource Reporting bugs / requesting features}">
                     <TextBlock Margin="10,0,10,0" VerticalAlignment="Top" Width="auto" TextWrapping="Wrap">
                         <Run Text="Two options:" />
                         <LineBreak />
@@ -132,7 +132,7 @@
                         <Run Text="2) Send an email to support@hsdecktracker.net" />
                     </TextBlock>
                 </GroupBox>
-                <GroupBox Header="GitHub Project">
+                <GroupBox Header="{DynamicResource GitHub Project}">
                     <StackPanel>
                         <TextBlock Margin="10,0,10,0" VerticalAlignment="Top">
                             <Run Text="The project can be found" />

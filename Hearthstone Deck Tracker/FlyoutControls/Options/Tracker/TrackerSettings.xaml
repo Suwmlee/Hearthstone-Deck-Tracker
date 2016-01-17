@@ -14,7 +14,7 @@
                         <StackPanel>
                             <CheckBox Name="CheckBoxAnalytics" Content="{DynamicResource Submit anonymous data}" Checked="CheckBoxAnalytics_OnChecked" Unchecked="CheckBoxAnalytics_OnUnchecked"/>
                             <TextBlock
-                                Text="This only tracks two things: App starts, where the version number and login mode is submitted, as well as information about crashes."
+                                Text="{DynamicResource This only tracks two things: App starts. where the version number and login mode is submitted. as well as information about crashes.}"
                                 TextWrapping="Wrap" />
                         </StackPanel>
                     </GroupBox>

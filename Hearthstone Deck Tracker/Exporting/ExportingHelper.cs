@@ -140,7 +140,7 @@ namespace Hearthstone_Deck_Tracker.Exporting
 			}
 			if(!User32.IsHearthstoneInForeground())
 			{
-				Core.MainWindow.ShowMessage("Exporting error", "Can't find Hearthstone window.");
+				Core.MainWindow.ShowMessage((string)App.Current.FindResource("Exporting error"), (string)App.Current.FindResource("Can't find Hearthstone window."));
 				Logger.WriteLine("Can't find Hearthstone window.", "DeckExporter");
 				return false;
 			}
