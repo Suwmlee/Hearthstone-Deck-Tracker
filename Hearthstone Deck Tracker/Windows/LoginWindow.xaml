@@ -6,7 +6,7 @@
                       BorderThickness="1" BorderBrush="{DynamicResource AccentColorBrush}"
                       Icon="{StaticResource AppIcon}"
                       ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True"
-                      Title="Hearthstone Deck Tracker" Height="400" Width="300">
+                      Title="{DynamicResource Hearthstone Deck Tracker}" Height="400" Width="300">
     <controls:MetroWindow.Resources>
         <ResourceDictionary
             Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
@@ -24,90 +24,89 @@
             <TextBlock Name="TextBlockErrorMessage" Foreground="Red" TextWrapping="Wrap" HorizontalAlignment="Center" />
             <Viewbox>
                 <TabControl Name="TabControlLoginRegister" controls:TabControlHelper.IsUnderlined="True">
-                    <TabItem Header="LOGIN"
+                    <TabItem Header="{DynamicResource LOGIN}"
                              Visibility="{Binding LoginRegisterVisibility, RelativeSource={RelativeSource AncestorType=hdt:LoginWindow}}"
                              Width="{Binding TabWidth, RelativeSource={RelativeSource AncestorType=hdt:LoginWindow}}"
                              HorizontalContentAlignment="Center">
                         <StackPanel Margin="0,16,0,0" Width="250">
-                            <TextBox Name="TextBoxEmail" controls:TextBoxHelper.Watermark="Email" TabIndex="0" />
-                            <PasswordBox Name="TextBoxPassword" controls:TextBoxHelper.Watermark="Password"
+                            <TextBox Name="TextBoxEmail" controls:TextBoxHelper.Watermark="{DynamicResource Email}" TabIndex="0" />
+                            <PasswordBox Name="TextBoxPassword" controls:TextBoxHelper.Watermark="{DynamicResource Password}"
                                          Margin="0,5,0,0" TabIndex="1" />
                             <DockPanel Margin="0,5,0,0">
-                                <CheckBox Name="CheckBoxRememberLogin" Content="Remember me" IsChecked="True"
+                                <CheckBox Name="CheckBoxRememberLogin" Content="{DynamicResource Remember me}" IsChecked="True"
                                           Checked="CheckBoxRememberLogin_Checked"
                                           Unchecked="CheckBoxRememberLogin_OnUnchecked" TabIndex="2" />
-                                <Button Name="BtnLogin" Content="Login" Margin="16,0,0,0" Click="BtnLogin_Click"
+                                <Button Name="BtnLogin" Content="{DynamicResource Login}" Margin="16,0,0,0" Click="BtnLogin_Click"
                                         IsDefault="True" TabIndex="3" />
                             </DockPanel>
                             <TextBlock>
                                 <Bold>
-                                    <Run Text="Forgot your password?" />
+                                    <Run Text="{DynamicResource Forgot your password?}" />
                                 </Bold>
                                 <LineBreak />
-                                <Run Text="no worries, click " />
+                                <Run Text="{DynamicResource no worries. click .}" />
                                 <Hyperlink
                                     NavigateUri="http://www.hearthstats.net/users/sign_in"
                                     RequestNavigate="Hyperlink_RequestNavigate">
-                                    here
+                                    <TextBlock Text="{DynamicResource here}" /> 
                                 </Hyperlink>
-                                <Run Text="to reset your password." />
+                                <Run Text="{DynamicResource to reset your password.}" />
                             </TextBlock>
 
                             <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,15,0,0">
-                                <Hyperlink Click="Button_Continue">
-                                    continue as guest
+                                <Hyperlink Click="Button_Continue"><TextBlock Text="{DynamicResource continue as guest}" />
                                 </Hyperlink>
                             </TextBlock>
                         </StackPanel>
                     </TabItem>
-                    <TabItem Header="REGISTER"
+                    <TabItem Header="{DynamicResource REGISTER}"
                              Visibility="{Binding LoginRegisterVisibility, RelativeSource={RelativeSource AncestorType=hdt:LoginWindow}}"
                              Width="{Binding TabWidth, RelativeSource={RelativeSource AncestorType=hdt:LoginWindow}}"
                              HorizontalContentAlignment="Center">
                         <StackPanel Margin="0,16,0,0" Width="250">
-                            <TextBox Name="TextBoxRegisterEmail" controls:TextBoxHelper.Watermark="Email" TabIndex="5" />
-                            <PasswordBox Name="TextBoxRegisterPassword" controls:TextBoxHelper.Watermark="Password"
+                            <TextBox Name="TextBoxRegisterEmail" controls:TextBoxHelper.Watermark="{DynamicResource Email}" TabIndex="5" />
+                            <PasswordBox Name="TextBoxRegisterPassword" controls:TextBoxHelper.Watermark="{DynamicResource Password}"
                                          Margin="0,5,0,0" TabIndex="6" />
                             <PasswordBox Name="TextBoxRegisterPasswordConfirm"
-                                         controls:TextBoxHelper.Watermark="Confirm Password"
+                                         controls:TextBoxHelper.Watermark="{DynamicResource Confirm Password}"
                                          Margin="0,5,0,0" TabIndex="7" />
                             <CheckBox Name="CheckBoxPrivacyPolicy" IsChecked="False" Margin="0,5,0,0"
                                       Checked="CheckBoxPrivacyPolicy_Checked"
                                       Unchecked="CheckBoxPrivacyPolicy_OnUnchecked" TabIndex="8">
                                 <TextBlock>
-                                    <Run>I agree to the </Run>
+                                    <Run Text="{DynamicResource I agree to the .}"></Run>
                                     <Hyperlink
                                         NavigateUri="http://www.hearthstats.net/privacy"
                                         RequestNavigate="Hyperlink_RequestNavigate">
-                                        Privacy Policy
+                                        <TextBlock Text="{DynamicResource Privacy Policy}" /> 
                                     </Hyperlink>
                                 </TextBlock>
                             </CheckBox>
                             <DockPanel Margin="0,5,0,0">
-                                <CheckBox Name="CheckBoxRegisterRememberLogin" Content="Remember me" IsChecked="True"
+                                <CheckBox Name="CheckBoxRegisterRememberLogin" Content="{DynamicResource Remember me}" IsChecked="True"
                                           Checked="CheckBoxRememberLogin_Checked"
                                           Unchecked="CheckBoxRememberLogin_OnUnchecked" TabIndex="9" />
-                                <Button Name="BtnRegister" Content="Register" Margin="16,0,0,0"
+                                <Button Name="BtnRegister" Content="{DynamicResource Register}" Margin="16,0,0,0"
                                         Click="BtnRegister_Click"
                                         IsDefault="True" TabIndex="10" IsEnabled="False" />
                             </DockPanel>
                         </StackPanel>
                     </TabItem>
-                    <TabItem Header="CONTINUE AS GUEST"
+                    <TabItem Header="{DynamicResource CONTINUE AS GUEST}"
                              Visibility="{Binding ContinueAsGuestVisibility, RelativeSource={RelativeSource AncestorType=hdt:LoginWindow}}"
                              HorizontalContentAlignment="Center"
                              Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=hdt:LoginWindow}}">
                         <StackPanel Width="250">
                             <Grid Height="160">
                                 <ItemsControl Margin="0,16,0,0" HorizontalAlignment="Center">
-                                    <TextBlock Text="Reasons you should use HearthStats:" FontSize="14"
+                                    <TextBlock Text="{DynamicResource Reasons you should use HearthStats:}" FontSize="14"
                                                FontWeight="SemiBold" />
                                     <BulletDecorator Margin="16,4,0,0">
                                         <BulletDecorator.Bullet>
                                             <Ellipse Fill="Black" Width="4" Height="4" VerticalAlignment="Center"
                                                      Margin="0,2,0,0" />
                                         </BulletDecorator.Bullet>
-                                        <TextBlock Text="Sync your decks and match history across all your devices"
+                                        <TextBlock Text="{DynamicResource Sync your decks and match history across all your devices}"
                                                    Margin="4,0,0,0" FontWeight="SemiBold" TextWrapping="Wrap" />
                                     </BulletDecorator>
                                     <BulletDecorator Margin="16,4,0,0">
@@ -116,7 +115,7 @@
                                                      Margin="0,2,0,0" />
                                         </BulletDecorator.Bullet>
                                         <TextBlock
-                                            Text="Easy access to the best and most popular decks in the current meta"
+                                            Text="{DynamicResource Easy access to the best and most popular decks in the current meta}"
                                             Margin="4,0,0,0" FontWeight="SemiBold" TextWrapping="Wrap" />
                                     </BulletDecorator>
                                     <BulletDecorator Margin="16,4,0,0">
@@ -125,14 +124,14 @@
                                                      Margin="0,2,0,0" />
                                         </BulletDecorator.Bullet>
                                         <TextBlock
-                                            Text="Stay on top of the game with the latest news and monthly stat reports"
+                                            Text="{DynamicResource Stay on top of the game with the latest news and monthly stat reports}"
                                             Margin="4,0,0,0" FontWeight="SemiBold" TextWrapping="Wrap" />
                                     </BulletDecorator>
                                 </ItemsControl>
                             </Grid>
                             <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
-                                <Button Content="register" Width="120" Click="ButtonBack_OnClick" />
-                                <Button Content="continue anyway" Width="120" Click="Button_ContinueAnyway"
+                                <Button Content="{DynamicResource register}" Width="120" Click="ButtonBack_OnClick" />
+                                <Button Content="{DynamicResource continue anyway}" Width="120" Click="Button_ContinueAnyway"
                                         Margin="10,0,0,0" />
                             </StackPanel>
                         </StackPanel>

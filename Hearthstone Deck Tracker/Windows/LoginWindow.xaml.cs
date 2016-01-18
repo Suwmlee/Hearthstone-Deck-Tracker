@@ -74,16 +74,16 @@ namespace Hearthstone_Deck_Tracker
 			var email = TextBoxEmail.Text;
 			if(string.IsNullOrEmpty(email) || !Regex.IsMatch(email, @".*@.*\..*"))
 			{
-				DisplayLoginError("Please enter an valid email address");
+				DisplayLoginError((string)App.Current.FindResource("Please enter an valid email address"));
 				return;
 			}
 			if(string.IsNullOrEmpty(TextBoxPassword.Password))
 			{
-				DisplayLoginError("Please enter a password");
+				DisplayLoginError((string)App.Current.FindResource("Please enter a password"));
 				return;
 			}
 			IsEnabled = false;
-			_controller = await this.ShowProgressAsync("Logging in...", "");
+			_controller = await this.ShowProgressAsync((string)App.Current.FindResource("Logging in..."), "");
 			var result = await HearthStatsAPI.LoginAsync(TextBoxEmail.Text, TextBoxPassword.Password);
 			TextBoxPassword.Clear();
 			if(result.Success)
@@ -92,7 +92,7 @@ namespace Hearthstone_Deck_Tracker
 				Close();
 			}
 			else if(result.Message.Contains("401"))
-				DisplayLoginError("Invalid email or password");
+				DisplayLoginError((string)App.Current.FindResource("Invalid email or password"));
 			else
 				DisplayLoginError(result.Message);
 		}
@@ -142,39 +142,39 @@ namespace Hearthstone_Deck_Tracker
 			var email = TextBoxRegisterEmail.Text;
 			if(string.IsNullOrEmpty(email) || !Regex.IsMatch(email, @".*@.*\..*"))
 			{
-				DisplayLoginError("Please enter an valid email address");
+				DisplayLoginError((string)App.Current.FindResource("Please enter an valid email address"));
 				return;
 			}
 			if(string.IsNullOrEmpty(TextBoxRegisterPassword.Password))
 			{
-				DisplayLoginError("Please enter a password");
+				DisplayLoginError((string)App.Current.FindResource("Please enter a password"));
 				return;
 			}
 			if(TextBoxRegisterPassword.Password.Length < 6)
 			{
-				DisplayLoginError("Your password needs to be at least 6 characters");
+				DisplayLoginError((string)App.Current.FindResource("Your password needs to be at least 6 characters"));
 				return;
 			}
 			if(string.IsNullOrEmpty(TextBoxRegisterPasswordConfirm.Password))
 			{
-				DisplayLoginError("Please confirm your password");
+				DisplayLoginError((string)App.Current.FindResource("Please confirm your password"));
 				return;
 			}
 			if(!TextBoxRegisterPassword.Password.Equals(TextBoxRegisterPasswordConfirm.Password))
 			{
-				DisplayLoginError("Entered passwords do not match");
+				DisplayLoginError((string)App.Current.FindResource("Entered passwords do not match"));
 				return;
 			}
 			IsEnabled = false;
-			_controller = await this.ShowProgressAsync("Registering account...", "");
+			_controller = await this.ShowProgressAsync((string)App.Current.FindResource("Registering account..."), "");
 			var result = await HearthStatsAPI.RegisterAsync(email, TextBoxRegisterPassword.Password);
 			if(result.Success)
 			{
-				_controller.SetTitle("Logging in...");
+				_controller.SetTitle((string)App.Current.FindResource("Logging in..."));
 				result = await HearthStatsAPI.LoginAsync(email, TextBoxRegisterPassword.Password);
 			}
 			else if(result.Message.Contains("422"))
-				DisplayLoginError("Email already registered");
+				DisplayLoginError((string)App.Current.FindResource("Email already registered"));
 			else
 				DisplayLoginError(result.Message);
 			TextBoxRegisterPassword.Clear();

@@ -49,7 +49,7 @@
                     <TextBlock Margin="10,2,0,0">
                                         <Hyperlink NavigateUri="https://chrome.google.com/webstore/detail/netdeck/lpdbiakcpmcppnpchohihcbdnojlgeel"
                                             RequestNavigate="Hyperlink_RequestNavigate">
-                                            Download NetDeck (Chrome ext.)
+                                            <TextBlock Text="{DynamicResource Download NetDeck (Chrome ext.)}"/>
                                         </Hyperlink>
                     </TextBlock>
                     <Button Margin="10,5,10,0" HorizontalAlignment="Stretch" Content="{DynamicResource SHOW CONSTRUCTED IMPORTING HOW-TO}" Click="ButtonConstructedHowTo_OnClick"/>

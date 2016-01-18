@@ -290,7 +290,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 		{
 			if(HearthStatsAPI.IsLoggedIn)
 			{
-				MenuItemLogout.Header = string.Format("LOGOUT ({0})", HearthStatsAPI.LoggedInAs);
+                MenuItemLogout.Header = (string)App.Current.FindResource("LOGOUT") + " " + HearthStatsAPI.LoggedInAs;
 				MenuItemLogin.Visibility = Visibility.Collapsed;
 				MenuItemLogout.Visibility = Visibility.Visible;
 				SeparatorLogout.Visibility = Visibility.Visible;
@@ -414,8 +414,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 		{
 			var result =
 				await
-				this.ShowMessageAsync("Logout?", "Are you sure you want to logout?", MessageDialogStyle.AffirmativeAndNegative,
-				                      new MessageDialogs.Settings {AffirmativeButtonText = "logout", NegativeButtonText = "cancel"});
+				this.ShowMessageAsync((string)App.Current.FindResource("Logout?"), (string)App.Current.FindResource("Are you sure you want to logout?"), MessageDialogStyle.AffirmativeAndNegative,
+				                      new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("logout"), NegativeButtonText = (string)App.Current.FindResource("cancel")});
 			if(result == MessageDialogResult.Affirmative)
 			{
 				var deletedFile = HearthStatsAPI.Logout();

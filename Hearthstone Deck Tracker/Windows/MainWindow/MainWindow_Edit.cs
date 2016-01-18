@@ -30,14 +30,14 @@ namespace Hearthstone_Deck_Tracker.Windows
 			if(!decks.Any())
 				return;
 
-			var settings = new MessageDialogs.Settings {AffirmativeButtonText = "Yes", NegativeButtonText = "No"};
+			var settings = new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("Yes"), NegativeButtonText = (string)App.Current.FindResource("No")};
 			var keepStatsInfo = Config.Instance.KeepStatsWhenDeletingDeck
-				                    ? "The stats will be kept (can be changed in options)"
-				                    : "The stats will be deleted (can be changed in options)";
+				                    ? (string)App.Current.FindResource("The stats will be kept (can be changed in options)")
+				                    : (string)App.Current.FindResource("The stats will be deleted (can be changed in options)");
 			var result =
 				await
 				this.ShowMessageAsync((string)App.Current.FindResource("Deleting") + (decks.Count == 1 ? decks.First().Name : decks.Count + (string)App.Current.FindResource("decks")),
-				                      (string)App.Current.FindResource("Are you Sure?\n") + keepStatsInfo, MessageDialogStyle.AffirmativeAndNegative, settings);
+				                      (string)App.Current.FindResource("Are you Sure?") + keepStatsInfo, MessageDialogStyle.AffirmativeAndNegative, settings);
 			if(result == MessageDialogResult.Negative)
 				return;
 			DeckManagerEvents.OnDeckDeleted.Execute(decks);

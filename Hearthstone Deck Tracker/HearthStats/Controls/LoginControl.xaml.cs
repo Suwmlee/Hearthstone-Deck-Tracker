@@ -39,12 +39,12 @@ namespace Hearthstone_Deck_Tracker.HearthStats.Controls
 			var email = TextBoxEmail.Text;
 			if(string.IsNullOrEmpty(email) || !Regex.IsMatch(email, @".*@.*\..*"))
 			{
-				DisplayLoginError("Please enter an valid email address");
+				DisplayLoginError((string)App.Current.FindResource("Please enter an valid email address"));
 				return;
 			}
 			if(string.IsNullOrEmpty(TextBoxPassword.Password))
 			{
-				DisplayLoginError("Please enter a password");
+				DisplayLoginError((string)App.Current.FindResource((string)App.Current.FindResource("Please enter a password")));
 				return;
 			}
 			IsEnabled = false;
@@ -57,13 +57,13 @@ namespace Hearthstone_Deck_Tracker.HearthStats.Controls
 				Core.MainWindow.MenuItemLogin.Visibility = Visibility.Collapsed;
 				Core.MainWindow.MenuItemLogout.Visibility = Visibility.Visible;
 				Core.MainWindow.SeparatorLogout.Visibility = Visibility.Visible;
-				Core.MainWindow.MenuItemLogout.Header = string.Format("LOGOUT ({0})", HearthStatsAPI.LoggedInAs);
+                Core.MainWindow.MenuItemLogout.Header = (string)App.Current.FindResource("LOGOUT") + " " + HearthStatsAPI.LoggedInAs;
 
 				var dialogResult =
 					await
-					Core.MainWindow.ShowMessageAsync("Sync now?", "Do you want to sync with HearthStats now?",
+					Core.MainWindow.ShowMessageAsync((string)App.Current.FindResource("Sync now?"), (string)App.Current.FindResource("Do you want to sync with HearthStats now?"),
 					                                 MessageDialogStyle.AffirmativeAndNegative,
-					                                 new MessageDialogs.Settings {AffirmativeButtonText = "sync now", NegativeButtonText = "later"});
+					                                 new MessageDialogs.Settings {AffirmativeButtonText = (string)App.Current.FindResource("sync now"), NegativeButtonText = (string)App.Current.FindResource("later")});
 				if(dialogResult == MessageDialogResult.Affirmative)
 					HearthStatsManager.SyncAsync();
 			}

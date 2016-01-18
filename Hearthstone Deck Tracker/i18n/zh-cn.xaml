@@ -3,11 +3,52 @@
                     xmlns:s="clr-namespace:System;assembly=mscorlib">
 
     <!-- main window-->
-
-    <s:String x:Key="Hearthstone Deck Tracker">炉石传说 记牌器</s:String>
+    <s:String x:Key="Hearthstone Deck Tracker">炉石传说记牌器</s:String>
     <s:String x:Key="options">选项</s:String>
     <s:String x:Key="help">帮助</s:String>
     <s:String x:Key="donate">捐赠给原作者</s:String>
+
+    <!-- login window -->
+    <s:String x:Key="LOGIN">登录</s:String>
+    <s:String x:Key="REGISTER">注册</s:String>
+    <s:String x:Key="CONTINUE AS GUEST">继续作为游客登录</s:String>
+    <s:String x:Key="continue as guest">游客登录</s:String>
+    <s:String x:Key="Remember me">记住我</s:String>
+    <s:String x:Key="Login">登录</s:String>
+    <s:String x:Key="here">这里</s:String>
+    <s:String x:Key="register">注册</s:String>
+    <s:String x:Key="Register">注册</s:String>
+    <s:String x:Key="Privacy Policy">隐私政策</s:String>
+    <s:String x:Key="continue anyway">依然继续</s:String>
+    <s:String x:Key="Forgot your password?">忘记你的密码?</s:String>
+    <s:String x:Key="no worries. click .">不用担心.点击</s:String>
+    <s:String x:Key="to reset your password.">重置你的密码</s:String>
+    <s:String x:Key="Reasons you should use HearthStats:">你应该是HearthStats的理由:</s:String>
+    <s:String x:Key="Sync your decks and match history across all your devices">在你的设备之间同步卡组和比赛记录</s:String>
+    <s:String x:Key="Easy access to the best and most popular decks in the current meta">容易获得当前环境下最好的和最受欢迎的卡组</s:String>
+    <s:String x:Key="Stay on top of the game with the latest news and monthly stat reports">通过最新的消息和每月统计报告来保持状态</s:String>
+    <s:String x:Key="Email">邮箱</s:String>
+    <s:String x:Key="Password">密码</s:String>
+    <s:String x:Key="Confirm Password">确认密码</s:String>
+    <s:String x:Key="I agree to the .">我同意该协议:</s:String>
+    <s:String x:Key="Login to your account">登录你的帐号</s:String>
+    <s:String x:Key="Do not have an account yet?">还没有帐号?</s:String>
+    <s:String x:Key="Create an account">还没有帐号?</s:String>
+
+    <s:String x:Key="Registering account...">正在注册帐号...</s:String>
+    <s:String x:Key="Please enter an valid email address">请输入一个可用的邮箱</s:String>
+    <s:String x:Key="Please enter a password">请输入密码</s:String>
+    <s:String x:Key="Your password needs to be at least 6 characters">密码最少6位字符</s:String>
+    <s:String x:Key="Please confirm your password">请确认密码</s:String>
+    <s:String x:Key="Entered passwords do not match">输入的密码不相同</s:String>
+    <s:String x:Key="Logging in...">登录中...</s:String>
+    <s:String x:Key="Email already registered">邮箱已经注册</s:String>
+    <s:String x:Key="Sync now?">现在同步</s:String>
+    <s:String x:Key="Do you want to sync with HearthStats now?">你想现在使用HearthStats进行同步吗?</s:String>
+    <s:String x:Key="sync now">现在同步</s:String>
+    <s:String x:Key="later">稍后</s:String>
+    <s:String x:Key="Invalid email or password">错误的邮箱或密码</s:String>
+
     <!-- top -->
     <!-- main -->
     <s:String x:Key="_MAIN">主菜单</s:String>
@@ -92,7 +133,7 @@
     <s:String x:Key="EMPTY...">空...</s:String>
 
     <s:String x:Key="Move to new window">在新窗口打开</s:String>
-    <s:String x:Key="Stats">统计</s:String>
+    <s:String x:Key="Stats">数据</s:String>
     <!-- mid -->
     <s:String x:Key="START LAUNCHER / HEARTHSTONE">运行 战网/炉石传说</s:String>
     <s:String x:Key="STARTING LAUNCHER...">正在启动 战网登陆器</s:String>
@@ -136,9 +177,25 @@
     <s:String x:Key="SHOW FILTERED">过滤后显示</s:String>
 
     <!-- hearthstats -->
-    <s:String x:Key="_HEARTHSTATS">某炉石网站</s:String>
+    <s:String x:Key="_HEARTHSTATS">HEARTHSTATS</s:String>
     <s:String x:Key="SYNC">同步</s:String>
-    <s:String x:Key="Decks found on HearthStats">Decks found on HearthStats</s:String>
+    <s:String x:Key="DASHBOARD (WEB)">总览(网页)</s:String>
+    <s:String x:Key="SYNC NOW">现在同步</s:String>
+    <s:String x:Key="FORCE FULL SYNC">强制全部同步</s:String>
+    <s:String x:Key="SYNC ON START">启动时同步</s:String>
+    <s:String x:Key="AUTO UPLOAD NEW DECKS">自动上传新卡组</s:String>
+    <s:String x:Key="AUTO UPLOAD GAMES">自动上传对战</s:String>
+    <s:String x:Key="AUTO DELETE DECKS">自动删除卡组</s:String>
+    <s:String x:Key="AUTO DELETE GAMES">自动删除对战</s:String>
+    <s:String x:Key="AUTO SYNC IN BACKGROUND*">后台自动同步*</s:String>
+    <s:String x:Key="DELETE SELECTED DECKS">删除选中的卡组</s:String>
+    <s:String x:Key="LOGOUT">退出</s:String>
+    <s:String x:Key="Will perform SYNC NOW every 5 minutes in the background. Unless you are running HDT on multiple PCs at the same time there you do not really need this.">
+    后台每5分钟自动进行一次同步.除非你在多个平台同时游戏否则不需要此设置</s:String>
+    <s:String x:Key="Decks found on HearthStats">在HearthStats发现卡组</s:String>
+    <s:String x:Key="Logout?">退出?</s:String>
+    <s:String x:Key="Are you sure you want to logout?">你确定要退出?</s:String>
+    <s:String x:Key="logout">退出</s:String>
 
     <!-- stats windows -->
     <s:String x:Key="Note">注释</s:String>
@@ -278,23 +335,31 @@
     <s:String x:Key="Player:">玩家:</s:String>
     <s:String x:Key="add game">添加游戏</s:String>
     <s:String x:Key="cancel">取消</s:String>
+    <s:String x:Key="Arena Rewards">竞技场奖励</s:String>
     <!-- main debugwindow -->
     <s:String x:Key="Cards">卡牌</s:String>
+    <s:String x:Key="Expand All">全部展开</s:String>
+    <s:String x:Key="Collapse All">全部折叠</s:String>
     <s:String x:Key="Entites">实体</s:String>
     <s:String x:Key="Damage">伤害</s:String>
     <!-- main deckselection -->
+    <s:String x:Key="Wrong deck detected">检测到错误的卡牌</s:String>
     <s:String x:Key="Select your deck">选择你的卡牌</s:String>
     <!-- main discardgame -->
     <s:String x:Key="[GAMEINFO]">[游戏信息]</s:String>
+    <s:String x:Key="DISCARD GAME?">舍弃这场对局?</s:String>
     <s:String x:Key="cards played do not match the selected deck">卡牌与选择的卡组不匹配</s:String>
     <s:String x:Key="discard">舍弃</s:String>
     <s:String x:Key="keep">保留</s:String>
     <s:String x:Key="move to other deck">移动到其他卡组</s:String>
     <!-- main movegamedialog -->
+    <s:String x:Key="Select target deck">选择目标卡组</s:String>
     <s:String x:Key="MOVE TO SELECTED">移动到所选项</s:String>
     <s:String x:Key="VERSION:">版本:</s:String>
     <!-- main notedialog -->
+    <s:String x:Key="NOTE FOR THIS GAME">这场对局的笔记</s:String>
     <s:String x:Key="Set">设置</s:String>
+    <s:String x:Key="Note...">笔记...</s:String>
     <s:String x:Key="Save with ENTER">ENTER键保存</s:String>
     <!-- main opponent -->
     <s:String x:Key="Opponent">对手</s:String>
@@ -319,7 +384,7 @@
     <!-- controls deckversionchange  -->
     <s:String x:Key="Hist change">变更</s:String>
     <!-- controls manacurve  -->
-    <s:String x:Key="MECHANICS">结构</s:String>
+    <s:String x:Key="MECHANICS">卡牌效果</s:String>
     <s:String x:Key="None">空</s:String>
     <!-- controls deckpicker   -->
     <s:String x:Key="_USE DECK">使用卡组</s:String>
@@ -457,7 +522,7 @@
     <s:String x:Key="Full text search in New Deck">在新建卡组时搜索卡牌全名</s:String>
     <s:String x:Key="* Neither 75s not 90s are quite correct. The base time is 75s but it is extended to up to ~100s depending on animations playing.">
        *70s和90s都不是准确的。基础时间是75s，但是根据动画长短，时间可能延长到100s或更多</s:String>
-    
+
     <!-- option tracker hotkeys -->
     <s:String x:Key="New">新建</s:String>
     <s:String x:Key="Mod">控制</s:String>
@@ -597,9 +662,9 @@
 
     <!-- help -->
     <s:String x:Key="FAQ">常见问题</s:String>
-    <s:String x:Key="The Overlay">悬浮层</s:String>
+    <s:String x:Key="The Overlay">界面</s:String>
     <s:String x:Key="Card marks">卡牌标记</s:String>
-    <s:String x:Key="The Coin">硬币</s:String>
+    <s:String x:Key="The Coin">幸运币</s:String>
     <s:String x:Key="Mulliganed">开局替换后的卡牌</s:String>
     <s:String x:Key="Returned">回到手中的卡牌</s:String>
     <s:String x:Key="Created">产生的新卡牌</s:String>
@@ -607,32 +672,34 @@
     <s:String x:Key="General:">一般:</s:String>
     <s:String x:Key="The number of copies left in the deck for a specific card.">某一卡牌在卡组中的数量</s:String>
     <s:String x:Key="Draw chance:">抓到概率:</s:String>
-    <s:String x:Key="The chance of drawing a card with X copies left in the deck.">如果某卡牌仍有X张在牌库中被抓到的概率</s:String>
+    <s:String x:Key="The chance of drawing a card with X copies left in the deck.">如果某卡牌仍有X张在牌库中单次被抓到的概率</s:String>
     <s:String x:Key="Holding chance:">在手牌中概率:</s:String>
     <s:String x:Key="The chance of your opponent holding a card at the start of the next turn with X copies left in play.">
-    你的对手在下回合开始时抓到某张可能在其卡组中X张的卡牌的概率</s:String>
-    <s:String x:Key="This includes the next draw but nothing beyond that.">这包括下一会合抓到除此之外都不是</s:String>
+    你的对手在下回合开始，某张可能在其卡组中有X张的卡牌在手上的概率</s:String>
+    <s:String x:Key="This includes the next draw but nothing beyond that.">这包括下一会合抓到的，仅仅到下一张为止</s:String>
     <s:String x:Key="Customization">自定义</s:String>
     <s:String x:Key="Almost everything in the overlay can be turn on or off. moved and resized.">
-        基本上所有的悬浮层都可以 打开/关闭、移动和重设大小</s:String>
+        基本上所有的元素都可以 打开/关闭、移动和重设大小</s:String>
     <s:String x:Key="On/off :">打开/关闭:</s:String>
-    <s:String x:Key="Options for this can be found under">设置路径在 </s:String>
+    <s:String x:Key="Options for this can be found under">设置路径位置 </s:String>
     <s:String x:Key="options > overlay > general / player / opponent"> 选项 > 界面 > 一般/玩家/对手</s:String>
     <s:String x:Key="Moving/resizing :">移动/重设大小:</s:String>
     <s:String x:Key="The overlay can be unlocked via">界面解锁设置</s:String>
     <s:String x:Key="options > overlay > general > unlock"> 选项 > 界面 > 一般 > 解锁 </s:String>
     <s:String x:Key="(button at the bottom).">(下面的按钮)</s:String>
     <s:String x:Key="Reporting bugs / requesting features">提交bug/请求新的特性</s:String>
-    <s:String x:Key="Two options:">两个选项:</s:String>
+    <s:String x:Key="Two options:">两种方法:</s:String>
     <s:String x:Key="1) Check out the">1)检查</s:String>
     <s:String x:Key="If there is no issue on the topic feel free to open a new one and/or even fix it yourself and create a pull request. For some futher information on what you might want to include in the issue">
-    如果里面没有则可以创建一个新的issue或者你自己解决它并提交。你想要一些什么样的新的特性也可以在里面提出</s:String>
+    如果里面没有相关的内容,则可以创建一个新的issue或者你自己解决它并提交。如果问题中包含更多信息</s:String>
     <s:String x:Key="2) Send an email to support@hsdecktracker.net">2)发送邮件到 support@hsdecktracker.net</s:String>
     <s:String x:Key="GitHub Project">Github项目</s:String>
     <s:String x:Key="The project can be found">这个项目在</s:String>
     <s:String x:Key="The">这个</s:String>
     <s:String x:Key="contains a brief overview of all the features.">包括所有特性的简单说明</s:String>
-    
+    <s:String x:Key="Show update notes">显示更新日志</s:String>
+    <s:String x:Key="Additional information can be found here.">获取额外的信息</s:String>
+
     <!-- cs code translate -->
     <!-- cs code translate -->
     <s:String x:Key="Hearthstone install directory not found">未找到炉石传说程序</s:String>
@@ -682,9 +749,11 @@
     <s:String x:Key="Please enter the arena screen (and build your deck).">请进入竞技场(创建你的套牌)</s:String>
     <s:String x:Key="Deck detection disabled.">重复套牌失效</s:String>
     <s:String x:Key="Can be re-enabled in DECKS menu.">可以在 套牌 菜单中重新可用</s:String>
-    <s:String x:Key="Deleting">删除</s:String>
+    <s:String x:Key="Deleting">删除 </s:String>
     <s:String x:Key="deck">套牌</s:String>
-    <s:String x:Key="Are you Sure?\n">你确定</s:String>
+    <s:String x:Key="Are you Sure?">你确定?</s:String>
+    <s:String x:Key="The stats will be kept (can be changed in options)">相关数据将会保存(可以在选项中修改)</s:String>
+    <s:String x:Key="The stats will be deleted (can be changed in options)">相关数据将会删除(可以在选项中修改)</s:String>
     <s:String x:Key="Clone game history?">复制游戏历史</s:String>
     <s:String x:Key="(Cloned games do not count towards class or overall stats.)">(复制的游戏不会记录到职业和总统计中)</s:String>
     <s:String x:Key="clone history">复制历史</s:String>
@@ -708,6 +777,8 @@
     <s:String x:Key="No missing cards">没有缺少的卡牌</s:String>
     <s:String x:Key="No cards were missing when you last exported this deck. (or you have not recently exported this deck)">最后一次导出这套套牌,没有卡牌丢失(或者你最近没有导出套牌)</s:String>
     <s:String x:Key="OK">确定</s:String>
+    <s:String x:Key="Yes">确定</s:String>
+    <s:String x:Key="No">确定</s:String>
     <s:String x:Key="Export incomplete">导出完成</s:String>
 
     <!-- elementsorter -->
@@ -716,7 +787,7 @@
     <s:String x:Key="Card Counter">卡牌计数</s:String>
     <s:String x:Key="Deck Title">卡组名称</s:String>
     <s:String x:Key="Win Rate">胜率</s:String>
-    
+
     <!-- import tips -->
     <s:String x:Key="start">开始</s:String>
     <s:String x:Key="Step 0:">步骤 0:</s:String>
@@ -733,7 +804,7 @@
     <s:String x:Key="import tips constructed" xml:space="preserve">0) 创建你的套牌 &#10;&#10; 1) 回主菜单 (总是从这里开始) &#10;&#10; 2)进入"我的收藏"界面,打开你想要导入的套牌 (这时候请不要进行修改) &#10;&#10; 3)离开收藏界面,返回主菜单 &#10;&#10; 4) 点击 "导入 > 从游戏内构筑" &#10;&#10; 5) 调整导入卡牌的数量 &#10;&#10; 为什么要调整? 因为导入功能并不完美. 它只会检测有什么卡牌但不会检测有多少张. 依赖于较少的点击, 非传说卡牌会默认为1-2张.</s:String>
     <s:String x:Key="import tips arena all" xml:space="preserve">1) 创建你的竞技场套牌 (或者 如果未组好套牌就进入竞技场界面) &#10;&#10; 2) 离开在竞技场界面 (返回主菜单) &#10;&#10; 3) 点击 "导入 > 从游戏内竞技场" &#10;&#10; 4) 调整导入卡牌的数量 &#10;&#10; 为什么要调整? 因为导入功能并不完美. 它只会检测有什么卡牌但不会知道有多少张. 你只需要通过点击卡牌就可以增加其数目. &#10;&#10; 你可以再次看到这个信息,在'选项 > 追踪 > 导入'中</s:String>
     <s:String x:Key="import tips constructed all" xml:space="preserve">0) 创建你的套牌 &#10;&#10; 1) 回主菜单 (总是从这里开始) &#10;&#10; 2)进入"我的收藏"界面,打开你想要导入的套牌 (这时候请不要进行修改) &#10;&#10; 3)离开收藏界面,返回主菜单 &#10;&#10; 4) 点击 "导入 > 从游戏内构筑" &#10;&#10; 5) 调整导入卡牌的数量 &#10;&#10; 为什么要调整? 因为导入功能并不完美. 它只会检测有什么卡牌但不会检测有多少张. 依赖于较少的点击, 非传说卡牌会默认为1-2张. &#10; 在导入德鲁伊第一页金色或者普通卡牌是可能出现问题.&#10;你可以再次看到这个信息,在'选项 > 追踪 > 导入'中</s:String>
-    
+
     <!-- export tips -->
     <s:String x:Key="1) create a new">1)创建一套新的</s:String>
     <s:String x:Key="(or open an existing one to be cleared automatically)">(或者打开一个想要被替换的存在的卡组)</s:String>
@@ -743,5 +814,5 @@
     <s:String x:Key="to Hearthstone">到炉石传说</s:String>
     <s:String x:Key="Creating Deck">创建套牌</s:String>
     <s:String x:Key="Please do not move your mouse or type.">请不要移动你的鼠标或按键</s:String>
-    
+
 </ResourceDictionary>
