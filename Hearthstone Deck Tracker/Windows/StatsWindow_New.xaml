@@ -5,7 +5,7 @@
         Icon="{StaticResource AppIcon}"
         BorderThickness="1" BorderBrush="{DynamicResource AccentColorBrush}"
         SaveWindowPosition="True"
-        Title="STATS" Height="820" Width="1150">
+        Title="{DynamicResource Stats}" Height="820" Width="1150">
     <controls:MetroWindow.IconTemplate>
         <DataTemplate>
             <Rectangle Margin="2" Opacity="0.7">

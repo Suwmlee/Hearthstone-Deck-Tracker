@@ -90,7 +90,7 @@
                 Source="{Binding ActiveDeck.ClassImage, RelativeSource={RelativeSource AncestorType=deckPicker:DeckPicker}}"
                 DockPanel.Dock="Left" Margin="5,1" RenderOptions.BitmapScalingMode="Fant" />
             <Grid Margin="0,0,5,0">
-                <TextBlock Text="NONE   -   CLICK &quot;USE&quot; ON DECK TO ACTIVATE" FontSize="14" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"
+                <TextBlock Text="{DynamicResource NONE  -  CLICK USE ON DECK TO ACTIVATE}" FontSize="14" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"
                            HorizontalAlignment="Left" Visibility="{Binding VisibilityNoDeck, RelativeSource={RelativeSource AncestorType=deckPicker:DeckPicker}}"/>
                 <DockPanel>
                     <DockPanel.Resources>

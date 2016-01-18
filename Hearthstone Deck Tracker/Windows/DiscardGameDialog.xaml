@@ -5,7 +5,7 @@
         WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow"
         Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"
         BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
-        Title="DISCARD GAME?" Height="146" Width="400">
+        Title="{DynamicResource DISCARD GAME?}" Height="146" Width="400">
     <controls:MetroWindow.IconTemplate>
         <DataTemplate>
             <Rectangle Margin="2" Opacity="0.7">
