@@ -61,24 +61,23 @@ namespace Hearthstone_Deck_Tracker
 			splashScreenWindow.ShowConditional();
 			Game = new GameV2();
 			LoginType loginType;
-            //var loggedIn = HearthStatsAPI.LoadCredentials();
-            //if(!loggedIn && Config.Instance.ShowLoginDialog)
-            //{
-            //    var loginWindow = new LoginWindow();
-            //    splashScreenWindow.Close();
-            //    loginWindow.ShowDialog();
-            //    if(loginWindow.LoginResult == LoginType.None)
-            //    {
-            //        Application.Current.Shutdown();
-            //        return;
-            //    }
-            //    loginType = loginWindow.LoginResult;
-            //    splashScreenWindow = new SplashScreenWindow();
-            //    splashScreenWindow.ShowConditional();
-            //}
-            //else
-            //    loginType = loggedIn ? LoginType.AutoLogin : LoginType.AutoGuest;
-            loginType = LoginType.Guest;
+            var loggedIn = HearthStatsAPI.LoadCredentials();
+            if (!loggedIn && Config.Instance.ShowLoginDialog)
+            {
+                var loginWindow = new LoginWindow();
+                splashScreenWindow.Close();
+                loginWindow.ShowDialog();
+                if (loginWindow.LoginResult == LoginType.None)
+                {
+                    Application.Current.Shutdown();
+                    return;
+                }
+                loginType = loginWindow.LoginResult;
+                splashScreenWindow = new SplashScreenWindow();
+                splashScreenWindow.ShowConditional();
+            }
+            else
+                loginType = loggedIn ? LoginType.AutoLogin : LoginType.AutoGuest;
 			MainWindow = new MainWindow();
 			MainWindow.LoadConfigSettings();
 			if(Config.Instance.ReselectLastDeckUsed)

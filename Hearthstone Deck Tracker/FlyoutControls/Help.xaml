@@ -9,10 +9,10 @@
         <Border BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1" Margin="-1"
                 DockPanel.Dock="Bottom">
             <DockPanel VerticalAlignment="Bottom">
-                <Button Name="ButtonUpdateNotes" Content="Show update notes" Click="ButtonUpdateNotes_OnClick"
+                <Button Name="ButtonUpdateNotes" Content="{DynamicResource Show update notes}" Click="ButtonUpdateNotes_OnClick"
                         DockPanel.Dock="Right" Margin="2" Width="200"
                         Style="{DynamicResource AccentedSquareButtonStyle}" />
-                <TextBlock Name="TxtblockVersion" Text="Version:" VerticalAlignment="Center" Margin="10,0,0,0" />
+                <TextBlock Name="TxtblockVersion" Text="{DynamicResource VERSION:}" VerticalAlignment="Center" Margin="10,0,0,0" />
             </DockPanel>
         </Border>
         <ScrollViewer>
@@ -105,7 +105,7 @@
                             <Hyperlink
                                 NavigateUri="https://github.com/Epix37/Hearthstone-Deck-Tracker/wiki/Overlay"
                                 RequestNavigate="Hyperlink_RequestNavigate">
-                                Additional information can be found here.
+                                <TextBlock Text="{DynamicResource Additional information can be found here.}" />  
                             </Hyperlink>
                         </TextBlock>
                     </StackPanel>
