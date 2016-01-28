@@ -1,8 +1,12 @@
 Hearthstone-Deck-Tracker
 ========================
-This is forked from [Hearthstone-Deck-Tracker](https://github.com/Epix37/Hearthstone-Deck-Tracker)
+This is forked from [Hearthstone-Deck-Tracker][0]
 
-Try to add i18n and translate it into Chinese
+Add i18n and translate it into Chinese
+
+The first of translated version has been mainly finshed in this branch.
+
+The translated method is not recommanded even though it is fast.
 
 
 Compile
@@ -12,4 +16,5 @@ Compile
   - .NET Framework 4.5
 
 
+[0]: https://github.com/Epix37/Hearthstone-Deck-Tracker
 
