@@ -137,6 +137,7 @@
                 <MenuItem Name="MenuItemMissingCards" Header="{DynamicResource SHOW _MISSING CARDS}"
                           ToolTip="this information is based on your last export" Click="MenuItemMissingDust_OnClick" />
                 <MenuItem Name="MenuItemUpdateDeck" Header="{DynamicResource _UPDATE (WEB)}" Click="BtnUpdateDeck_Click" />
+                <MenuItem Name="MenuItemSetDeckUrl" Header="" Click="BtnSetDeckUrl_Click" />
                 <MenuItem Name="MenuItemOpenUrl" Header="{DynamicResource OPEN _WEBSITE}" Click="BtnOpenDeckUrl_Click" />
                 <MenuItem Name="MenuItemOpenHearthStats" Header="{DynamicResource OPEN _HEARTHSTATS}" Click="BtnOpenHearthStats_Click" />
                 <Separator />

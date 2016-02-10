@@ -54,10 +54,7 @@ namespace Hearthstone_Deck_Tracker
 			}
 		}
 
-		public void SetTurnTime(int turnTime)
-		{
-			_turnTime = turnTime;
-		}
+		public void SetTurnTime(int turnTime) => _turnTime = turnTime;
 
 		/// <summary>
 		/// 
@@ -113,10 +110,7 @@ namespace Hearthstone_Deck_Tracker
 			TimerTick(this, new TimerEventArgs(Seconds, PlayerSeconds, OpponentSeconds, false, CurrentActivePlayer));
 		}
 
-		public void SetCurrentPlayer(ActivePlayer activePlayer)
-		{
-			CurrentActivePlayer = activePlayer;
-		}
+		public void SetCurrentPlayer(ActivePlayer activePlayer) => CurrentActivePlayer = activePlayer;
 
 		public void MulliganDone(ActivePlayer activePlayer)
 		{
@@ -137,14 +131,10 @@ namespace Hearthstone_Deck_Tracker
 
 		private void CheckForTimerAlarm()
 		{
-			if(Config.Instance.TimerAlert)
-			{
-				if(Seconds == Config.Instance.TimerAlertSeconds)
-				{
-					SystemSounds.Asterisk.Play();
-					User32.FlashHs();
-				}
-			}
+			if(!Config.Instance.TimerAlert || Seconds != Config.Instance.TimerAlertSeconds)
+				return;
+			SystemSounds.Asterisk.Play();
+			User32.FlashHs();
 		}
 	}
 }

@@ -35,7 +35,7 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 		private string _englishText;
 		private int _inHandCount;
 		private bool _isCreated;
-		private bool _isFrameHighlighted;
+		internal bool IsFrameHighlighted;
 		private int _lastCount;
 		private bool _loaded;
 		private string _localizedName;
@@ -155,14 +155,13 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			get { return _text; }
 			set
 			{
-				_text = value != null
-					        ? value.Replace("<b>", "")
-					               .Replace("</b>", "")
-					               .Replace("<i>", "")
-					               .Replace("</i>", "")
-					               .Replace("$", "")
-					               .Replace("#", "")
-					               .Replace("\\n", "\n") : null;
+				_text = value?.Replace("<b>", "")
+							  .Replace("</b>", "")
+							  .Replace("<i>", "")
+							  .Replace("</i>", "")
+							  .Replace("$", "")
+							  .Replace("#", "")
+							  .Replace("\\n", "\n");
 			}
 		}
 
@@ -172,14 +171,13 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			get { return string.IsNullOrEmpty(_englishText) ? Text : _englishText; }
 			set
 			{
-				_englishText = value != null
-					               ? value.Replace("<b>", "")
-					                      .Replace("</b>", "")
-					                      .Replace("<i>", "")
-					                      .Replace("</i>", "")
-					                      .Replace("$", "")
-					                      .Replace("#", "")
-					                      .Replace("\\n", "\n") : null;
+				_englishText = value?.Replace("<b>", "")
+									 .Replace("</b>", "")
+									 .Replace("<i>", "")
+									 .Replace("</i>", "")
+									 .Replace("$", "")
+									 .Replace("#", "")
+									 .Replace("\\n", "\n");
 			}
 		}
 
@@ -188,8 +186,8 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 		{
 			get
 			{
-				string result = "";
-				for(int i = 0; i < AlternativeNames.Count; ++i)
+				var result = "";
+				for(var i = 0; i < AlternativeNames.Count; ++i)
 				{
 					if(i > 0)
 						result += "-\n";
@@ -211,16 +209,10 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 		}
 
 		[XmlIgnore]
-		public Visibility ShowAlternativeLanguageTextInTooltip
-		{
-			get { return AlternativeNames.Count > 0 ? Visibility.Visible : Visibility.Collapsed; }
-		}
+		public Visibility ShowAlternativeLanguageTextInTooltip => AlternativeNames.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
 
 		[XmlIgnore]
-		public Visibility ShowIconsInTooltip
-		{
-			get { return Type == "Spell" || Type == "Enchantment" || Type == "Hero Power" ? Visibility.Hidden : Visibility.Visible; }
-		}
+		public Visibility ShowIconsInTooltip => Type == "Spell" || Type == "Enchantment" || Type == "Hero Power" ? Visibility.Hidden : Visibility.Visible;
 
 		[XmlIgnore]
 		public string Set { get; set; }
@@ -229,19 +221,13 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 		public string Race { get; set; }
 
 		[XmlIgnore]
-		public string RaceOrType
-		{
-			get { return Race ?? Type; }
-		}
+		public string RaceOrType => Race ?? Type;
 
 		[XmlIgnore]
 		public int? Durability { get; set; }
 
 		[XmlIgnore]
-		public int DurabilityOrHealth
-		{
-			get { return Durability ?? Health; }
-		}
+		public int DurabilityOrHealth => Durability ?? Health;
 
 		[XmlIgnore]
 		public string Type { get; set; }
@@ -310,10 +296,7 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			set { _localizedName = value; }
 		}
 
-		public string[] EntourageCardIds
-		{
-			get { return _dbCard != null ? _dbCard.EntourageCardIds : new string[0]; }
-		}
+		public string[] EntourageCardIds => _dbCard != null ? _dbCard.EntourageCardIds : new string[0];
 
 		[XmlIgnore]
 		public int InHandCount
@@ -327,10 +310,7 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 		}
 
 		[XmlIgnore]
-		public bool IsClassCard
-		{
-			get { return GetPlayerClass != "Neutral"; }
-		}
+		public bool IsClassCard => GetPlayerClass != "Neutral";
 
 		[XmlIgnore]
 		public bool IsCreated
@@ -354,30 +334,15 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			}
 		}
 
-		public int Height
-		{
-			get { return (int)Math.Round(OverlayWindow.Scaling * 35, 0); }
-		}
+		public int Height => (int)Math.Round(OverlayWindow.Scaling * 35, 0);
 
-		public int OpponentHeight
-		{
-			get { return (int)Math.Round(OverlayWindow.OpponentScaling * 35, 0); }
-		}
+		public int OpponentHeight => (int)Math.Round(OverlayWindow.OpponentScaling * 35, 0);
 
-		public int PlayerWindowHeight
-		{
-			get { return (int)Math.Round(PlayerWindow.Scaling * 35, 0); }
-		}
+		public int PlayerWindowHeight => (int)Math.Round(PlayerWindow.Scaling * 35, 0);
 
-		public int OpponentWindowHeight
-		{
-			get { return (int)Math.Round(OpponentWindow.Scaling * 35, 0); }
-		}
+		public int OpponentWindowHeight => (int)Math.Round(OpponentWindow.Scaling * 35, 0);
 
-		public string GetPlayerClass
-		{
-			get { return PlayerClass ?? "Neutral"; }
-		}
+		public string GetPlayerClass => PlayerClass ?? "Neutral";
 
 		public SolidColorBrush ColorPlayer
 		{
@@ -398,26 +363,18 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			}
 		}
 
+		[XmlIgnore]
 		public bool HighlightFrame { get; set; }
 
-		public SolidColorBrush ColorOpponent
-		{
-			get { return new SolidColorBrush(Colors.White); }
-		}
+		public SolidColorBrush ColorOpponent => new SolidColorBrush(Colors.White);
 
-		public string CardFileName
-		{
-			get
-			{
-				return Name.ToLowerInvariant()
-				           .Replace(' ', '-')
-				           .Replace(":", "")
-				           .Replace("'", "-")
-				           .Replace(".", "")
-				           .Replace("!", "")
-				           .Replace(",", "");
-			}
-		}
+		public string CardFileName => Name.ToLowerInvariant()
+										  .Replace(' ', '-')
+										  .Replace(":", "")
+										  .Replace("'", "-")
+										  .Replace(".", "")
+										  .Replace("!", "")
+										  .Replace(",", "");
 
 		public FontFamily Font
 		{
@@ -437,7 +394,7 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			get
 			{
 				if(_cachedBackground != null && Count == _lastCount && _coloredFrame == Config.Instance.RarityCardFrames
-				   && _coloredGem == Config.Instance.RarityCardGems && _isFrameHighlighted == HighlightFrame)
+				   && _coloredGem == Config.Instance.RarityCardGems && IsFrameHighlighted == HighlightFrame)
 					return _cachedBackground;
 				_lastCount = Count;
 				_coloredFrame = Config.Instance.RarityCardFrames;
@@ -446,102 +403,8 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 					return new ImageBrush();
 				try
 				{
-					var cardFileName = CardFileName + ".png";
-
-
-					//card graphic
-					var drawingGroup = new DrawingGroup();
-
-					if(File.Exists("Images/" + cardFileName))
-					{
-						drawingGroup.Children.Add(new ImageDrawing(new BitmapImage(new Uri("Images/" + cardFileName, UriKind.Relative)),
-						                                           new Rect(104, 1, 110, 34)));
-					}
-
-					//frame
-					var frame = "Images/frame.png";
-					if(HighlightFrame)
-					{
-						frame = "Images/frame_golden.png";
-						_isFrameHighlighted = true;
-					}
-					else
-					{
-						_isFrameHighlighted = false;
-						if(Config.Instance.RarityCardFrames)
-						{
-							switch(Rarity)
-							{
-								case Rarity.Free:
-								case Rarity.Common:
-									frame = "Images/frame_rarity_common.png";
-									break;
-								case Rarity.Rare:
-									frame = "Images/frame_rarity_rare.png";
-									break;
-								case Rarity.Epic:
-									frame = "Images/frame_rarity_epic.png";
-									break;
-								case Rarity.Legendary:
-									frame = "Images/frame_rarity_legendary.png";
-									break;
-							}
-						}
-					}
-					drawingGroup.Children.Add(new ImageDrawing(new BitmapImage(new Uri(frame, UriKind.Relative)), new Rect(0, 0, 218, 35)));
-					//gem
-					if(Config.Instance.RarityCardGems)
-					{
-						var gem = "Images/gem_rarity_common.png";
-						switch(Rarity)
-						{
-							case Rarity.Rare:
-								gem = "Images/gem_rarity_rare.png";
-								break;
-							case Rarity.Epic:
-								gem = "Images/gem_rarity_epic.png";
-								break;
-							case Rarity.Legendary:
-								gem = "Images/gem_rarity_legendary.png";
-								break;
-						}
-						drawingGroup.Children.Add(new ImageDrawing(new BitmapImage(new Uri(gem, UriKind.Relative)), new Rect(3, 3, 28, 28)));
-					}
-
-					if(Math.Abs(Count) > 1 || Rarity == Rarity.Legendary)
-					{
-						drawingGroup.Children.Add(new ImageDrawing(new BitmapImage(new Uri("Images/frame_countbox.png", UriKind.Relative)),
-						                                           new Rect(189, 6, 25, 24)));
-
-						if(Math.Abs(Count) > 1 && Math.Abs(Count) <= 9)
-						{
-							drawingGroup.Children.Add(
-							                          new ImageDrawing(
-								                          new BitmapImage(new Uri("Images/frame_" + Math.Abs(Count) + ".png", UriKind.Relative)),
-								                          new Rect(194, 8, 18, 21)));
-						}
-						else
-						{
-							drawingGroup.Children.Add(new ImageDrawing(new BitmapImage(new Uri("Images/frame_legendary.png", UriKind.Relative)),
-							                                           new Rect(194, 8, 18, 21)));
-						}
-					}
-
-					if(IsCreated)
-					{
-						var xOffset = Math.Abs(Count) > 1 || Rarity == Rarity.Legendary ? 23 : 3;
-						drawingGroup.Children.Add(new ImageDrawing(ImageCache.GetImage("card-marker.png", "Images"), new Rect(192 - xOffset, 8, 21, 21)));
-						drawingGroup.Children.Add(new ImageDrawing(ImageCache.GetImage("card-icon-created.png", "Images"),
-						                                           new Rect(194 - xOffset, 9, 16, 16)));
-					}
-
-					//dark overlay
-					if(Count <= 0 || Jousted)
-						drawingGroup.Children.Add(new ImageDrawing(new BitmapImage(new Uri("Images/dark.png", UriKind.Relative)), new Rect(0, 0, 218, 35)));
-
-					var brush = new ImageBrush {ImageSource = new DrawingImage(drawingGroup)};
-					_cachedBackground = brush;
-					return brush;
+					_cachedBackground = new CardImageBuilder(this).Build();
+					return _cachedBackground;
 				}
 				catch(Exception)
 				{
@@ -556,19 +419,12 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 		[XmlIgnore]
 		public bool HighlightInHand { get; set; }
 
-		public object Clone()
-		{
-			var newcard = new Card(Id, PlayerClass, Rarity, Type, Name, Cost, LocalizedName, InHandCount, Count, Text, EnglishText, Attack,
-			                       Health, Race, Mechanics, Durability, Artist, Set, AlternativeNames, AlternativeTexts);
-			return newcard;
-		}
+		public object Clone() => new Card(Id, PlayerClass, Rarity, Type, Name, Cost, LocalizedName, InHandCount, Count, Text, EnglishText, Attack,
+										  Health, Race, Mechanics, Durability, Artist, Set, AlternativeNames, AlternativeTexts);
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public override string ToString()
-		{
-			return Name + "(" + Count + ")";
-		}
+		public override string ToString() => Name + "(" + Count + ")";
 
 		public override bool Equals(object card)
 		{
@@ -578,15 +434,9 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			return c.Name == Name;
 		}
 
-		public bool EqualsWithCount(Card card)
-		{
-			return card.Id == Id && card.Count == Count;
-		}
+		public bool EqualsWithCount(Card card) => card.Id == Id && card.Count == Count;
 
-		public override int GetHashCode()
-		{
-			return Name.GetHashCode();
-		}
+		public override int GetHashCode() => Name.GetHashCode();
 
 		public void Load()
 		{
@@ -618,9 +468,7 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			var handler = PropertyChanged;
-			if(handler != null)
-				handler(this, new PropertyChangedEventArgs(propertyName));
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
 }

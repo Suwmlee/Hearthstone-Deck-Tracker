@@ -6,10 +6,12 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Media.Imaging;
 using Hearthstone_Deck_Tracker.Exporting;
 using Hearthstone_Deck_Tracker.Hearthstone;
 using MahApps.Metro.Controls.Dialogs;
+using Clipboard = System.Windows.Clipboard;
 
 #endregion
 
@@ -88,7 +90,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			if(pngEncoder != null)
 			{
 				var saveOperation = await this.ShowScreenshotUploadSelectionDialog();
-				var tmpFile = new FileInfo(Path.Combine(Config.Instance.DataDir, string.Format("tmp{0}.png", DateTime.Now.ToFileTime())));
+				var tmpFile = new FileInfo(Path.Combine(Config.Instance.DataDir, $"tmp{DateTime.Now.ToFileTime()}.png"));
 				var fileName = saveOperation.SaveLocal
 					               ? Helper.ShowSaveFileDialog(Helper.RemoveInvalidFileNameChars(proposedFileName), "png") : tmpFile.FullName;
 				if(fileName != null)
@@ -132,17 +134,39 @@ namespace Hearthstone_Deck_Tracker.Windows
 
 		private async void BtnSaveToFile_OnClick(object sender, RoutedEventArgs e)
 		{
-			var deck = DeckPickerList.SelectedDecks.FirstOrDefault();
-			if(deck == null)
-				return;
-
-			var fileName = Helper.ShowSaveFileDialog(Helper.RemoveInvalidFileNameChars(deck.Name), "xml");
-
-			if(fileName != null)
+			var selectedDecks = DeckPickerList.SelectedDecks;
+			if (selectedDecks.Count > 1)
 			{
+				if(selectedDecks.Count > 10)
+				{
+					var result = await
+						this.ShowMessageAsync("Exporting multiple decks!", $"You are about to export {selectedDecks.Count} decks. Are you sure?",
+											  MessageDialogStyle.AffirmativeAndNegative);
+					if(result != MessageDialogResult.Affirmative)
+						return;
+				}
+				var dialog = new FolderBrowserDialog();
+				if(dialog.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+					return;
+				foreach(var deck in DeckPickerList.SelectedDecks)
+				{
+					//Helper.GetValidFilePath avoids overwriting files and properly handles duplicate deck names
+					var saveLocation = Path.Combine(dialog.SelectedPath, Helper.GetValidFilePath(dialog.SelectedPath, deck.Name, "xml"));
+					XmlManager<Deck>.Save(saveLocation, deck.GetSelectedDeckVersion());
+					Logger.WriteLine($"Saved {deck.GetSelectedDeckVersion().GetDeckInfo()} to file: {saveLocation}", "Export");
+				}
+				await this.ShowSavedFileMessage(dialog.SelectedPath);
+
+			}
+			else if(selectedDecks.Count > 0)
+			{
+				var deck = selectedDecks.First();
+				var fileName = Helper.ShowSaveFileDialog(Helper.RemoveInvalidFileNameChars(deck.Name), "xml");
+				if(fileName == null)
+					return;
 				XmlManager<Deck>.Save(fileName, deck.GetSelectedDeckVersion());
 				await this.ShowSavedFileMessage(fileName);
-				Logger.WriteLine("Saved " + deck.GetSelectedDeckVersion().GetDeckInfo() + " to file: " + fileName, "Export");
+				Logger.WriteLine($"Saved {deck.GetSelectedDeckVersion().GetDeckInfo()} to file: {fileName}", "Export");
 			}
 		}
 
@@ -167,15 +191,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			{
 				try
 				{
-					english =
-						await
-						this.ShowMessageAsync("Select language", "", MessageDialogStyle.AffirmativeAndNegative,
-						                      new MessageDialogs.Settings
-						                      {
-							                      AffirmativeButtonText = Helper.LanguageDict.First(x => x.Value == "enUS").Key,
-							                      NegativeButtonText = Helper.LanguageDict.First(x => x.Value == Config.Instance.SelectedLanguage).Key
-						                      })
-						== MessageDialogResult.Affirmative;
+					english = await this.ShowLanguageSelectionDialog();
 				}
 				catch(Exception ex)
 				{
@@ -205,9 +221,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			var url = await InputDeckURL();
 			if(url == null)
 				return;
-
 			var deck = await ImportDeckFromURL(url);
-
 			if(deck != null)
 				ExportDeck(deck);
 			else

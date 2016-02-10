@@ -38,7 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>5</LangVersion>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -144,6 +144,7 @@
     <Compile Include="Controls\ChartWinsByClass.xaml.cs">
       <DependentUpon>ChartWinsByClass.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DeckPicker\DateConverter.cs" />
     <Compile Include="Controls\DeckPicker\DeckPickerClassItem.xaml.cs">
       <DependentUpon>DeckPickerClassItem.xaml</DependentUpon>
     </Compile>
@@ -264,16 +265,20 @@
     <Compile Include="FlyoutControls\Options\Tracker\TrackerNotifications.xaml.cs">
       <DependentUpon>TrackerNotifications.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hearthstone\CardImageBuilder.cs" />
     <Compile Include="Hearthstone\GameTime.cs" />
     <Compile Include="Hearthstone\HearthDbConverter.cs" />
+    <Compile Include="Hearthstone\GameMetaData.cs" />
     <Compile Include="LogReader\Handlers\LoadingScreenHandler.cs" />
+    <Compile Include="LogReader\Handlers\NetHandler.cs" />
     <Compile Include="LogReader\LogReaderHelper.cs" />
     <Compile Include="Stats\CompiledStats\ArenaRun.cs" />
     <Compile Include="Stats\CompiledStats\ChartStats.cs" />
     <Compile Include="Stats\CompiledStats\ClassStats.cs" />
     <Compile Include="Stats\CompiledStats\MatchupStats.cs" />
+    <Compile Include="Utility\BatteryMonitor.cs" />
     <Compile Include="Utility\BoardDamage\BoardCard.cs" />
-    <Compile Include="Utility\BoardDamage\BoardEntity.cs" />
+    <Compile Include="Utility\BoardDamage\IBoardEntity.cs" />
     <Compile Include="Utility\BoardDamage\BoardHero.cs" />
     <Compile Include="Utility\BoardDamage\BoardState.cs" />
     <Compile Include="Utility\BoardDamage\EntityHelper.cs" />

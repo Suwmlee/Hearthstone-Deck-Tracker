@@ -27,39 +27,60 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 
 		public static Card GetCardFromName(string name, bool localized = false, bool showErrorMessage = true, bool collectible = true)
 		{
-			Language lang = Language.enUS;
+			var lang = Language.enUS;
 			if(localized)
 				Enum.TryParse(Config.Instance.SelectedLanguage, out lang);
-			var card = Cards.GetFromName(name, lang, collectible);
-			if(card != null)
-				return new Card(card);
+			try
+			{
+				var card = Cards.GetFromName(name, lang, collectible);
+				if (card != null)
+					return new Card(card);
+			}
+			catch(Exception ex)
+			{
+				Logger.WriteLine("Error getting card from HearthDb:\n" + ex);
+			}
 			if(showErrorMessage)
 				Logger.WriteLine("Could not get card from name: " + name, "Database");
 			return new Card("UNKNOWN", null, Rarity.Free, "Minion", name, 0, name, 0, 1, "", "", 0, 0, "UNKNOWN", null, 0, "", "");
 		}
 
-		public static List<Card> GetActualCards()
-		{
-			return Cards.Collectible.Values.Select(x => new Card(x)).ToList();
-		}
+		public static List<Card> GetActualCards() => Cards.Collectible.Values.Select(x => new Card(x)).ToList();
 
 		public static string GetHeroNameFromId(string id, bool returnIdIfNotFound = true)
 		{
-			string name;
-			var match = Regex.Match(id, @"(?<base>(.*_\d+)).*");
-			if(match.Success)
-				id = match.Groups["base"].Value;
-			if(CardIds.HeroIdDict.TryGetValue(id, out name))
-				return name;
-			var card = GetCardFromId(id);
-			if(card == null || string.IsNullOrEmpty(card.Name) || card.Name == "UNKNOWN" || card.Type != "Hero")
+			if(string.IsNullOrEmpty(id))
 				return returnIdIfNotFound ? id : null;
+			string name;
+			var baseId = GetBaseId(id);
+			if(CardIds.HeroIdDict.TryGetValue(baseId, out name))
+				return name;
+			var card = GetCardFromId(baseId);
+			if(string.IsNullOrEmpty(card?.Name) || card.Name == "UNKNOWN" || card.Type != "Hero")
+				return returnIdIfNotFound ? baseId : null;
 			return card.Name;
 		}
 
-		public static bool IsActualCard(Card card)
+		public static bool IsHero(string cardId)
 		{
-			return card != null && Cards.Collectible.ContainsKey(card.Id);
+			if(string.IsNullOrEmpty(cardId))
+				return false;
+			string name;
+			var baseId = GetBaseId(cardId);
+			if (CardIds.HeroIdDict.TryGetValue(baseId, out name))
+				return true;
+			var card = GetCardFromId(baseId);
+			return !string.IsNullOrEmpty(card?.Name) && card.Name != "UNKNOWN" && card.Type == "Hero";
 		}
+
+		private static string GetBaseId(string cardId)
+		{
+			if(string.IsNullOrEmpty(cardId))
+				return cardId;
+			var match = Regex.Match(cardId, @"(?<base>(.*_\d+)).*");
+			return match.Success ? match.Groups["base"].Value : cardId;
+		}
+
+		public static bool IsActualCard(Card card) => card != null && Cards.Collectible.ContainsKey(card.Id);
 	}
 }

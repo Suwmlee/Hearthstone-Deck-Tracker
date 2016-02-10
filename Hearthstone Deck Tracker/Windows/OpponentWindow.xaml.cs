@@ -58,15 +58,9 @@ namespace Hearthstone_Deck_Tracker
 			Update();
 		}
 
-		public List<Card> OpponentDeck
-		{
-			get { return _game.Opponent.DisplayRevealedCards; }
-		}
+		public List<Card> OpponentDeck => _game.Opponent.DisplayRevealedCards;
 
-		public bool ShowToolTip
-		{
-			get { return Config.Instance.WindowCardToolTips; }
-		}
+		public bool ShowToolTip => Config.Instance.WindowCardToolTips;
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
@@ -87,7 +81,7 @@ namespace Hearthstone_Deck_Tracker
 				var lossesVs = selectedDeck.GetRelevantGames().Count(g => g.Result == GameResult.Loss && g.OpponentHero == _game.Opponent.Class);
 				var percent = (winsVs + lossesVs) > 0
 					              ? Math.Round(winsVs * 100.0 / (winsVs + lossesVs), 0).ToString(CultureInfo.InvariantCulture) : "-";
-				LblWinRateAgainst.Text = string.Format("VS {0}: {1} - {2} ({3}%)", _game.Opponent.Class, winsVs, lossesVs, percent);
+				LblWinRateAgainst.Text = $"VS {_game.Opponent.Class}: {winsVs}-{lossesVs} ({percent}%)";
 			}
 		}
 
@@ -148,26 +142,20 @@ namespace Hearthstone_Deck_Tracker
 			LblOpponentHandChance1.Text = holdingNextTurn + "%";
 		}
 
-		private void OpponentDeckOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
-		{
-			Scale();
-		}
-
 		private void Scale()
 		{
 			const int offsetToMakeSureGraphicsAreNotClipped = 40;
 			var allLabelsHeight = CanvasOpponentCount.ActualHeight + CanvasOpponentChance.ActualHeight + LblWinRateAgainst.ActualHeight
 			                      + LblOpponentFatigue.ActualHeight + offsetToMakeSureGraphicsAreNotClipped;
-			if(((Height - allLabelsHeight) - (ListViewOpponent.Items.Count * 35 * Scaling)) < 1 || Scaling < 1)
-			{
-				var previousScaling = Scaling;
-				Scaling = (Height - allLabelsHeight) / (ListViewOpponent.Items.Count * 35);
-				if(Scaling > 1)
-					Scaling = 1;
+			if(!(((Height - allLabelsHeight) - (ListViewOpponent.Items.Count * 35 * Scaling)) < 1) && !(Scaling < 1))
+				return;
+			var previousScaling = Scaling;
+			Scaling = (Height - allLabelsHeight) / (ListViewOpponent.Items.Count * 35);
+			if(Scaling > 1)
+				Scaling = 1;
 
-				if(previousScaling != Scaling)
-					ListViewOpponent.Items.Refresh();
-			}
+			if(previousScaling != Scaling)
+				ListViewOpponent.Items.Refresh();
 		}
 
 		private void Window_SizeChanged_1(object sender, SizeChangedEventArgs e)
@@ -226,16 +214,14 @@ namespace Hearthstone_Deck_Tracker
 			await Task.Delay(50);
 			if((DateTime.Now - _lastOpponentUpdateReqest).Milliseconds < 50)
 				return;
-			OnPropertyChanged("OpponentDeck");
+			OnPropertyChanged(nameof(OpponentDeck));
 			Scale();
 		}
 
 		[NotifyPropertyChangedInvocator]
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			var handler = PropertyChanged;
-			if(handler != null)
-				handler(this, new PropertyChangedEventArgs(propertyName));
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
 }

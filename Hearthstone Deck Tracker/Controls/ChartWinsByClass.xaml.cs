@@ -22,27 +22,18 @@ namespace Hearthstone_Deck_Tracker.Controls
 			ArenaStats.Instance.PropertyChanged += (sender, args) =>
 			{
 				if(args.PropertyName == "WinsByClass")
-					OnPropertyChanged("SeriesSourceWins");
+					OnPropertyChanged(nameof(SeriesSourceWins));
 			};
 		}
 
-		public IEnumerable<WinChartData> SeriesSourceWins
-		{
-			get
-			{
-				return
-					Enumerable.Range(0, 13).Select(n => new WinChartData {Index = n.ToString(), ItemsSource = ArenaStats.Instance.WinsByClass[n]});
-			}
-		}
+		public IEnumerable<WinChartData> SeriesSourceWins => Enumerable.Range(0, 13).Select(n => new WinChartData {Index = n.ToString(), ItemsSource = ArenaStats.Instance.WinsByClass[n]});
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		[NotifyPropertyChangedInvocator]
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			var handler = PropertyChanged;
-			if(handler != null)
-				handler(this, new PropertyChangedEventArgs(propertyName));
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 
 		public class WinChartData

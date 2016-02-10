@@ -14,13 +14,11 @@ namespace Hearthstone_Deck_Tracker.Controls.Stats.Arena
 	/// </summary>
 	public partial class ArenaRuns : INotifyPropertyChanged
 	{
-		private readonly bool _initialized;
 		private object _chartWinsControl = new ChartWins();
 
 		public ArenaRuns()
 		{
 			InitializeComponent();
-			_initialized = true;
 		}
 
 		public object ChartWinsControl
@@ -39,9 +37,7 @@ namespace Hearthstone_Deck_Tracker.Controls.Stats.Arena
 		[NotifyPropertyChangedInvocator]
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			var handler = PropertyChanged;
-			if(handler != null)
-				handler(this, new PropertyChangedEventArgs(propertyName));
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
 }

@@ -293,6 +293,7 @@
                     <Separator Name="SeparatorDeck1"/>
                     <MenuItem Name="MenuItemMissingCards" Header="{DynamicResource SHOW _MISSING CARDS}" ToolTip="{DynamicResource this information is based on your last export}" Click="MenuItemMissingDust_OnClick"/>
                     <MenuItem Name="MenuItemUpdateDeck" Header="{DynamicResource _UPDATE (WEB)}" Click="BtnUpdateDeck_Click" />
+                    <MenuItem Name="MenuItemSetDeckUrl" Header="" Click="BtnSetDeckUrl_Click" />
                     <MenuItem Name="MenuItemOpenUrl" Header="{DynamicResource OPEN _WEBSITE}" Click="BtnOpenDeckUrl_Click" />
                     <MenuItem Name="MenuItemOpenHearthStats" Header="{DynamicResource OPEN _HEARTHSTATS}" Click="BtnOpenHearthStats_Click" />
                     <Separator />
@@ -350,7 +351,7 @@
                     <MenuItem Header="{DynamicResource _SELECT REPLAY}" Click="MenuItemReplaySelectGame_OnClick" />
                     <MenuItem Header="{DynamicResource LOAD REPLAY FROM _FILE}" Click="MenuItemReplayFromFile_OnClick"/>
                 </MenuItem>
-                <MenuItem Header="{DynamicResource _HEARTHSTATS}">
+                <MenuItem Header="{DynamicResource _HEARTHSTATS}" SubmenuOpened="MenuItemHearthStats_OnSubmenuOpened">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16" Margin="0,0,-10,0">
                             <Rectangle.Fill>
@@ -360,7 +361,14 @@
                     </MenuItem.Icon>
                     <MenuItem Name="MenuItemLogin" Header="{DynamicResource LOGIN}" Click="MenuItemLogin_OnClick"/>
                     <MenuItem Name="MenuItemDashboard" Header="{DynamicResource DASHBOARD (WEB)}" Click="MenuItemDashboard_OnClick"/>
-                    <MenuItem Name="MenuItemHearthStatsSync"  Header="{DynamicResource SYNC NOW}" Click="MenuItemHearthStatsSync_OnClick"/>
+                    <MenuItem Name="MenuItemHearthStatsSync" Click="MenuItemHearthStatsSync_OnClick">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{DynamicResource SYNC NOW}"/>
+                                <TextBlock Foreground="DimGray" Margin="10,0,0,0" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type windows:MainWindow}}, Path=LastSync, StringFormat='(LAST: {0})'}"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
                     <MenuItem Name="MenuItemHearthStatsForceFullSync"  Header="{DynamicResource FORCE FULL SYNC}" Click="MenuItemHearthStatsForceFullSync_OnClick"/>
                     <Separator/>
                     <CheckBox Name="MenuItemCheckBoxSyncOnStart" Content="{DynamicResource SYNC ON START}" Margin="-24,0,0,0" FontSize="14" Checked="MenuItemCheckBoxSyncOnStart_OnChecked" Unchecked="MenuItemCheckBoxSyncOnStart_OnUnchecked"/>
