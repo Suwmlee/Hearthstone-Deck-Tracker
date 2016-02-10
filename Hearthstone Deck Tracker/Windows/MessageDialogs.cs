@@ -133,16 +133,10 @@ namespace Hearthstone_Deck_Tracker.Windows
 		{
 			if(!deck.MissingCards.Any())
 			{
-<<<<<<< HEAD
 				await
 					window.ShowMessageAsync((string)App.Current.FindResource("No missing cards"),
 					                        (string)App.Current.FindResource("No cards were missing when you last exported this deck. (or you have not recently exported this deck)"),
 					                        MessageDialogStyle.Affirmative, new Settings {AffirmativeButtonText = (string)App.Current.FindResource("OK")});
-=======
-				await window.ShowMessageAsync("No missing cards",
-						"No cards were missing when you last exported this deck. (or you have not recently exported this deck)",
-						Affirmative, new Settings {AffirmativeButtonText = "OK"});
->>>>>>> Epix37/master
 				return;
 			}
 			var message = "The following cards were not found:\n";
@@ -167,14 +161,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 				else
 					totalDust += card.DustCost * card.Count;
 			}
-<<<<<<< HEAD
-			message += string.Format("\n\nYou need {0} dust {1}{2}to craft the missing cards.", totalDust, nax, promo);
-			await
-				window.ShowMessageAsync((string)App.Current.FindResource("Export incomplete"), message, MessageDialogStyle.Affirmative, new Settings {AffirmativeButtonText = "OK"});
-=======
 			message += $"\n\nYou need {totalDust} dust {string.Join("", sets)}to craft the missing cards.";
 			await window.ShowMessageAsync("Export incomplete", message, Affirmative, new Settings {AffirmativeButtonText = "OK"});
->>>>>>> Epix37/master
 		}
 
 		public static async Task<bool> ShowAddGameDialog(this MetroWindow window, Deck deck)

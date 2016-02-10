@@ -43,16 +43,16 @@ namespace Hearthstone_Deck_Tracker
 			};
 			_notifyIcon.ContextMenu.MenuItems.Add(startHearthstonMenuItem);
 
-			var useNoDeckMenuItem = new MenuItem((string)App.Current.FindResource("Use no deck"), (sender, args) => UseNoDeckContextMenu()) {Name = UseNoDeckMenuItemName};
+			var useNoDeckMenuItem = new MenuItem((string)App.Current.FindResource("USE _NO DECK"), (sender, args) => UseNoDeckContextMenu()) {Name = UseNoDeckMenuItemName};
 			_notifyIcon.ContextMenu.MenuItems.Add(useNoDeckMenuItem);
 
-			var autoSelectDeckMenuItem = new MenuItem((string)App.Current.FindResource("Autoselect deck"), (sender, args) => AutoDeckDetectionContextMenu())
+			var autoSelectDeckMenuItem = new MenuItem((string)App.Current.FindResource("AUTO DECK SELECTION"), (sender, args) => AutoDeckDetectionContextMenu())
 			{
 				Name = AutoSelectDeckMenuItemName
 			};
 			_notifyIcon.ContextMenu.MenuItems.Add(autoSelectDeckMenuItem);
 
-			var classCardsFirstMenuItem = new MenuItem((string)App.Current.FindResource("Class cards first"), (sender, args) => SortClassCardsFirstContextMenu())
+			var classCardsFirstMenuItem = new MenuItem((string)App.Current.FindResource("CLASS CARDS FIRST"), (sender, args) => SortClassCardsFirstContextMenu())
 			{
 				Name = ClassCardsFirstMenuItemName
 			};
